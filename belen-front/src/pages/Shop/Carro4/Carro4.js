@@ -4,10 +4,10 @@ import { LoadingOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import uuid from 'uuid/v4';
 
-import maklube from '../../../assets/img/maklube.png';
-import belen from '../../../assets/img/belen.png';
-import pagofacil from '../../../assets/img/pagofacil2.png';
-import paypal from '../../../assets/img/paypal.png';
+import belen from '../../../assets/imagen/logo2Belen.png';
+import macklube from '../../../assets/imagen/logoBelen.png';
+import pagofacil from '../../../assets/imagen/pagofacil.png';
+import paypal from '../../../assets/imagen/paypal.png';
 
 import { signUpApi } from '../../../api/user';
 import { MakePaymentApi, MakePaymentPaypalApi } from '../../../api/payment';
@@ -117,22 +117,22 @@ export default function Carro4() {
                 setFinalEntradaInvitadosString((finalEntradaInvitados / 20) * 15000)
                 setInputs({
                     ...inputs,
-                    hob: (inputs.hob / 70) * 55000,
-                    hobString: (inputs.hob / 70) * 55000
+                    hob: (inputs.hob / 70) * 60000,
+                    hobString: (inputs.hob / 70) * 60000
                 });
-                setFinalHobInvitados((finalHobInvitados / 70) * 55000)
-                setFinalHobInvitadosString((finalHobInvitados / 70) * 55000)
-                setTotalAmount(((finalEntradaInvitados / 20) * 15000) + ((inputs.hob / 70) * 55000) + ((finalHobInvitados / 70) * 55000) + 15000)
-                setTotalAmountString(numberToString(((finalEntradaInvitados / 20) * 15000) + ((inputs.hob / 70) * 55000) + ((finalHobInvitados / 70) * 55000) + 15000))
+                setFinalHobInvitados((finalHobInvitados / 70) * 60000)
+                setFinalHobInvitadosString((finalHobInvitados / 70) * 60000)
+                setTotalAmount(((finalEntradaInvitados / 20) * 15000) + ((inputs.hob / 70) * 60000) + ((finalHobInvitados / 70) * 60000) + 15000)
+                setTotalAmountString(numberToString(((finalEntradaInvitados / 20) * 15000) + ((inputs.hob / 70) * 60000) + ((finalHobInvitados / 70) * 60000) + 15000))
             } else {
                 setInputs({
                     ...inputs,
-                    hob: (inputs.hob / 70) * 55000,
-                    hobString: (inputs.hob / 70) * 55000
+                    hob: (inputs.hob / 70) * 60000,
+                    hobString: (inputs.hob / 70) * 60000
                 });
-                setTotalAmount(((inputs.hob / 70) * 55000) + 15000)
-                console.log(((inputs.hob / 70) * 55000) + 15000)
-                setTotalAmountString(numberToString(((inputs.hob / 70) * 55000) + 15000))
+                setTotalAmount(((inputs.hob / 70) * 60000) + 15000)
+                console.log(((inputs.hob / 70) * 60000) + 15000)
+                setTotalAmountString(numberToString(((inputs.hob / 70) * 60000) + 15000))
             }
         } else {
             setInputs({
@@ -164,21 +164,21 @@ export default function Carro4() {
                 setFinalEntradaInvitadosString((finalEntradaInvitados / 15000) * 20)
                 setInputs({
                     ...inputs,
-                    hob: (inputs.hob / 55000) * 70,
-                    hobString: (inputs.hob / 55000) * 70
+                    hob: (inputs.hob / 60000) * 70,
+                    hobString: (inputs.hob / 60000) * 70
                 });
-                setFinalHobInvitados((finalHobInvitados / 55000) * 70)
-                setFinalHobInvitadosString((finalHobInvitados / 55000) * 70)
-                setTotalAmount(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 55000) * 70) + ((finalHobInvitados / 55000) * 70) + 20)
-                setTotalAmountString(numberToString(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 55000) * 70) + ((finalHobInvitados / 55000) * 70) + 20))
+                setFinalHobInvitados((finalHobInvitados / 60000) * 70)
+                setFinalHobInvitadosString((finalHobInvitados / 60000) * 70)
+                setTotalAmount(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20)
+                setTotalAmountString(numberToString(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20))
             } else {
                 setInputs({
                     ...inputs,
-                    hob: (inputs.hob / 55000) * 70,
-                    hobString: (inputs.hob / 55000) * 70
+                    hob: (inputs.hob / 60000) * 70,
+                    hobString: (inputs.hob / 60000) * 70
                 });
-                setTotalAmount(((inputs.hob / 55000) * 70) + 20)
-                setTotalAmountString(numberToString(((inputs.hob / 55000) * 70) + 20))
+                setTotalAmount(((inputs.hob / 60000) * 70) + 20)
+                setTotalAmountString(numberToString(((inputs.hob / 60000) * 70) + 20))
             }
         } else {
             setInputs({
@@ -214,7 +214,7 @@ export default function Carro4() {
                     commune: inputs.commune,
                     adress: inputs.adress,
                     hobExperience: inputs.hobValue,
-                    quantityHobExperience: (inputs.hob / 55000),
+                    quantityHobExperience: (inputs.hob / 60000),
                     communeHobExperience: inputs.communeHob,
                     guest: null,
                     totalPayment: totalAmountString,
@@ -256,7 +256,7 @@ export default function Carro4() {
                     commune: inputs.commune,
                     adress: inputs.adress,
                     hobExperience: inputs.hobValue,
-                    quantityHobExperience: (inputs.hob / 55000),
+                    quantityHobExperience: (inputs.hob / 60000),
                     communeHobExperience: inputs.communeHob,
                     guest: null,
                     totalPayment: totalAmountString,
@@ -465,28 +465,28 @@ export default function Carro4() {
             <div className="carro">
                 <div className="header">
                     <div className="contenedor">
-                        <div className="maklube"><img src={maklube} alt="maklube" /></div>
+                        <div className="maklube"><img src={macklube} alt="maklube" /></div>
                         <div className="belen"><img src={belen} alt="belen" /></div>
-                    </div>
+                     </div>
                 </div>
-                <div className="contenedor">
+                <div className="contenedor2">
                     <div className="pasos">
                         <div className="col">
                             <div className="num">1</div>
                             <span>Compra tu entrada</span>
                         </div>
-                        {/*
+                        
                         <div className="col">
                             <div className="num">2</div>
                             <span>Agregar Experiencia Gastronómica</span>
                         </div>
-                        */}
+                       
                         <div className="col">
-                            <div className="num">2</div>
+                            <div className="num">3</div>
                             <span>añadir invitados</span>
                         </div>
                         <div className="col">
-                            <div className="num active">3</div>
+                            <div className="num active">4</div>
                             <span>medio de pago</span>
                         </div>
                     </div>
@@ -497,11 +497,11 @@ export default function Carro4() {
                                 <div className="medios">
                                     <div className="md">
                                         <input type="radio" name="medio_pago" id="pagofacil" checked={methodPay} />
-                                        <label htmlFor="pagofacil" onClick={() => changeToPagofacil()}><img src={pagofacil} alt="pagofacil" /></label>
+                                        <label htmlFor="pagofacil" onClick={() => changeToPagofacil()}><img src={pagofacil} alt="pagofacil" className="pagoFacil"/></label>
                                     </div>
                                     <div className="md">
                                         <input type="radio" name="medio_pago" id="paypal"  checked={!methodPay} />
-                                        <label htmlFor="paypal" onClick={() => changeToPaypal()}><img src={paypal} alt="paypal" /></label>
+                                        <label htmlFor="paypal" onClick={() => changeToPaypal()}><img src={paypal} alt="paypal" className="paypal"/></label>
                                     </div>
                                 </div>
                             </div>
@@ -519,10 +519,10 @@ export default function Carro4() {
                                                         <div className="line">Entrada Otros países <span>$20</span></div>
                                                     }
                                                     {ticketStatus ? <div className="line">Entrada Chile (Invitados)<span>${finalEntradaInvitadosString}</span></div> : <span></span>}
-                                                    {/*
+                                                    
                                                     {inputs.hobValue ? <div className="line">Expriencia gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
-                                                    {usersHobStatus ? <div className="line">Expriencia gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> : <span></span>}
-                                                    */}
+                                                    {/* {usersHobStatus ? <div className="line">Expriencia gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> : <span></span>} */}
+                                                   
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns">
@@ -536,9 +536,9 @@ export default function Carro4() {
                                                     :
                                                         <div className="line">Entrada Otros países <span>$20</span></div>
                                                     }
-                                                    {/*
+                                                    
                                                     {inputs.hobValue ? <div className="line">Expriencia gastronómica<span>${inputs.hobString}</span></div> : <span></span>}
-                                                    */}
+                                                   
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns">
@@ -589,17 +589,18 @@ export default function Carro4() {
                         </div>
                     </div>
                 </div>
+
+                
+                <div className="footer-carro">
+                        <img src={belen} alt="belen" width="150" />
+                        <div className="Up">
+                            <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
+                            </a>
+                        </div>
+                    </div>                    
             </div>
-            <div className="footer">
-                <div className="contenedor">
-                    <img src={belen} alt="belen" width="150" />
-                    <div className="Up">
-                        <a href="https://upwebinar.cl/" rel="noopener noreferrer" target="_blank">
-                            <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
         </Spin>
     )
 }

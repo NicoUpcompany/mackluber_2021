@@ -3,8 +3,8 @@ import { notification, Form } from 'antd';
 
 import { emailValidation, minLengthValidation, rutValidation } from '../../../utils/formValidation';
 
-import maklube from '../../../assets/img/maklube.png';
-import belen from '../../../assets/img/belen.png';
+import belen from '../../../assets/imagen/logo2Belen.png';
+import macklube from '../../../assets/imagen/logoBelen.png';
 
 var arrayAux = [];
 
@@ -188,18 +188,18 @@ export default function Carro3() {
                 if (usersHobStatus && ticketStatus) {
                     setTicketValue(usersCount * 15000);
                     setTicketValueString(numberToString(usersCount * 15000));
-                    setHob(55000 * usersHobCount);
-                    setHobString(numberToString(55000 * usersHobCount));
-                    setTotalAmountTitular((((55000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
-                    setTotalAmountString(numberToString(((55000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
+                    setHob(60000 * usersHobCount);
+                    setHobString(numberToString(60000 * usersHobCount));
+                    setTotalAmountTitular((((60000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
+                    setTotalAmountString(numberToString(((60000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
                 }
             } else {
                 setTicketValue(usersCount * 15000);
                 setTicketValueString(numberToString(usersCount * 15000));
-                setHob(55000 * usersHobCount);
-                setHobString(numberToString(55000 * usersHobCount));
-                setTotalAmountTitular((((55000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
-                setTotalAmountString(numberToString(((55000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
+                setHob(60000 * usersHobCount);
+                setHobString(numberToString(60000 * usersHobCount));
+                setTotalAmountTitular((((60000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
+                setTotalAmountString(numberToString(((60000 * usersHobCount) + (usersCount * 15000)) + parseInt(totalAmount)));
     
             }
             if (!deleteUserStatus) {
@@ -308,7 +308,7 @@ export default function Carro3() {
     const deleteUser = item => {
         let userArray = users;
         if (item.hobExperience) {
-            var aux = item.quantityHobExperience * 55000;
+            var aux = item.quantityHobExperience * 60000;
             setUsersHobCount(usersHobCount - item.quantityHobExperience);
             if ((hob - aux) === 0) {
                 setUsersHobStatus(false);
@@ -390,8 +390,8 @@ export default function Carro3() {
                         setHobValue(true);
                         setTicketStatus(true);
                         setUsersHobStatus(true);
-                        setUsersHob(personCount * 55000);
-                        setUsersHobString(numberToString(personCount * 55000));
+                        setUsersHob(personCount * 60000);
+                        setUsersHobString(numberToString(personCount * 60000));
                         const updateUser = {
                             fullName: users[users.length - 1].fullName,
                             phone: users[users.length - 1].phone,
@@ -442,28 +442,28 @@ export default function Carro3() {
             <div className="carro">
                 <div className="header">
                     <div className="contenedor">
-                        <div className="maklube"><img src={maklube} alt="maklube" /></div>
+                        <div className="maklube"><img src={macklube} alt="maklube" /></div>
                         <div className="belen"><img src={belen} alt="belen" /></div>
-                    </div>
+                     </div>
                 </div>
-                <div className="contenedor">
+                <div className="contenedor2">
                     <div className="pasos">
                         <div className="col">
                             <div className="num">1</div>
                             <span>Compra tu entrada</span>
                         </div>
-                        {/*
+                        
                         <div className="col">
                             <div className="num">2</div>
                             <span>Agregar Experiencia Gastronómica</span>
                         </div>
-                        */}
+                       
                         <div className="col">
-                            <div className="num active">2</div>
+                            <div className="num active">3</div>
                             <span>añadir invitados</span>
                         </div>
                         <div className="col">
-                            <div className="num">3</div>
+                            <div className="num">4</div>
                             <span>medio de pago</span>
                         </div>
                     </div>
@@ -659,21 +659,18 @@ export default function Carro3() {
                         </div>
                     </Form>
 
-                </div>
-            </div>
-
-            <div className="footer">
-                
-                <div className="contenedor">
-                    <img src={belen} alt="belen" width="150" />
-                    <div className="Up">
-                        <a href="https://upwebinar.cl/" rel="noopener noreferrer" target="_blank">
-                            <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
-                        </a>
+                    <div className="footer-carro">
+                        <img src={belen} alt="belen" width="150" />
+                        <div className="Up">
+                            <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             </div>
+
+
         </>
     )
 }

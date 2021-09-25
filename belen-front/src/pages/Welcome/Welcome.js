@@ -5,12 +5,15 @@ import { LoadingOutlined } from '@ant-design/icons';
 import uuid from 'uuid/v4';
 
 import maklube from '../../assets/img/maklube.png';
-import hora from '../../assets/img/hora.png';
+import logoMaklube from '../../assets/imagen/logoBelen.png'
+import logoBelen from '../../assets/imagen/logo2Belen.png'
+import hora from '../../assets/imagen/timer.png';
 import belen from '../../assets/img/belen.png';
 import au from '../../assets/img/auspiciadores.png';
 import au_m from '../../assets/img/auspiciadores-m.png';
 import pagofacil from '../../assets/img/pagofacil2.png';
 import paypal from '../../assets/img/paypal.png';
+import imgBoy from '../../assets/imagen/img1.jpg';
 
 import { emailValidation, numberValidation } from '../../utils/formValidation';
 import { MakeDonationApi, MakeDonationPaypalApi } from '../../api/payment';
@@ -125,13 +128,13 @@ export default function Welcome() {
             <div className="mid m">
                 <div className="middle">
                     <div className="maklube">
-                        <img src={maklube} alt="maklube" className="img1" />
-                        <img src={belen} alt="belen" className="img2 tablet desktop"  />
+                        <img src={logoMaklube} alt="maklube" className="img1" />
+                        {/* <img src={belen} alt="belen" className="img2 tablet desktop"  /> */}
                     </div>
-                    <h3>¡Bienvenidos a nuestra Nueva Versión!</h3>
+                    <h3>¡Bienvenidos al Maklube 2021!</h3>
                     <p>
-                        Estamos muy contentos de poder reunirnos nuevamente en la XV edición de nuestro tradicional Maklube Fraterno, esta vez 
-                        <strong> vía streaming </strong> y en memoria de quien fue nuestro histórico presidente, don José Said Saffie.
+                     Estamos muy contentos de poder reunirnos nuevamente en la XVI edición de nuestro tradicional Maklube Fraterno
+                        <strong>nuevamente vía streaming </strong>
                     </p>
                     <p>
                         Orgullosos de nuestro origen y de la generosidad que nos caracteriza
@@ -140,8 +143,7 @@ export default function Welcome() {
                         junto a grandes artistas e invitados. 
                     </p>
                     <p>
-                        Extendemos esta invitación a toda la gente de regiones y fuera de Chile a 
-                        unirse a nuestro Maklube 2020.
+                    Extendemos esta invitación a toda la gente de regiones y fuera de Chile a unirse a nuestro Maklube 2021
                     </p>
                     <p>
                         <strong>¡Nos vemos!</strong>
@@ -154,11 +156,16 @@ export default function Welcome() {
             </div>
             <div className="mid">
                 <div className="entrada">
-                    <img src={belen} alt="belen" className="img2 movil"  />
+                    <img
+                        src={imgBoy}
+                        className='imgBoy'
+                    />
+
                     <Link to="/ingresa-tus-datos">
                         <span className="btn">Compra tu entrada aquí</span>
                     </Link>
-                    <span className="btn" onClick={() => setVisible(true)}>Haz tu donación aquí</span>
+                    <img src={logoBelen} alt="belen" className="img2"/>
+                    {/* <span className="btn" onClick={() => setVisible(true)}>Haz tu donación aquí</span> */}
                 </div>
             </div>
             <div className="auspiciadores">

@@ -10,28 +10,30 @@ body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
-	background-color: #090909;
+	background-color: white;
 }
 a{
 	text-decoration: none;
 }
 a:hover{
-	text-decoration: none;	
+	text-decoration: none;
 }
 .tablet, .movil{ display: none !important; }
 .desktop{ display: block !important; }
 .contenedor{
-	display: table;
+	display: flex;
 	clear: both;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1280px;
+	background-color: white;
 }
 .bienvenida{
 	float: left;
 	width: 100%;
-	background: url('./assets/img/bienvenida.jpg') center center no-repeat;
-	background-size: cover; 
+	background: url('./assets/imagen/fondoBelen.png') center center no-repeat;
+	background-color: white;
+	background-size: cover;
 	height: 100vh;
 }
 .bienvenida .mid{
@@ -45,7 +47,7 @@ a:hover{
 	display: flex;
 	align-items: center;
 	height: calc(100vh - 170px);
-} 
+}
 .bienvenida .mid .middle{
 	float: left;
 	width: 100%;
@@ -57,7 +59,7 @@ a:hover{
 }
 .bienvenida .mid .maklube .img1{
 	float: left;
-    margin-left: 50px;
+    margin-left: 200px;
     width: 220px;
 }
 .bienvenida .mid .maklube .img2{
@@ -69,17 +71,17 @@ a:hover{
 .bienvenida .mid h3{
 	float: left;
 	width: 100%;
-	color: #fff;
-	font-size: 20px;
+	color: #000;
+	font-size: 24px;
 	margin: 30px 0 10px;
 	font-weight: 600;
 }
 .bienvenida .mid p{
 	float: left;
 	width: 100%;
-	color: #fff;
+	color: #000;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 16px;
 	padding: 0;
 }
 .bienvenida .mid p strong{
@@ -90,37 +92,57 @@ a:hover{
 	clear: both;
 	margin:  0 auto 10px;
 	padding-top: 20px;
-	border-top: 4px solid #e4bd3f; 
 }
 .bienvenida .mid .hora img{
 	margin: 0 auto;
+	width: 70%;
 }
 .bienvenida .mid .entrada{
     width: 100%;
-    position: absolute;
-	bottom: 30px;
-	left: 50%;
-	transform: translate(-50%);
+    /* position: absolute; */
+	/* bottom: 30px;
+	left: 50%; */
+	/* transform: translate(-50%); */
+	padding-top: 100px;
 	max-width: 100%;
 	padding: 0px 50px;
+	height: 600px;
+	padding-left: 100px;
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.bienvenida .mid .entrada img{
+
+.bienvenida .mid .entrada .imgBoy{
+	margin-top: 30px;
+	height: 70%;
+}
+/* .bienvenida .mid .entrada img{
 	margin: 0 auto 20px;
-}
+} */
 .bienvenida .mid .entrada .btn{
 	display: table;
 	float: left;
-	width: calc(50% - 20px);
+	width: calc(100% - 20px);
 	max-width: 300px;
 	color: #000;
 	text-transform: uppercase;
-	margin: 10px;
+	margin: 30px;
 	text-align: center;
 	height: 50px;
 	line-height: 35px;
 	text-decoration: none;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
+	background: #E4C3A0;
+	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
+}
+
+.bienvenida .mid .entrada .img2{
+	position: absolute;
+	width: 30%;
+	left: -150px;
+	top:480px;
 }
 .bienvenida .auspiciadores{
 	float: left;
@@ -133,35 +155,64 @@ a:hover{
 	margin: 0 auto;
 }
 .carro{
-	float: left;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	background: #0b0c0d;
+	height: 100vh;
+	background: #fff;
+	align-items: center;
 }
+
+
 .carro .header{
-	float: left;
-	width: 100%;
-	background: url('./assets/img/header.jpg') center center no-repeat;
-	background-size: cover; 
-	padding: 40px 0 30px;
+	width:100%;
+	/* padding: 100px; */
+	background-image: url('./assets/imagen/header-maklube.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+.carro .contenedor {
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+}
+
+.carro .contenedor img {
+	width: 80%;
+}
+
+.carro .contenedor2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	width: 80%;
 }
 .carro .header .maklube{
 	float: left;
 }
+
 .carro .header .belen{
 	float: right;
 	margin-top: 60px;
 }
 .carro .pasos{
-	float: left;
+	display: flex;
+	justify-content: space-around;
 	width: 100%;
-	background: #000000;
-	margin: 60px 0 50px;
+	background: transparent;
+	margin: 20px 0 40px;
 	color: #fff;
 	padding: 0 15px;
+	border: 2px solid #E4C3A0;
+	border-radius: 4px;
 }
 .carro .pasos .col{
 	float: left;
-	width: calc(100% / 3);
+	width: calc(100% / 4);
 	height: 65px;
 	line-height: 65px;
 	text-transform: uppercase;
@@ -172,14 +223,16 @@ a:hover{
 	width: 35px;
 	height: 35px;
 	color: #000;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
+	background:#e4c3a0;
+	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
 	border-radius: 100%;
 	line-height: 35px;
 	text-align: center;
 	margin: 15px 10px 0 0;
 	opacity: 0.3;
 }
+
+
 .carro .pasos .col .num.active{
 	opacity: 1;
 }
@@ -192,15 +245,15 @@ a:hover{
     font-size: 14px;
     display: flex;
     align-items: center;
+	color: #000;
 }
 .carro .datos{
-	float: left;
 	width: 100%;
 }
 .carro .datos h3{
 	float: left;
 	width: 100%;
-	color: #fff;
+	color: #000;
 	font-size: 18px;
     margin-bottom: 20px;
 }
@@ -213,6 +266,7 @@ a:hover{
 .carro .datos .campos{
 	float: left;
 	width: 100%;
+
 }
 .carro .datos .mid{
 	float: left;
@@ -228,6 +282,7 @@ a:hover{
 	margin-bottom: 20px;
 	position: relative;
 }
+
 .carro .datos .campos .campo .md{
 	float: left;
 	width: calc(50% - 10px);
@@ -243,18 +298,24 @@ a:hover{
 	height: 50px;
 	line-height: 50px;
 	padding: 0 20px;
-	color: #fff;
+	color: #000;
 	background: transparent;
 	border-image-slice: 1;
 	border-width: 1px;
 	border-style: solid;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
+	border-color: #e4c3a0;
 }
+
+.carro .contenedor2 .chile{
+	color: #000;
+}
+
 .carro .datos .campos .campo label{
 	position: absolute;
-	background: #0b0c0d;
+	background: #fff;
 	font-size: 10px;
-	color: #fff;
+	color: #000;
 	top: -6px;
 	left: 5px;
 	padding: 0 10px;
@@ -273,17 +334,19 @@ a:hover{
 .carro .datos .desc{
 	float: left;
 	width: 100%;
-	background: #000000;
+	background: white;
 	color: #fff;
 	padding: 30px 50px 30px;
 	margin-bottom: 50px;
+	border: 2px solid #E4C3A0;
+	border-radius: 4px;
 }
 .carro .datos .desc p{
 	float: left;
     width: 100%;
     font-size: 16px;
     margin-top: 0;
-    color: #fff;
+    color: #000;
 }
 .carro .datos .desc p span{
 	float: left;
@@ -291,19 +354,36 @@ a:hover{
 	margin-right: 5px;
     font-weight: 700;
 }
+
+.carro .datos .desc .num, 
+.carro .datos .desc2 .num {
+	float: left;
+	width: 33px;
+	height: 33px;
+	color: #000;
+	background: #E4C3A0;
+	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
+	border-radius: 100%;
+	line-height: 35px;
+	text-align: center;
+	margin: 0 10px 0 0;
+	opacity: 0.7;
+}
 .carro .datos .valor{
 	padding: 20px;
-	background: #181d1f;
+	background: white;
 	font-size: 20px;
 	font-weight: 700;
 	float: left;
 	width: 100%;
 	margin-bottom: 5px;
 	border-radius: 5px;
+	color: #000;
 }
 .carro .datos .valor span{
 	float: left;
 	width: 100%;
+	color: #000;
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -311,6 +391,14 @@ a:hover{
 	float: left;
 	width: 100%;
 	margin: 0 0 20px;
+}
+
+.carro .footer-carro{
+	background-color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0 20px 100px;
 }
 
 .custom-select{
@@ -325,7 +413,8 @@ a:hover{
 	border-width: 1px;
 	border-style: solid;
 	background: transparent;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	border-color: #e4c3a0;
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 }
 .custom-select.error{
 	border: 0;
@@ -356,21 +445,31 @@ a:hover{
     font-weight: 500;
     background: transparent;
     display: block;
+	background-color: white;
 }
 .carro .datos .campos .campo .custom-select label.selected{
 	display: none;
 	font-size: 10px;
     color: #00f;
-    background: #0b0c0d;
+    background: #fff;
     left: 0;
     top: 0;
 }
+
+.carro .datos .campos .medios .paypal,
+.carro .datos .campos .medios .pagoFacil{
+	width: 40%;
+}
+
+.carro .datos .campos .medios .pagoFacil{
+	width: 70%;
+}
 .select-selected {
-  	background-color: #0b0c0d;
+  	background-color: #fff;
   	padding: 0 16px;
   	cursor: pointer;
   	border: 0;
-  	color: #fff;
+  	color: #000;
   	height: 40px;
   	line-height: 40px;
   	width: 100%;
@@ -439,8 +538,8 @@ a:hover{
 	line-height: 35px;
 	text-decoration: none;
 	font-weight: 700;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
+	background: #E4C3A0
+	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
 }
 .footer{
 	float: left;
@@ -448,6 +547,10 @@ a:hover{
 	background: #090909;
 	padding: 10px 0;
 	position: relative;
+}
+
+.footer .contenedor {
+	background-color: white;
 }
 .footer .Up{
 	position: absolute;
@@ -468,17 +571,20 @@ a:hover{
 .carro .datos .desc2{
 	float: left;
 	width: 100%;
-	background: #000000;
-	color: #fff;
+	background: transparent;
+	border: 2px solid #e4c3a0;
+	border-radius: 4px;
+	color: #000;
 	padding: 30px 50px 30px;
 	margin-bottom: 50px;
 }
+
 .carro .datos .desc2 p{
 	float: left;
     width: 100%;
     font-size: 16px;
     margin-top: 0;
-    color: #fff;
+    color: #000;
 }
 .carro .datos .desc2 p label{
 	float: left;
@@ -494,7 +600,7 @@ a:hover{
 }
 .carro .datos .desc2 .valor{
 	padding: 20px;
-	background: #181d1f;
+	background: transparent;
 	font-size: 20px;
 	font-weight: 700;
 	float: left;
@@ -523,11 +629,12 @@ a:hover{
 .carro .datos .info p{
 	margin: 0 0 30px;
 	font-size: 16px;
+	color: #000;
 }
 .carro .datos .info p small{
 	float: left;
     width: 100%;
-    color: #fff;
+    color: #000;
     font-size: 14px;
 }
 .carro .datos .campo .ml{
@@ -549,7 +656,7 @@ a:hover{
     left: -10px;
     color: #fff;
     display: block;
-    font-size: 12px;	
+    font-size: 12px;
 }
 .carro .datos .campo .campo-r{
 	float: left;
@@ -558,7 +665,8 @@ a:hover{
 	border-width: 1px;
 	border-style: solid;
 	background: transparent;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	border-color: #e4c3a0;
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 	height: 50px;
 	line-height: 50px;
 }
@@ -574,6 +682,7 @@ a:hover{
 	left: auto;
     background: transparent;
 	font-size: 14px;
+	color: #000;
 }
 .carro .datos .campo .campo-r .radiobtn{
 	position: relative;
@@ -633,27 +742,30 @@ a:hover{
   	background: #c17c33;
 }
 .carro .datos .campo .campo-r .radiobtn input[type=radio]:checked ~ label{
-  	
+
 }
 .carro .resumen{
 	float: left;
 	width: 100%;
 	border-image-slice: 1;
 	border-width: 1px;
+	border-color: #e4c3a0;
 	border-style: solid;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 	color: #fff;
 	margin-bottom: 50px;
 }
 .carro .resumen .lines{
-	float: left;	
+	float: left;
 	width: 100%;
 	border-image-slice: 1;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	border-color: #e4c3a0;
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 	padding: 20px 20px 10px;
 	font-size: 16px;
+	color: #000;
 }
 .carro .resumen .lines .line{
 	float: left;
@@ -665,8 +777,9 @@ a:hover{
 	font-weight: 600;
 }
 .carro .resumen .total{
-	float: left;	
+	float: left;
 	width: 100%;
+	color: #000;
 	border-image-slice: 1;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -677,7 +790,7 @@ a:hover{
 }
 .carro .resumen .total span{
 	float: right;
-	font-weight: 600;	
+	font-weight: 600;
 }
 .carro .resumen .btns{
 	float: left;
@@ -695,8 +808,8 @@ a:hover{
 	line-height: 35px;
 	text-decoration: none;
 	font-weight: 700;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);	
+	background: #E4C3A0;	
+	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
 }
 .carro .resumen .btn:nth-child(2n){
 	margin-right: 0;
@@ -841,13 +954,56 @@ a:hover{
 .exito{
 	float: left;
 	width: 100%;
-	height: calc(100vh - 73px);
-	background: url('./assets/img/confirmacion.jpg') center center no-repeat;
-	background-size: cover; 
+	height: 100vh;
+	/* background: url('./assets/img/confirmacion.jpg') center center no-repeat; */
+	background-color: white;
+	background-image: url('./assets/imagen/fondoBelen.png');
+	background-size: cover;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.exito .imgBoy2{
+	width: 40%;
+	justify-content: center;
+}
+
+.exito .contenedor{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	background-color: transparent;
+}
+
+.exito .text {
+	background-color: #e4c3a0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding:20px;
+	margin-top: -35px;
+}
+
+.exito .text p{
+	width: 80%;
+}
+
+.banner-footer{
+	padding-top: 10px;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 5%;
 }
 .dialog{
 	position: absolute;
+	background-color: red;
 	bottom: 85px;
 	left: calc(50%);
 	transform: translate(-50%);
@@ -918,7 +1074,7 @@ a:hover{
 	text-decoration: none;
 	font-weight: 700;
 	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);	
+	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
 	padding: 13px 0;
 }
 .dialog .btns .btn:nth-child(2n){
@@ -993,7 +1149,7 @@ a:hover{
 .home .icons .cols .col .name{
 	float: left;
 	width: 100%;
-	font-size: 16px; 
+	font-size: 16px;
 	margin-top: 10px;
 }
 .home .icons .cols .col .name strong{
@@ -1210,7 +1366,7 @@ a:hover{
 	font-weight: 400;
 	font-size: 12px;
 	color: #1d1d1d;
-	padding: 5px;	
+	padding: 5px;
 }
 .dashboard .table2{
 	float: left;
@@ -1234,7 +1390,7 @@ a:hover{
 	font-weight: 400;
 	font-size: 12px;
 	color: white;
-	padding: 5px;	
+	padding: 5px;
 	background: black;
 	border: 1px solid white;
 }
@@ -1353,6 +1509,10 @@ a:hover{
 .donacion .campo .mid{
 	float: left;
 	width: 100%;
+}
+
+.exito .campo .mid .custom-select {
+	background-color: red;
 }
 .donacion .botones{
 
@@ -1498,7 +1658,7 @@ a:hover{
 	width: 200px;
 	height: 40px;
 	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);		
+	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
 	font-size: 20px;
 	line-height: 40px;
 	text-align: center;
@@ -1516,7 +1676,7 @@ a:hover{
 	float: right;
 	width: 200px;
 	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);		
+	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
   }
   .webinar .column-1 .botones .pregunta input{
 	float: right;
@@ -1531,7 +1691,7 @@ a:hover{
   .slick-list{
 	overflow: hidden;
   }
-  
+
   .webinar .column-2{
 	float: right;
 	width: 320px;
@@ -1592,7 +1752,7 @@ a:hover{
    opacity: 1;
    }
    .webinar .auspiciadores .sliderVertical .slick-dots li{
-	
+
 	margin: 0px;
    }*/
   .webinar .auspiciadores h2{
@@ -1612,7 +1772,7 @@ a:hover{
 	width: 100%;
 	padding: 8px 50px 50px;
   }
-  
+
   .row1 h1:first-child
   {
 	  float: left;
@@ -1647,7 +1807,7 @@ a:hover{
 	align-items: center;
 	position: relative;
   }
-  
+
   .row1 .campo input[type=radio]{
 	visibility: hidden;
   }
@@ -1662,7 +1822,7 @@ a:hover{
 	width: 8px;
 	border-radius: 20px;
 	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);		
+	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
 	position: absolute;
 	top: 32px;
 	left: 17px;
@@ -1696,7 +1856,7 @@ a:hover{
 	width: 8px;
 	border-radius: 20px;
 	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);		
+	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
 	position: absolute;
 	top: 12px;
 	left: 17px;
@@ -1772,7 +1932,7 @@ a:hover{
 	margin-bottom: 19px;
 	color: black;
   }
-  
+
   .row1 .resumen a strong{
 	font-weight: 500;
   }
@@ -1800,7 +1960,7 @@ a:hover{
   }
   .row1 .resumen .total .right{
 	float: right;
-	
+
   }
   .row1 .resumen .tituloResumen{
 	float: left;
@@ -1810,7 +1970,7 @@ a:hover{
 	margin: 0px;
 	margin-bottom: 15px;
   }
-  
+
   .row1 .campo #labelwey{
 	position: absolute;
 	padding-left: 0px;
@@ -1821,11 +1981,11 @@ a:hover{
 	font-size: 12px;
 	line-height: normal;
   }
-  
+
   .row1 .campo #labelwey small{
 	font-style: italic;
   }
-  
+
   .row1 .campo #labelwey2{
 	position: absolute;
 	padding-left: 0px;
@@ -1836,7 +1996,7 @@ a:hover{
 	font-size: 12px;
 	line-height: normal;
   }
-  
+
   .row1 .campo #labelwey2 small{
 	font-style: italic;
   }
@@ -1857,14 +2017,14 @@ a:hover{
 	left: 9px;
 	cursor: pointer;
   }
-  
+
   .header{
 	  float: left;
 	  width: 100%;
 	  padding: 0px 50px 20px;
 	  background-image: url(./assets/img/fondoSalaEspera.jpg);
 	  background-size: cover;
-	  
+
   }
   .rowSala{
 	  float: left;
@@ -1913,13 +2073,13 @@ a:hover{
 	justify-content: center;
 	align-items: flex-end;
   }
-  
+
   .rowSala .cronometro .countdown{
 	float: left;
 	width: 100%;
 	padding: 0px 20px;
 	max-width: 500px;
-	
+
 }
   .rowSala .cronometro .countdown div{
 	float: left;
@@ -1928,7 +2088,7 @@ a:hover{
 	border: 1px solid rgba(181,123,27,1);
 	border: 1px solid transparent;
 	border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%) 1;
-	
+
 	border-radius: 5px;
 	position: relative;
 	height: 125px;
@@ -2024,22 +2184,26 @@ a:hover{
 		width: 100% !important;
 		min-width: 100vw;
 		padding: 0px;
+		height: 100vh;
 	}
 	.container2 .row{
 		float: left;
 		width: 100%;
-		height: calc(100vh - 150px);
-		max-height: calc(100vh - 150px);
-		background-image: url(./assets/img/fondoLogin.png);
+		height: 100vh;
+		background-image: url(./assets/imagen/fondoBelen2.png);
 		background-size: cover;
 		background-position: top;
 		padding: 0px;
 		margin: 0px !important;
 	}
 	.container2 .row .column-1{
-		float: left;
 		min-width: 50% !important;
 		width: 50%;
+		background-image: url('./assets/imagen/login.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0;
 	}
 	.container2 .row .column-2{
 		float: left;
@@ -2056,16 +2220,30 @@ a:hover{
 	.container2 .row .column-2 .imagen{
 		float: left;
 		width: 100%;
+		height: 25%;
+		margin-bottom: 30px;
 		display: flex;
 		justify-content: center;
 	}
-	.container2 .row .column-2 .datos img{
-		
+	.container2 .row .column-2 .imagen:nth-child(2){
 		width: 100%;
+		height: 20%;
+	}
+	.container2 .row .column-2 .imagen:nth-child(2) img{
+		width: 50%;
+		margin-top: 20px;
+	}
+	.container2 .row .column-2 .datos img{
+		width: 60%;
 		max-width: 220px;
 	}
+
+	.container2 .row .column-2 .logo-belen {
+		width: 50%;
+		margin-top: 60px;
+	}
 	.container2 .row .column-2 h2{
-		color: white;
+		color: #000;
 		font-weight: bold;
 		font-size: 18px;
 		float: left;
@@ -2075,49 +2253,51 @@ a:hover{
 	.container2 .row .column-2 .datos span{
 		float: left;
 		width: 100%;
-		color: white;
+		color: #000;;
 		margin-bottom: 20px;
 	}
 	.container2 .row .column-2 .prueba{
-		float: center;
 		max-width: 400px;
 		margin: auto;
+		color: #000;
 	}
 	.container2 .row .column-2 .prueba .campo{
 		float: left;
 		width: 100%;
 		margin-bottom: 20px;
+		color: #000 ;
 	}
-	
+
 	.container2 .row .column-2 .prueba .campo button{
 		float: left;
 		width: 100%;
 		height: 40px;
 		color: #000;
 		border: none;
-	text-transform: uppercase;
-	text-align: center;
-	height: 50px;
-	line-height: 35px;
-	text-decoration: none;
-	transition-duration: 1s;
-	background: rgb(181,124,27);
-	font-weight: bold;
-	font-size: 14px;
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
+		text-transform: uppercase;
+		text-align: center;
+		height: 50px;
+		line-height: 35px;
+		text-decoration: none;
+		transition-duration: 1s;
+		background: rgb(181,124,27);
+		font-weight: bold;
+		font-size: 14px;
+		background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
 	}
 	.container2 .row .column-2 .prueba .campo button:hover{
 		transition-duration: 1s;
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 30%, rgba(255,236,136,1) 60%, rgba(181,123,27,1) 100%);
+		background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 30%, rgba(255,236,136,1) 60%, rgba(181,123,27,1) 100%);
 	}
 	.container2 .row .column-2 .prueba .campo input{
 		width: 100%;
 		max-width: 100%;
+		color: #000;
 	}
 	.MuiInputBase-input{
 		width: 100% !important;
 		float: left;
-		color: white !important;
+		color: black !important;
 	}
 	.container2 .pie{
 		float: left;
@@ -2159,7 +2339,7 @@ a:hover{
 		color: rgba(181,124,27,1) !important;
 	}
 	.MuiFormLabel-root{
-		color: white !important;
+		color: black !important;
 	}
 	button:focus{
 		border: none;
@@ -2184,7 +2364,7 @@ a:hover{
 		width: 100%;
 	  }
 	  #color{
-	  
+
 	  }
 	  .content{
 		float: left;
@@ -2233,7 +2413,7 @@ a:hover{
 		text-decoration: none;
 		text-transform: uppercase;
 	  }
-	  
+
 .home .mid.w .center .ant-btn{
 	display: block! important;
 }

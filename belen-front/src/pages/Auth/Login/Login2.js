@@ -5,7 +5,7 @@ import Alert from '@material-ui/lab/Alert';
 import jwtDecode from 'jwt-decode';
 
 import logo from '../../../assets/img/maklube2.png';
-import logo2 from '../../../assets/img/auspiciadores.png';
+import logo2 from '../../../assets/imagen/logoBelen.png';
 
 import { emailValidation, minLengthValidation } from '../../../utils/formValidation';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../../../utils/constants';
@@ -64,7 +64,7 @@ const Login2 = () => {
   
   const register = async () => {
     var data = {
-      code: user.code,
+      // code: user.code,
       fullName: inputs.fullName,
       email: inputs.email
     }
@@ -98,7 +98,7 @@ const Login2 = () => {
           <div className="column-1"></div>
           <div className="column-2">
             <div className="imagen">
-              <img src={logo} alt="logo" />
+              <img src={logo2} alt="logo" />
             </div>
             <div className="prueba">
               <form onChange={changeForm}>
@@ -135,11 +135,7 @@ const Login2 = () => {
             </Snackbar>
           </div>      
         </div>
-        <div className="pie">
-          <div className="blanco responsive">
-            <img src={logo2} width="100%" height="auto" alt="3" />
-          </div>
-        </div>
+
       </div>
     </>
   );

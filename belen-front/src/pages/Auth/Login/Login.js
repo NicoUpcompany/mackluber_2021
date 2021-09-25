@@ -15,8 +15,9 @@ import { getAccessTokenApi } from '../../../api/auth';
 import pagofacil from '../../../assets/img/pagofacil2.png';
 import paypal from '../../../assets/img/paypal.png';
 
-import logo from '../../../assets/img/maklube2.png'
-import logo2 from '../../../assets/img/auspiciadores.png'
+import logo from '../../../assets/imagen/logo2Belen.png';
+import logo2 from '../../../assets/imagen/logoBelen.png';
+
 
 import { MakeDonationApi, MakeDonationPaypalApi } from '../../../api/payment';
 
@@ -91,15 +92,15 @@ const Login = () => {
   }
   
   const register = async () => {      
-    if (  !inputs.code  ) {
-      setMensaje("El ticket es obligatorio");
+    if (  !inputs.email  ) {
+      setMensaje("El Email es obligatorio");
       handleClick();
-    } else if (!formValid.code ) {
-      setMensaje("Ticket no válido");
+    } else if (!formValid.email ) {
+      setMensaje("El email no es válido ");
       handleClick();
     } else {
       var data = {
-        code: inputs.code,
+        email: inputs.email,
         signInTime: moment().format('LLL')
       }
       const result = await signInApi(data);
@@ -190,7 +191,7 @@ const Login = () => {
           <div className="column-1"></div>
           <div className="column-2">
             <div className="imagen">
-              <img src={logo} alt="logo" />
+              <img src={logo2} alt="logo" />
             </div>
             <div className="prueba">
               <form onChange={changeForm}>
@@ -198,7 +199,7 @@ const Login = () => {
                   <h2>Ingresa al evento Maklube Fraterno</h2>      
                   <span>Ticket entrada</span>
                 </div>    
-                {/* <div className="campo">
+                <div className="campo">
                   <TextField 
                     id="email"
                     name="email"
@@ -206,8 +207,8 @@ const Login = () => {
                     onChange={inputValidation}
                     value={inputs.email}
                   />
-                </div> */}
-                <div className="campo">
+                </div>
+                {/* <div className="campo">
                   <TextField 
                     id="code" 
                     name="code"
@@ -215,17 +216,20 @@ const Login = () => {
                     onChange={inputValidation}
                     value={inputs.code}
                   />
-                </div>
+                </div> */}
                 <div className="campo">
                   <button type="button" onClick={() => register()}>Entrar al evento</button>
                 </div>
                 <div className="campo">
                   <button  type="button" onClick={() => toShop()} >Aún no he comprado mi entrada</button>
                 </div>
-                <div className="campo">
+                {/* <div className="campo">
                   <button  type="button" onClick={() => setVisible(true)}>Haz tu donación aquí</button>
-                </div>
+                </div> */}
               </form>
+                <div className="imagen">
+                  <img src={logo} alt="logo" />
+                </div>
             </div>
             <Snackbar anchorOrigin={{vertical: 'top', horizontal: 'right' }} open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error">
@@ -233,11 +237,6 @@ const Login = () => {
               </Alert>
             </Snackbar>
           </div>      
-        </div>
-        <div className="pie">
-          <div className="blanco responsive">
-            <img src={logo2} width="100%" height="auto" alt="logo2" />
-          </div>
         </div>
       </div>
           <Modal
@@ -291,9 +290,9 @@ const Login = () => {
                               </div>
                       </div>
                   </div>
-                  <div className="botones">
+                  {/* <div className="botones">
                       <span className="btn" onClick={() => makeDonation()}>Donar</span>
-                  </div>
+                  </div> */}
               </div>
           </Spin>
       </Modal>

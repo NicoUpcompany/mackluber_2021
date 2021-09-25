@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { notification } from 'antd';
 import { minLengthValidation } from '../../../utils/formValidation';
 
-import maklube from '../../../assets/img/maklube.png';
-import belen from '../../../assets/img/belen.png';
+import belen from '../../../assets/imagen/logo2Belen.png';
+import macklube from '../../../assets/imagen/logoBelen.png';
+
 
 export default function Carro2() {
 
@@ -47,15 +48,15 @@ export default function Carro2() {
         console.log(currencyType)
         if (currencyType) {
             if (hobValue) {
-                setHob(55000 * personCount);
-                setHobString(numberToString(55000 * personCount));
-                setTotalAmount((55000 * personCount) + 15000);
-                setTotalAmountString(numberToString((55000 * personCount) + 15000));
+                setHob(60000 * personCount);
+                setHobString(numberToString(60000 * personCount));
+                setTotalAmount((60000 * personCount) + 15000);
+                setTotalAmountString(numberToString((60000 * personCount) + 15000));
             } else {
-                setHob(55000 * 0);
-                setHobString(numberToString(55000 * 0));
-                setTotalAmount((55000 * 0) + 15000);
-                setTotalAmountString(numberToString((55000 * 0) + 15000));
+                setHob(60000 * 0);
+                setHobString(numberToString(60000 * 0));
+                setTotalAmount((60000 * 0) + 15000);
+                setTotalAmountString(numberToString((60000 * 0) + 15000));
             }
         } else {
             if (hobValue) {
@@ -232,13 +233,13 @@ export default function Carro2() {
     return (
         <>
             <div className="carro">
-                <div className="header">
+                 <div className="header">
                     <div className="contenedor">
-                        <div className="maklube"><img src={maklube} alt="maklube" /></div>
+                        <div className="maklube"><img src={macklube} alt="maklube" /></div>
                         <div className="belen"><img src={belen} alt="belen" /></div>
-                    </div>
+                     </div>
                 </div>
-                <div className="contenedor">
+                <div className="contenedor2">
                     <div className="pasos">
                         <div className="col">
                             <div className="num">1</div>
@@ -265,7 +266,7 @@ export default function Carro2() {
                                 <p>Solo en provincia de Santiago y Chicureo</p>
                                 <p>
                                     ¿Quieres vivir la Experiencia gastronómica?
-                                    <small>(Experiencia disponible hasta el 10.10.2020)</small>
+                                    <small>(Experiencia disponible hasta el 10.11.2021)</small>
                                 </p>
                                 
                                 <div className="campos">
@@ -393,27 +394,27 @@ export default function Carro2() {
 
                                 <h3><strong>¿Qué es una Experiencia Gastronómica?</strong></h3>
                                 <p>
-                                    <label>01 |</label> <span> Box de @ameliacorreaentucasa con productos de nuestros auspiciadores y patrocinadores, para compartir el día del evento.</span>
+                                    <label className='num'>1 </label> <span> Box de @ameliacorreaentucasa con productos de nuestros auspiciadores y patrocinadores, para compartir el día del evento.</span>
                                 </p>
                                 <p>
-                                    <label>02 |</label> <span> <strong>Cada BOX es para 2 personas e incluye: </strong>
+                                    <label className='num'>2 </label> <span> <strong>Cada BOX es para 2 personas e incluye: </strong>
                                          hummus - babaghanoush - mini pan pitas - 10 hojitas de parra - 6 empanaditas mechada - queso - productos Cial Alimentos - 10 dulces árabes SUK - 2 bebidas - 1 botella de vino "El Principal" - 1 vela para "Ceremonia de la Luz" - regalos.</span>
                                 </p>
                                 <p>
-                                    <label>03 |</label> <span> Puedes comprar 1 o más Box para la misma dirección.</span>
+                                    <label className='num'>3 </label> <span> Puedes comprar 1 o más Box para la misma dirección.</span>
                                 </p>
                                 <p>
-                                    <label>04 |</label> <span> Incluye el despacho</span>
+                                    <label className='num'>4 </label> <span> Incluye el despacho</span>
                                 </p>
                                 {currencyType ?
                                     <div className="valor">
                                         <span>Valor experiencia gastronómica para dos personas.</span>
-                                        CLP $55.000
+                                        CLP $60.000
                                     </div>
                                 :
                                     <div className="valor" style={{width: '100%'}}>
                                         <span>Valor experiencia gastronómica para dos personas.</span>
-                                        USD $70
+                                        USD $75
                                     </div>
                                 }
                             </div>                            
@@ -421,21 +422,18 @@ export default function Carro2() {
 
                     </div>
 
-                </div>
-            </div>
-
-            <div className="footer">
-                
-                <div className="contenedor">
-                    <img src={belen} alt="belen" width="150" />
-                    <div className="Up">
-                        <a href="https://upwebinar.cl/" rel="noopener noreferrer" target="_blank">
-                            <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
-                        </a>
+                    <div className="footer-carro">
+                        <img src={belen} alt="belen" width="150" />
+                        <div className="Up">
+                            <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
+                            </a>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
         </>
     )
 }
