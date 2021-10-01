@@ -130,7 +130,7 @@ export default function Welcome() {
                     <div className="middle">
                         <div className="maklube">
                             <img src={logoMaklube} alt="maklube" className="img1" />
-                            <img src={logoBelen} alt="belen" className="img2 tablet desktop"  />
+                            <img src={logoBelen} alt="belen" className="img2"  />
                         </div>
                         <h3>¡Bienvenidos al Maklube 2021!</h3>
                         <p>
@@ -174,6 +174,9 @@ export default function Welcome() {
             <div className="auspiciadores">
                 <img src={au} alt="au" className="tablet desktop" />
                 {/* <img src={au_m} alt="au_m" className="movil" width="100%" /> */}
+            </div>
+            <div className='auspiciadores-m'>
+                <img src={au_m} alt="au_m" className="movil" width="100%" />
             </div>
         </div>
         

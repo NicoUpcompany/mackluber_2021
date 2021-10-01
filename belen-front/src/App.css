@@ -131,7 +131,7 @@ a:hover{
 	/* bottom: 30px;
 	left: 50%; */
 	/* transform: translate(-50%); */
-	padding-top: 100px;
+	/* padding-top: 100px; */
 	max-width: 100%;
 	padding: 0px 50px;
 	height: 500px;
@@ -141,6 +141,8 @@ a:hover{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 20vh);
 }
 
 .bienvenida .middle .texto{
@@ -154,8 +156,8 @@ a:hover{
 }
 
 .bienvenida .mid .entrada .imgBoy{
-	margin-top: 30px;
-	height: 75%;
+	/* margin-top: 20%; */
+	height: 70%;
 }
 /* .bienvenida .mid .entrada img{
 	margin: 0 auto 20px;
@@ -195,11 +197,13 @@ a:hover{
 	bottom: -100px;
 	left: 0;
     background: white;
+	height: 15vh;
     /* padding: 20px 30px; */
 }
 
 .bienvenida .auspiciadores img{
 	/* margin: 0 auto; */
+	width: 100%;
 }
 .carro{
 	display: flex;
@@ -237,7 +241,7 @@ a:hover{
 .carro .header  .contenedor .belen img{
 	/* margin-top: 60px; */
 	float: right;
-	width: 50%;
+	width: 35%;
 
 }
 
@@ -407,8 +411,8 @@ a:hover{
 .carro .datos .desc .num, 
 .carro .datos .desc2 .num {
 	float: left;
-	width: 33px;
-	height: 33px;
+	width: 35px;
+	height: 35px;
 	color: #000;
 	background: #E4C3A0;
 	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
@@ -634,6 +638,7 @@ a:hover{
     font-size: 16px;
     margin-top: 0;
     color: #000;
+	font-family: fuente_mira;
 }
 .carro .datos .desc2 p label{
 	float: left;

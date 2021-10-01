@@ -1,4 +1,28 @@
+/* Pantalla Orlando */
+
+@media only screen and ( min-width:1560px ) and (max-width:2080px){
+
+	.bienvenida .auspiciadores{
+		height: 25vh;
+		width: 100%;
+		margin: 0;
+	}
+
+	.bienvenida .auspiciadores img {
+		width: 100%;
+	}
+	.bienvenida .texto {
+		font-size: 32px;
+	}
+
+	.bienvenida .mid .entrada .imgBoy{
+		margin-top: 20%;
+	}
+}
+
 /* TABLET */
+
+
 @media only screen and ( min-width:720px ) and (max-width:1060px){
 	.desktop, .movil{ display: none !important; }
 	.tablet{ display: block !important; }
@@ -148,20 +172,36 @@
 	.bienvenida .mid .hora img{
 		width: 100%;
 	}
+
+	.bienvenida .mid .maklube{
+		padding: 0;
+	}
+
 	.bienvenida .mid .maklube .img1{
 		float: none;
 		margin: 0 auto;
+		height: 30%;
+		margin-right: 10px;
+	}
+	.bienvenida .mid .maklube .img2{
+		float: none;
+		margin: 0 auto;
+		height: 20%;
 	}
 	.bienvenida .mid .entrada .img2{
 		left: 50%;
 		bottom: 0;
 	}
 
+	.bienvenida .mid .entrada{
+		margin-top: 0;
+		padding-top: 0;
+	}
 	
 	.bienvenida .auspiciadores{
 		display: none;
 	}
-	
+
 	.bienvenida .mid .entrada .btn{
 		display: table;
 		float: left;
@@ -200,9 +240,9 @@
 	}
 
 	.carro .pasos .col .num {
-		width: 20px;
-		height: 20px;
-		line-height: 20px;
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
 		text-align: center;
 		margin: 20px 10px 0 0;
 		opacity: 0.3;
@@ -210,7 +250,16 @@
 	}
 
 	.carro .pasos .col span{
-		font-size: 8px;
+		font-size: 6px;
+	}
+
+	.carro .header{
+		padding: 0;
+		padding-top: 20px;
+	}
+
+	.carro .header .contenedor{
+		width: 100%;
 	}
 
 	.carro .header .belen{
@@ -221,9 +270,10 @@
 		padding: 30px;
 	}
 	.carro .datos .campos .campo .campo-r .radio label{
-	    font-size: 12px;
-    	line-height: 20px;
+	    font-size: 8px;
+    	line-height: 8px;
 		top: 10px;
+		width: 120%;
 	}
 	.carro .datos .campo .ms .custom-select label{
 		top: -22px;

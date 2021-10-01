@@ -262,7 +262,7 @@ export default function Carro2() {
                     <div className="datos">
                         <div className="mid">
                             <div className="info">
-                                <h3>Agregar caja Gastronómica</h3>
+                                <h3>Agregar Caja Gastronómica</h3>
                                 <p>Solo en provincia de Santiago y Chicureo</p>
                                 <p>
                                     ¿Quieres vivir la Experiencia gastronómica?
@@ -407,13 +407,13 @@ export default function Carro2() {
                                     <label className='num'>4 </label> <span> Incluye el despacho</span>
                                 </p> */}
                                 <p>
-                                    <label className='num'>1 </label> <span> Caja con productos para dos personas que incluye bebestible, comida árabe, dulces, sorpresas y regalos de nuestros auspiciadores y patrocinadores, para compartir el día del.</span>
+                                    <label className='num'>1 </label> <span> Caja de<strong> Joaquin Lea Plaza</strong>  con productos para<strong> dos personas</strong> , que incluye: Vino tinto, hummus, pate de ave y oporto, empanaditas de masa philo, hojas de parra, pan pita minis, queso camembert, queso gruyere, mantecoso, damasco turco y romero, tostadas de pan pita crujiente, cecinas, dulces árabes y mucho más</span>
                                 </p>
                                 <p>
-                                    <label className='num'>2 </label> <span> <strong>Puedes comprar 1 o más cajas gastronómicas para la misma dirección</strong></span>
+                                    <label className='num'>2 </label> <span> <strong>Puedes comprar 1 o más cajas gastronómicas para la misma dirección.</strong></span>
                                 </p>
                                 <p>
-                                    <label className='num'>3 </label> <span> Incluye el despacho</span>
+                                    <label className='num'>3 </label> <span> Incluye el despacho.</span>
                                 </p>
                                 {currencyType ?
                                     <div className="valor">
