@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { notification, Form } from 'antd';
 
 import { emailValidation, minLengthValidation, rutValidation } from '../../../utils/formValidation';
-import belen from '../../../assets/imagen/logo2Belen.png';
+import belen from '../../../assets/imagen/logoBelenColor.png';
 import macklube from '../../../assets/imagen/logoBelen.png';
  
 export default function Carro1() {
@@ -547,11 +547,11 @@ export default function Carro1() {
             <div className="carro">
                 <div className="header">
                     <div className="contenedor">
-                        <div className="maklube"><img src={macklube} alt="maklube" /></div>
-                        <div className="belen"><img src={belen} alt="belen" /></div>
+                        <div className="maklube"><img  class='logo' src={macklube} alt="maklube" /></div>
+                        <div className="belen"><img class='logo'  src={belen} alt="belen" /></div>
                      </div>
                 </div>
-                <div className="contenedor2">{}
+                <div className="contenedor2">
                     <div className="pasos">
                         <div className="col">
                             <div className="num active">1</div>
@@ -560,7 +560,7 @@ export default function Carro1() {
                         
                         <div className="col">
                             <div className="num">2</div>
-                            <span>Agregar Experiencia Gastronómica</span>
+                            <span>Agregar caja Gastronómica</span>
                         </div>
                        
                         <div className="col">
@@ -649,10 +649,10 @@ export default function Carro1() {
                                             <span className="num">01</span> |  Al comprar tu entrada, estás adquiriendo <strong>UNA</strong> conexión al evento.
                                         </p>
                                         <p>
-                                            <span className="num">02</span> |  Luego, llegará a tu mail un código con el link para ingresar a nuestro Maklube fraterno. <small>(si no lo encuentras revisa el spam)</small>
+                                            <span className="num">02</span> |  Luego de la compra, llegará a tu mail la confirmación de esta. <small>(si no lo encuentras revisa el spam)</small>
                                         </p>
                                         <p>
-                                            <span className="num">03</span> |  Dicho código puede ser usado <strong>una vez</strong> y en <strong>un solo dispositivo</strong> (computador, smart TV, tablet, celular), ya que es bloqueado después del ingreso.
+                                            <span className="num">03</span> |  El día del evento deberas ingresar con el mail registrado, este puede ser ingresado <strong>una sola vez</strong> y en <strong>un solo dispositivo</strong> (computador, smart TV, tablet, celular), ya que es bloqueado después del ingreso.
                                         </p>
                                         {/*
                                         <p>
@@ -680,12 +680,12 @@ export default function Carro1() {
                         </div>
                     </Form>
                     <div className="footer-carro">
-                        <img src={belen} alt="belen" width="150" />
-                        <div className="Up">
+                        {/* <img src={belen} alt="belen" width="150" /> */}
+                        {/* <div className="Up">
                             <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

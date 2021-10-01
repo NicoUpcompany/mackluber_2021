@@ -4,8 +4,9 @@ import { LoadingOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import uuid from 'uuid/v4';
 
-import belen from '../../../assets/imagen/logo2Belen.png';
+import belen from '../../../assets/imagen/logoBelenColor.png';
 import macklube from '../../../assets/imagen/logoBelen.png';
+ 
 import pagofacil from '../../../assets/imagen/pagofacil.png';
 import paypal from '../../../assets/imagen/paypal.png';
 
@@ -162,23 +163,40 @@ export default function Carro4() {
             if (guestsStatus) {
                 setFinalEntradaInvitados((finalEntradaInvitados / 15000) * 20)
                 setFinalEntradaInvitadosString((finalEntradaInvitados / 15000) * 20)
-                setInputs({
-                    ...inputs,
-                    hob: (inputs.hob / 60000) * 70,
-                    hobString: (inputs.hob / 60000) * 70
-                });
-                setFinalHobInvitados((finalHobInvitados / 60000) * 70)
-                setFinalHobInvitadosString((finalHobInvitados / 60000) * 70)
-                setTotalAmount(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20)
-                setTotalAmountString(numberToString(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20))
+            //     setInputs({
+            //         ...inputs,
+            //         hob: (inputs.hob / 60000) * 70,
+            //         hobString: (inputs.hob / 60000) * 70
+            //     });
+            //     setFinalHobInvitados((finalHobInvitados / 60000) * 70)
+            //     setFinalHobInvitadosString((finalHobInvitados / 60000) * 70)
+            //     setTotalAmount(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20)
+            //     setTotalAmountString(numberToString(((finalEntradaInvitados / 15000) * 20) + ((inputs.hob / 60000) * 70) + ((finalHobInvitados / 60000) * 70) + 20))
+                   setInputs({
+                       ...inputs, 
+                       hob: 0,
+                       hobString: 0
+                   }) 
+                   setFinalHobInvitados(0);
+                   setFinalHobInvitadosString(0)
+                   setTotalAmount(((finalEntradaInvitados/15000) * 20 ) + 20 )
+                   setTotalAmountString(numberToString(((finalEntradaInvitados/15000) * 20 ) + 20))
             } else {
+                // setInputs({
+                //     ...inputs,
+                //     hob: (inputs.hob / 60000) * 70,
+                //     hobString: (inputs.hob / 60000) * 70
+                // });
+                // setTotalAmount(((inputs.hob / 60000) * 70) + 20)
+                // setTotalAmountString(numberToString(((inputs.hob / 60000) * 70) + 20))
                 setInputs({
-                    ...inputs,
-                    hob: (inputs.hob / 60000) * 70,
-                    hobString: (inputs.hob / 60000) * 70
-                });
-                setTotalAmount(((inputs.hob / 60000) * 70) + 20)
-                setTotalAmountString(numberToString(((inputs.hob / 60000) * 70) + 20))
+                    ...inputs, 
+                    hob: 0,
+                    hobString: 0
+                }) 
+                setTotalAmount(((finalEntradaInvitados/15000) * 20 ) + 20 )
+                setTotalAmountString(numberToString(((finalEntradaInvitados/15000) * 20 ) + 20))
+
             }
         } else {
             setInputs({
@@ -478,7 +496,7 @@ export default function Carro4() {
                         
                         <div className="col">
                             <div className="num">2</div>
-                            <span>Agregar Experiencia Gastronómica</span>
+                            <span>Agregar caja Gastronómica</span>
                         </div>
                        
                         <div className="col">
@@ -520,8 +538,8 @@ export default function Carro4() {
                                                     }
                                                     {ticketStatus ? <div className="line">Entrada Chile (Invitados)<span>${finalEntradaInvitadosString}</span></div> : <span></span>}
                                                     
-                                                    {inputs.hobValue ? <div className="line">Expriencia gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
-                                                    {/* {usersHobStatus ? <div className="line">Expriencia gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> : <span></span>} */}
+                                                    { ( inputs.hobValue && currencyTypeString==='CLP') ? <div className="line">Caja gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
+                                                    { ( usersHobStatus && currencyTypeString==='CLP' ) ? <div className="line">Caja gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> : <span></span>} 
                                                    
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
@@ -536,9 +554,17 @@ export default function Carro4() {
                                                     :
                                                         <div className="line">Entrada Otros países <span>$20</span></div>
                                                     }
-                                                    
-                                                    {inputs.hobValue ? <div className="line">Expriencia gastronómica<span>${inputs.hobString}</span></div> : <span></span>}
-                                                   
+                                                    {
+                                                        (inputs.hobValue && currencyTypeString==='CLP')
+                                                            ? <div className="line">Caja gastronómica<span>${inputs.hobString}</span></div> 
+                                                            : <span></span>
+                                                    }
+                                                    {
+                                                        (usersHobStatus && currencyTypeString==='CLP' && finalHobInvitadosString )
+                                                            ? <div className="line">Caja gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> 
+                                                            : <span></span>
+                                                    }
+                                               
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns">
@@ -592,12 +618,12 @@ export default function Carro4() {
 
                 
                 <div className="footer-carro">
-                        <img src={belen} alt="belen" width="150" />
-                        <div className="Up">
+                        {/* <img src={belen} alt="belen" width="150" /> */}
+                        {/* <div className="Up">
                             <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
                             </a>
-                        </div>
+                        </div> */}
                     </div>                    
             </div>
 

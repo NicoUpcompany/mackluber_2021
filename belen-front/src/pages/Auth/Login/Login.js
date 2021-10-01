@@ -197,7 +197,7 @@ const Login = () => {
               <form onChange={changeForm}>
                 <div className="datos">
                   <h2>Ingresa al evento Maklube Fraterno</h2>      
-                  <span>Ticket entrada</span>
+                  {/* <span>Ticket entrada</span> */}
                 </div>    
                 <div className="campo">
                   <TextField 

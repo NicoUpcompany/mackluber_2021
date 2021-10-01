@@ -74,18 +74,18 @@ const Streaming = () => {
         setOpen2(false);
     }
     useEffect(() => {
-        var token = getAccessTokenApi();
-        if (token !== null) {
-            var decodedToken = jwtDecode(token);
-            setUser(decodedToken);
-            const data = {
-                code: decodedToken.code,
-                streamTime: moment().format('LLL')
-            }
-            updateStreamApi(token, data);
-        } else {
-            window.location.href = "/iniciarsesion";
-        }
+        // var token = getAccessTokenApi();
+        // if (token !== null) {
+        //     var decodedToken = jwtDecode(token);
+        //     setUser(decodedToken);
+        //     const data = {
+        //         code: decodedToken.code,
+        //         streamTime: moment().format('LLL')
+        //     }
+        //     updateStreamApi(token, data);
+        // } else {
+        //     window.location.href = "/iniciarsesion";
+        // }
 
         var time
         $(function(){
@@ -167,7 +167,7 @@ const Streaming = () => {
                 <div className="webinar">
                     <div className="column-1">
                         <div className="videoWebinar">
-                            <iframe src="https://vimeo.com/event/380398/embed" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <iframe src="https://player.vimeo.com/video/612621185?h=f7c8edba30" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </div>
                         <div className="botones">
                             <div className="donacion">

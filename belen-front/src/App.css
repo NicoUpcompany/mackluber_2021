@@ -1,3 +1,14 @@
+@font-face {
+	font-family: fuente_helvetica;
+	src: url(./fonts/Helvetica.ttc);
+}
+
+@font-face {
+	font-family: fuente_mira;
+	src: url(./fonts/Mirandah\ -\ Normal.otf);
+}
+
+
 *{
 	box-sizing: border-box;
 	outline: none;
@@ -8,7 +19,8 @@ img{
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+	font-family: fuente_helvetica;
 	font-size: 14px;
 	background-color: white;
 }
@@ -31,22 +43,28 @@ a:hover{
 .bienvenida{
 	float: left;
 	width: 100%;
-	background: url('./assets/imagen/fondoBelen.png') center center no-repeat;
-	background-color: white;
 	background-size: cover;
 	height: 100vh;
+	padding: 0 30px;
+	background: url('./assets/imagen/fondoBelen.png') center center no-repeat;
 }
+
+.bienvenida .cont {
+	height: calc(100vh-10vh);
+}
+
 .bienvenida .mid{
 	float: left;
 	width: 50%;
 	position: relative;
 	height: calc(100vh - 170px);
 	padding: 0 50px;
+	
 }
 .bienvenida .mid.m{
 	display: flex;
 	align-items: center;
-	height: calc(100vh - 170px);
+	height: calc(100vh - 200px);
 }
 .bienvenida .mid .middle{
 	float: left;
@@ -56,32 +74,41 @@ a:hover{
 .bienvenida .mid .maklube{
 	float: left;
 	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 100px;
+	height: 40vh;
 }
 .bienvenida .mid .maklube .img1{
 	float: left;
-    margin-left: 200px;
-    width: 220px;
+    /* margin-left: 200px; */
+    /* width: 220px; */
+	height: 70%;
 }
 .bienvenida .mid .maklube .img2{
 	float: right;
 	margin-top: 25px;
 	margin-right: 50px;
-	width: 200px;
+	height: 40%;
 }
 .bienvenida .mid h3{
 	float: left;
 	width: 100%;
-	color: #000;
-	font-size: 24px;
+	color: #494949;
+	font-size: 32px;
 	margin: 30px 0 10px;
 	font-weight: 600;
+	font-family: fuente_mira;
+	margin-top: -10px;
+	margin-bottom: 20px;
 }
 .bienvenida .mid p{
 	float: left;
 	width: 100%;
 	color: #000;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 14px;
 	padding: 0;
 }
 .bienvenida .mid p strong{
@@ -91,7 +118,8 @@ a:hover{
 	display: table;
 	clear: both;
 	margin:  0 auto 10px;
-	padding-top: 20px;
+	padding: 10px 0 40px 0;
+	margin-bottom: 10px;
 }
 .bienvenida .mid .hora img{
 	margin: 0 auto;
@@ -106,8 +134,8 @@ a:hover{
 	padding-top: 100px;
 	max-width: 100%;
 	padding: 0px 50px;
-	height: 600px;
-	padding-left: 100px;
+	height: 500px;
+	/* padding-left: 100px; */
 	position: relative;
 	text-align: center;
 	display: flex;
@@ -115,9 +143,19 @@ a:hover{
 	align-items: center;
 }
 
+.bienvenida .middle .texto{
+	position: absolute;
+	width: 50%;
+	/* bottom: 10; */
+	right: -90px;
+	font-size: 18px;
+	font-weight: 600;
+	font-family: fuente_helvetica;
+}
+
 .bienvenida .mid .entrada .imgBoy{
 	margin-top: 30px;
-	height: 70%;
+	height: 75%;
 }
 /* .bienvenida .mid .entrada img{
 	margin: 0 auto 20px;
@@ -127,7 +165,7 @@ a:hover{
 	float: left;
 	width: calc(100% - 20px);
 	max-width: 300px;
-	color: #000;
+	color: #494949;
 	text-transform: uppercase;
 	margin: 30px;
 	text-align: center;
@@ -135,6 +173,10 @@ a:hover{
 	line-height: 35px;
 	text-decoration: none;
 	background: #E4C3A0;
+	font-family: fuente_helvetica;
+	font-weight: 600;
+	border-radius: 10px;
+	font-size: 14px;
 	/* background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%); */
 }
 
@@ -142,17 +184,22 @@ a:hover{
 	position: absolute;
 	width: 30%;
 	left: -150px;
-	top:480px;
+	bottom: 15%;
+
 }
 .bienvenida .auspiciadores{
 	float: left;
     width: calc(100% - 100px);
-    margin: 0 50px;
-    background: #fff;
-    padding: 20px 30px;
+    margin: 50px 50px;
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+    background: white;
+    /* padding: 20px 30px; */
 }
+
 .bienvenida .auspiciadores img{
-	margin: 0 auto;
+	/* margin: 0 auto; */
 }
 .carro{
 	display: flex;
@@ -165,23 +212,33 @@ a:hover{
 
 
 .carro .header{
-	width:100%;
-	/* padding: 100px; */
+	width:80%;
+	padding: 50px;
 	background-image: url('./assets/imagen/header-maklube.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 30vh;
+	display: flex;
 }
 
-.carro .contenedor {
+.carro .header .contenedor {
 	background-color: transparent;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.carro .contenedor img {
-	width: 80%;
+.carro .header .contenedor .maklube img{
+	float: left;
+	width: 100%;
+}
+
+.carro .header  .contenedor .belen img{
+	/* margin-top: 60px; */
+	float: right;
+	width: 50%;
+
 }
 
 .carro .contenedor2{
@@ -190,14 +247,6 @@ a:hover{
 	align-items: center;
 	align-content: center;
 	width: 80%;
-}
-.carro .header .maklube{
-	float: left;
-}
-
-.carro .header .belen{
-	float: right;
-	margin-top: 60px;
 }
 .carro .pasos{
 	display: flex;
@@ -398,7 +447,7 @@ a:hover{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 0 20px 100px;
+	padding: 20px 0 20px 0;
 }
 
 .custom-select{
@@ -440,7 +489,7 @@ a:hover{
     left: 8px;
     transition: .3s all ease;
     opacity: 1;
-    font-size: 12px;
+    font-size: 10px;
     color: #666;
     font-weight: 500;
     background: transparent;
@@ -682,7 +731,13 @@ a:hover{
 	left: auto;
     background: transparent;
 	font-size: 14px;
+	line-height: 1.8;
+	padding-top: 10px;
 	color: #000;
+}
+
+.carro .datos .campos .campo .campo-r .radio label small{
+	font-size: 7px;
 }
 .carro .datos .campo .campo-r .radiobtn{
 	position: relative;
@@ -783,7 +838,8 @@ a:hover{
 	border-image-slice: 1;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	border-color: #e4c3a0;
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 	padding: 20px;
 	font-weight: 600;
 	font-size: 18px;
@@ -801,6 +857,7 @@ a:hover{
 	float: left;
 	width: calc(50% - 10px);
 	color: #000;
+	font-size: 14px;
 	text-transform: uppercase;
 	margin-right: 20px;
 	text-align: center;
@@ -832,7 +889,8 @@ a:hover{
 	border-image-slice: 1;
 	border-width: 1px;
 	border-style: solid;
-	border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1));
+	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
+	border-color: #e4c3a0;
 	margin-bottom: 30px;
 }
 .carro .datos .inscritos .line{
@@ -841,13 +899,14 @@ a:hover{
 	padding: 20px;
 }
 .carro .datos .inscritos .line:hover{
-	background: #131415;
+	background: #E4C3A0;
+	color: white;
 }
 .carro .datos .inscritos .line .v{
 	float: left;
 	min-width: 30%;
 	max-width: 45%;
-	color: #fff;
+	color: #000;
 	height: 46px;
 	font-size: 14px;
 }
@@ -856,7 +915,7 @@ a:hover{
     width: 100%;
     font-size: 10px;
     margin-bottom: 6px;
-    color: #fff;
+    color: #000;
     font-weight: 600;
 }
 .carro .datos .inscritos .line .opciones{
@@ -867,7 +926,7 @@ a:hover{
 .carro .datos .inscritos .line .opciones span{
 	float: left;
 	width: 100%;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
 	font-size: 12px;
 }
@@ -967,7 +1026,7 @@ a:hover{
 }
 
 .exito .imgBoy2{
-	width: 40%;
+	width: 30%;
 	justify-content: center;
 }
 
@@ -987,6 +1046,7 @@ a:hover{
 	width: 50%;
 	padding:20px;
 	margin-top: -35px;
+	margin-bottom: 10px;
 }
 
 .exito .text p{
@@ -996,10 +1056,19 @@ a:hover{
 .banner-footer{
 	padding-top: 10px;
 	display: flex;
+	height: 10vh;
 	width: 100%;
 	justify-content: space-around;
 	position: absolute;
 	bottom: 5%;
+}
+
+.exito .banner-footer{
+	width: 70%;
+}
+
+.banner-footer img {
+	height: 100%;
 }
 .dialog{
 	position: absolute;
@@ -1272,6 +1341,7 @@ a:hover{
 .dashboard .header .logo{
 	float: left;
 	margin: 20px auto;
+
 }
 .dashboard .row{
 	float: left;
@@ -1510,9 +1580,8 @@ a:hover{
 	float: left;
 	width: 100%;
 }
-
 .exito .campo .mid .custom-select {
-	background-color: red;
+	/* background-color: red; */
 }
 .donacion .botones{
 
@@ -2417,3 +2486,5 @@ a:hover{
 .home .mid.w .center .ant-btn{
 	display: block! important;
 }
+
+

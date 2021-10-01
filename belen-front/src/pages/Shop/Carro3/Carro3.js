@@ -3,8 +3,9 @@ import { notification, Form } from 'antd';
 
 import { emailValidation, minLengthValidation, rutValidation } from '../../../utils/formValidation';
 
-import belen from '../../../assets/imagen/logo2Belen.png';
+import belen from '../../../assets/imagen/logoBelenColor.png';
 import macklube from '../../../assets/imagen/logoBelen.png';
+ 
 
 var arrayAux = [];
 
@@ -368,6 +369,7 @@ export default function Carro3() {
             setTicketStatus(true);
             setHobCount(hobCount + 1);
             setUsersCount(usersCount + 1);
+            clearForm();
         }
     }
 
@@ -455,7 +457,7 @@ export default function Carro3() {
                         
                         <div className="col">
                             <div className="num">2</div>
-                            <span>Agregar Experiencia Gastronómica</span>
+                            <span>Agregar caja Gastronómica</span>
                         </div>
                        
                         <div className="col">
@@ -489,7 +491,7 @@ export default function Carro3() {
                                              <input 
                                                 type="email" 
                                                 name="userEmail" 
-                                                placeholder="Email" 
+                                                placeholder="Email invitado" 
                                                 onChange={inputValidation}
                                                 value={guestInputs.userEmail}
                                             />
@@ -510,8 +512,7 @@ export default function Carro3() {
                                         <span onClick={() => addUser()} className="btn">Agregar al carro</span>
                                     </div>
                                     <div className="campo">&nbsp;</div>
-                                    {/*
-                                    <h3>Experiencia Gastronómica para invitados</h3>
+                                    <h3>Caja Gastronómica para invitados</h3>
                                     <div className="campo">
                                         <div className="ml">
                                             <div className="campo-r">
@@ -606,9 +607,8 @@ export default function Carro3() {
                                         </div>
                                     </div>
                                     <div className="campo">
-                                        <span onClick={() => addExperience()} className="btn">Agregar experiencia</span>
+                                        <span onClick={() => addExperience()} className="btn">Agregar la caja</span>
                                     </div>
-                                    */}
                                     <div className="campo">
                                         <span onClick={() => clearForm()} className="btn">Agregar otro invitado</span>
                                     </div>
@@ -643,10 +643,10 @@ export default function Carro3() {
                                                 <div className="line">Entrada otros países <span>$20</span></div>
                                             }
                                             {ticketStatus ? <div className="line">Entrada Chile (Invitados)<span>${ticketValueString}</span></div> : <span></span>}
-                                            {/*
-                                            {inputs.hobValue ? <div className="line">Expriencia gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
-                                            {usersHobStatus ? <div className="line">Expriencia gastronómica (Invitados)<span>${hobString}</span></div> : <span></span>}
-                                            */}
+                                            
+                                            {inputs.hobValue ? <div className="line">Caja gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
+                                            {usersHobStatus ? <div className="line">Caja gastronómica (Invitados)<span>${hobString}</span></div> : <span></span>}
+                                           
                                         </div>
                                         <div className="total">Total <span>${totalAmountString}</span></div>
                                         <div className="btns">
@@ -660,12 +660,12 @@ export default function Carro3() {
                     </Form>
 
                     <div className="footer-carro">
-                        <img src={belen} alt="belen" width="150" />
-                        <div className="Up">
+                        {/* <img src={belen} alt="belen" width="150" /> */}
+                        {/* <div className="Up">
                             <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

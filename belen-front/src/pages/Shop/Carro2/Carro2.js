@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { notification } from 'antd';
 import { minLengthValidation } from '../../../utils/formValidation';
 
-import belen from '../../../assets/imagen/logo2Belen.png';
+import belen from '../../../assets/imagen/logoBelenColor.png';
 import macklube from '../../../assets/imagen/logoBelen.png';
-
+ 
 
 export default function Carro2() {
 
@@ -233,10 +233,10 @@ export default function Carro2() {
     return (
         <>
             <div className="carro">
-                 <div className="header">
+                <div className="header">
                     <div className="contenedor">
-                        <div className="maklube"><img src={macklube} alt="maklube" /></div>
-                        <div className="belen"><img src={belen} alt="belen" /></div>
+                        <div className="maklube"><img  class='logo' src={macklube} alt="maklube" /></div>
+                        <div className="belen"><img class='logo'  src={belen} alt="belen" /></div>
                      </div>
                 </div>
                 <div className="contenedor2">
@@ -247,7 +247,7 @@ export default function Carro2() {
                         </div>
                         <div className="col">
                             <div className="num active">2</div>
-                            <span>Agregar Experiencia Gastronómica</span>
+                            <span>Agregar caja Gastronómica</span>
                         </div>
                         <div className="col">
                             <div className="num">3</div>
@@ -262,11 +262,11 @@ export default function Carro2() {
                     <div className="datos">
                         <div className="mid">
                             <div className="info">
-                                <h3>Agregar Experiencia Gastronómica</h3>
+                                <h3>Agregar caja Gastronómica</h3>
                                 <p>Solo en provincia de Santiago y Chicureo</p>
                                 <p>
                                     ¿Quieres vivir la Experiencia gastronómica?
-                                    <small>(Experiencia disponible hasta el 10.11.2021)</small>
+                                    <small>(Compra disponible hasta el 09.11.2021)</small>
                                 </p>
                                 
                                 <div className="campos">
@@ -378,7 +378,7 @@ export default function Carro2() {
                                             <div className="line">Entrada otros países <span>$20</span></div>
                                         }
                                         
-                                        {hobValue ? <div className="line">Expriencia gastronómica <span>${hobString}</span></div> : <span></span>}
+                                        {hobValue ? <div className="line">Caja gastronómica <span>${hobString}</span></div> : <span></span>}
                                     </div>
                                     <div className="total">Total <span>${totalAmountString}</span></div>
                                     <div className="btns">
@@ -392,8 +392,8 @@ export default function Carro2() {
                         <div className="mid">
                             <div className="desc2">
 
-                                <h3><strong>¿Qué es una Experiencia Gastronómica?</strong></h3>
-                                <p>
+                                <h3><strong>¿Qué es una caja gastronómica?</strong></h3>
+                                {/* <p>
                                     <label className='num'>1 </label> <span> Box de @ameliacorreaentucasa con productos de nuestros auspiciadores y patrocinadores, para compartir el día del evento.</span>
                                 </p>
                                 <p>
@@ -405,15 +405,24 @@ export default function Carro2() {
                                 </p>
                                 <p>
                                     <label className='num'>4 </label> <span> Incluye el despacho</span>
+                                </p> */}
+                                <p>
+                                    <label className='num'>1 </label> <span> Caja con productos para dos personas que incluye bebestible, comida árabe, dulces, sorpresas y regalos de nuestros auspiciadores y patrocinadores, para compartir el día del.</span>
+                                </p>
+                                <p>
+                                    <label className='num'>2 </label> <span> <strong>Puedes comprar 1 o más cajas gastronómicas para la misma dirección</strong></span>
+                                </p>
+                                <p>
+                                    <label className='num'>3 </label> <span> Incluye el despacho</span>
                                 </p>
                                 {currencyType ?
                                     <div className="valor">
-                                        <span>Valor experiencia gastronómica para dos personas.</span>
+                                        <span>Valor caja gastronómica para dos personas.</span>
                                         CLP $60.000
                                     </div>
                                 :
                                     <div className="valor" style={{width: '100%'}}>
-                                        <span>Valor experiencia gastronómica para dos personas.</span>
+                                        <span>Valor caja gastronómica para dos personas.</span>
                                         USD $75
                                     </div>
                                 }
@@ -423,12 +432,12 @@ export default function Carro2() {
                     </div>
 
                     <div className="footer-carro">
-                        <img src={belen} alt="belen" width="150" />
-                        <div className="Up">
+                        {/* <img src={belen} alt="belen" width="150" /> */}
+                        {/* <div className="Up">
                             <a href="https://upwebinar.cl/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://upwebinar.cl/img/up.min.svg" alt="upwebinar" width="14"/>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
