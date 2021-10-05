@@ -9,8 +9,8 @@ import logoMaklube from '../../assets/imagen/logoBelen.png'
 import logoBelen from '../../assets/imagen/logoBelenColor.png'
 import hora from '../../assets/imagen/timer.png';
 import belen from '../../assets/img/belen.png';
-import au from '../../assets/img/auspiciadores.png';
-import au_m from '../../assets/img/auspiciadores-m.png';
+import au from '../../assets/img/auspiciadores2.jpg';
+import au_m from '../../assets/img/auspiciadores-m2.png';
 import pagofacil from '../../assets/img/pagofacil2.png';
 import paypal from '../../assets/img/paypal.png';
 import imgBoy from '../../assets/imagen/img1.png';

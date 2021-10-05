@@ -29,7 +29,7 @@ export default function Confirm() {
 
                         <div className="t3">Agenda tu evento virtual, <strong>Maklube Fraterno 2021</strong></div>
                         <div className="btns">
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20201016T000000Z%2F20201016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer" className="btn"><img src={cal1} alt="cal1" /></a>
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20211110T233000Z%2F20211110T263000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer" className="btn"><img src={cal1} alt="cal1" /></a>
                             <a href="http://upwebinar.cl/mailing/maklube/maklube.ics" target="_blank" rel="noopener noreferrer" className="btn"><img src={cal2} alt="cal2" /></a>
                         </div>
                 </div>

@@ -12,6 +12,7 @@ import paypal from '../../../assets/imagen/paypal.png';
 
 import { signUpApi } from '../../../api/user';
 import { MakePaymentApi, MakePaymentPaypalApi } from '../../../api/payment';
+import $ from 'jquery';
 
 moment.locale('es');
 
@@ -476,6 +477,10 @@ export default function Carro4() {
         }
     }
 
+    const pagarPaypal = () =>{
+        const formulario = $('#formPaypal').submit();
+    }
+
     const antIcon = <LoadingOutlined style={{ fontSize: 50 }} spin />;
 
     return (
@@ -521,17 +526,20 @@ export default function Carro4() {
                                         <input type="radio" name="medio_pago" id="paypal"  checked={!methodPay} />
                                         <label htmlFor="paypal" onClick={() => changeToPaypal()}>
                                             <img src={paypal} alt="paypal" className="paypal"/>
-                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="formPaypal" >
                                                 <input type="hidden" name="charset" value="utf-8"/>
                                                 <input type="hidden" name="cmd" value="_xclick"/>
                                                 <input type="hidden" name="business" value="KF7U8S9XEPUNQ"/>
-                                                <input type="hidden" name="item_name" value="Producto genial"/>
-                                                <input type="hidden" name="amount" value="1.00"/>
+                                                <input type="hidden" name="item_name" value="Entrada general"/>
+                                                {/* <input type="hidden" name="amount" value={totalAmountString}/> */}
+                                                <input type="hidden" name="amount" value='1.00'/>
                                                 <input type="hidden" name="currency_code" value="USD"/>
-                                                <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/>
-                                                <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/>
+                                                {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
+                                                <input type="hidden" name="return" value="https://maklube.upwebinar.cl/confirmacion"/>
+                                                {/* <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/> */}
+                                                <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/>
                                                 <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US"/>
-                                                <input type="image" src={paypal} border="0" name="submit"/>
+                                                {/* <input type="image" src={paypal} border="0" name="submit"/> */}
                                             </form>
                                         </label>
                                     </div>
@@ -558,7 +566,10 @@ export default function Carro4() {
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns">
-                                                    <span onClick={() => pay()} className="btn center">Pagar</span>
+                                                    { methodPay
+                                                        ?<span onClick={() => pay()} className="btn center">Pagar</span>
+                                                        :<span onClick={() => pagarPaypal()} className="btn center">Pagar</span> 
+                                                    }
                                                 </div>
                                             </> :
                                             <>
@@ -582,7 +593,10 @@ export default function Carro4() {
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns">
-                                                    <span onClick={() => pay()} className="btn center">Pagar</span>
+                                                    { methodPay
+                                                        ?<span onClick={() => pay()} className="btn center">Pagar</span>
+                                                        :<span onClick={() => pagarPaypal()} className="btn center">Pagar</span> 
+                                                    }
                                                 </div>
                                             </>
                                         }

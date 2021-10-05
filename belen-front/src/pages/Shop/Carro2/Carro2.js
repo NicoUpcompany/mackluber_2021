@@ -266,7 +266,7 @@ export default function Carro2() {
                                 <p>Solo en provincia de Santiago y Chicureo</p>
                                 <p>
                                     ¿Quieres vivir la Experiencia gastronómica?
-                                    <small>(Compra disponible hasta el 07 de nov 2021)</small>
+                                    <small>(Compra disponible hasta el 07 de Nov 2021)</small>
                                 </p>
                                 
                                 <div className="campos">
