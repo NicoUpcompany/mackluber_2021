@@ -536,8 +536,8 @@ export default function Carro4() {
                                                 <input type="hidden" name="currency_code" value="USD"/>
                                                 {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
                                                 <input type="hidden" name="return" value="https://maklube.upwebinar.cl/confirmacion"/>
-                                                {/* <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/> */}
-                                                <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/>
+                                                <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/>
+                                                {/* <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/> */}
                                                 <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US"/>
                                                 {/* <input type="image" src={paypal} border="0" name="submit"/> */}
                                             </form>
