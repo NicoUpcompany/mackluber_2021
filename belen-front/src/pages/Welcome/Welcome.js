@@ -10,7 +10,7 @@ import logoBelen from '../../assets/imagen/logoBelenColor.png'
 import hora from '../../assets/imagen/timer.png';
 import belen from '../../assets/img/belen.png';
 import au from '../../assets/img/auspiciadores2.jpg';
-import au_m from '../../assets/img/auspiciadores-m2.png';
+import au_m from '../../assets/img/auspciadores-m2.jpg';
 import pagofacil from '../../assets/img/pagofacil2.png';
 import paypal from '../../assets/img/paypal.png';
 import imgBoy from '../../assets/imagen/img1.png';
