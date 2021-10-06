@@ -319,7 +319,10 @@ function catchCallback(req, res) {
                                                                                                 <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                                     <tr>
                                                                                                         <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                                            Ingresa tu email
+                                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. <br/>
+                                                                                                            Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
+                                                                                                            Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
+                                                                                                            El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     <tr>
@@ -443,7 +446,10 @@ function catchCallback(req, res) {
                                                                                 <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                     <tr>
                                                                                         <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                            Ingresa tu email
+                                                                                            Haz comprado una entrada para el Maklube Fraterno 2021. <br/>
+                                                                                            Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
+                                                                                            Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
+                                                                                            El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
