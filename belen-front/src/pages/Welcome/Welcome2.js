@@ -9,16 +9,20 @@ import logoMaklube from '../../assets/imagen/logoBelen.png'
 import logoBelen from '../../assets/imagen/logoBelenColor.png'
 import hora from '../../assets/imagen/timer.png';
 import belen from '../../assets/img/belen.png';
-import au from '../../assets/img/auspiciadores2.jpg';
-import au_m from '../../assets/img/auspciadores-m2.jpg';
+import au from '../../assets/img/auspiciadores.png';
+import au_m from '../../assets/img/auspiciadores_m.jpg';
 import pagofacil from '../../assets/img/pagofacil2.png';
 import paypal from '../../assets/img/paypal.png';
 import imgBoy from '../../assets/imagen/img1.png';
+import logoBci from '../../assets/imagen/bci.png';
+
 
 import { emailValidation, numberValidation } from '../../utils/formValidation';
 import { MakeDonationApi, MakeDonationPaypalApi } from '../../api/payment';
 
-export default function Welcome() {
+import './welcome.css';
+
+export default function Welcome2() {
     
     const [inputs, setInputs] = useState({
         total: '',
@@ -124,61 +128,60 @@ export default function Welcome() {
     const antIcon = <LoadingOutlined style={{ fontSize: 50 }} spin />;
 
     return (
-        <div className="bienvenida">
-            <div className="cont">
-                <div className="mid m">
-                    <div className="middle">
-                        <div className="maklube">
-                            <img src={logoMaklube} alt="maklube" className="img1" />
-                            <img src={logoBelen} alt="belen" className="img2"  />
+        <div className='caja'>
+            <div className="welcome">
+                        <div className="home">
+                            <div className="mitad">
+                                    <div className="header2">
+                                        <img src={logoMaklube} alt="maklube" className="img1" />
+                                        <img src={logoBelen} alt="belen" className="img2"  />
+                                    </div>
+                                    <div className='texto-home'>
+                                        <h3>¡Bienvenidos al Maklube 2021!</h3>
+                                        <h4>Por los niños de palestina.</h4>
+                                        <p>
+                                            Orgullosos de nuestro origen y de la generosidad que nos caracteriza como comunidad, queremos invitarlos a estar presentees en la edicción XVI de nuestro Maklube Fraterno, 
+                                            este 10 de noviembre a las 21:00 horas, vía streaming.
+                                            {/* <strong> nuevamente vía streaming. </strong> */}
+                                        </p>
+                                        <p>
+                                            Extendemos esta invitación a toda nuestra familia y amigos de regiones y fuera de Chile.
+                                        </p>
+                                        <p>
+                                            <strong>¡Nos vemos!.</strong>
+                                        </p>
+                                    </div>
+                                    <img
+                                            className='logoBci desktop tablet'
+                                            src={logoBci}
+                                        />
+                                    {/* <p className="texto desktop">Auspician</p> */}
+                            </div>
+                            <div className="mitad">
+                                <div className="entrada">
+                                    <img
+                                        src={imgBoy}
+                                        className='imgBoy'
+                                    />
+                                    {/* <img src={logoBelen} alt="belen" className="img2"/> */}
+                                    {/* <span className="btn" onClick={() => setVisible(true)}>Haz tu donación aquí</span> */}
+                                    <Link to="/ingresa-tus-datos" className='btn'>
+                                        <span>Comprar entradas</span>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
-                        <h3>¡Bienvenidos al Maklube 2021!</h3>
-                        <p>
-                        Estamos muy contentos de poder reunirnos este 10 de Nov. En la XVI edición de nuestro tradicional Maklube Fraterno
-                            <strong> nuevamente vía streaming. </strong>
-                        </p>
-                        <p>
-                            Orgullosos de nuestro origen y de la generosidad que nos caracteriza
-                            como comunidad, queremos invitarlos a estar presentes <strong>“Por los niños de Palestina” </strong>
-                            y a compartir desde la comodidad de sus casas, nuestro evento solidario 
-                            junto a grandes artistas e invitados. 
-                        </p>
-                        <p>
-                        Extendemos esta invitación a toda la gente de regiones y fuera de Chile a unirse a nuestro Maklube 2021.
-                        </p>
-                        <p>
-                            <strong>¡Nos vemos!.</strong>
-                        </p>
-
-                        <div className="hora">
-                            <img src={hora} alt="hora" />
+                        {/* Auspiciadores*/}
+                        <div className="auspiciadores">
+                            <img src={au} alt="au" className="tablet desktop" />
+                            {/* <img src={au_m} alt="au_m" className="movil" width="100%" /> */}
                         </div>
-                        <p className="texto desktop">Auspician</p>
+                        <div className='auspiciadores-m'>
+                            <img src={au_m} alt="au_m" className="movil" width="100%" />
+                        </div>
                     </div>
-                </div>
-                <div className="mid">
-                    <div className="entrada">
-                        <img
-                            src={imgBoy}
-                            className='imgBoy'
-                        />
-                        <Link to="/ingresa-tus-datos">
-                            <span className="btn">Compra tu entrada aquí</span>
-                        </Link>
-                        {/* <img src={logoBelen} alt="belen" className="img2"/> */}
-                        {/* <span className="btn" onClick={() => setVisible(true)}>Haz tu donación aquí</span> */}
-                    </div>
-                </div>
-            </div>
-            {/* Auspiciadores*/}
-            <div className="auspiciadores">
-                <img src={au} alt="au" className="tablet desktop" />
-                {/* <img src={au_m} alt="au_m" className="movil" width="100%" /> */}
-            </div>
-            <div className='auspiciadores-m'>
-                <img src={au_m} alt="au_m" className="movil" width="100%" />
-            </div>
-        </div>
         
+        </div>
+     
     )
 }

@@ -14,6 +14,7 @@ import ConfirmDonation from '../pages/Confirm/Donation';
 import ErrorTrx from '../pages/Error';
 import LoginDashboard from '../pages/AdminDashboard/Auth';
 import Dashboard from '../pages/AdminDashboard/Dashboard';
+import Welcome2 from '../pages/Welcome/Welcome2';
 
 export const AppRouter = () => {
     return (
@@ -33,7 +34,7 @@ export const AppRouter = () => {
                     <Route exact path="/salaespera" component={ Streaming } />
                     <Route exact path="/dashboard" component={ LoginDashboard } />
                     <Route path="/dashboard/admin" component={ Dashboard } />
-                    <Route path="/" component={ Welcome } />
+                    <Route path="/" component={ Welcome2 } />
                     <Route path="/login" component={ LoginScreen } />
                     <Redirect to="/" />
                 </Switch>

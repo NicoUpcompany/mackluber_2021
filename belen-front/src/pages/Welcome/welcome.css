@@ -1,0 +1,212 @@
+@font-face {
+	font-family: fuente_helvetica;
+	src: url(../../fonts/Helvetica.ttc);
+}
+
+@font-face {
+	font-family: fuente_mira;
+	src: url(../../fonts/Mirandah\ -\ Normal.otf);
+}
+
+.caja {
+    background-image: url('../../assets/imagen/fondoBelen.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.welcome {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 1180px; 
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    font-family: fuente_helvetica;
+    overflow-y: hidden;
+    margin: 20px 0;
+}
+
+.welcome .home {
+    display: flex;
+    height: 550px;
+    max-width: 1180px;
+    justify-content: center;
+}
+
+.welcome .home .mitad{
+    width: 50%;
+}
+
+.welcome .home .mitad:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome .home .mitad .header2 {
+    width: 680px;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+
+.welcome .home .mitad .img1{
+    height: 60%;
+}
+.welcome .home .mitad .img2{
+    height: 60%;
+}
+
+
+.welcome .home .mitad .texto-home {
+    width: 550px;
+}
+
+.welcome .home .mitad .texto-home h3{
+    font-size: fuente_mira;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.welcome .home .mitad .texto-home h4{
+    font-size: fuente_helvetica;
+    font-size: 14px;
+    text-align: center;
+}
+
+.welcome .home .mitad .texto-home p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.welcome .home .mitad .logoBci{
+   width: 30%;
+   margin: 50px 0;
+}
+
+/* Mitad 2 */
+.welcome .home .mitad:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome .home .mitad .entrada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.welcome .home .mitad .entrada .btn{
+	display: table;
+	float: left;
+	width: 380px;
+	color: #000000;
+	text-transform: uppercase;
+    margin-top: 30px;
+	text-align: center;
+	/* height: 50px; */
+	line-height: 35px;
+	text-decoration: none;
+	background: #E4C3A0;
+	font-family: fuente_helvetica;
+	font-weight: 600;
+	border-radius: 20px;
+	font-size: 14px;
+}
+
+.welcome .home .mitad .entrada .imgBoy{
+    width: 380px;
+    height: 340px;
+}
+
+.welcome .auspciadores {
+    height: 20vh;
+}
+
+@media only screen and ( min-width:320px ) and (max-width:719px){
+
+    .caja{
+        flex-direction: column;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .welcome{
+        overflow-y: none;
+        flex-direction: column;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .welcome .home {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .welcome .home .mitad .header2{
+        flex-direction: column;
+        height: 30vh;
+        align-items: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .welcome .home .mitad .header2 .img1{
+        height: 40%;
+    }
+
+    .welcome .home .mitad .header2 .img2{
+        height: 30%;
+    }
+
+    .welcome .home {
+        height: auto;
+    }
+
+    .welcome .home .mitad{
+        width: 100%;
+    }
+
+    .welcome .auspciadores-m img{
+        width: 100%;
+    }
+
+    .welcome .home .mitad:nth-child(2){
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .welcome .home .mitad .entrada{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcome .home .mitad .texto-home{
+        width: 80%;
+    }
+
+    .welcome .home .mitad .entrada .imgBoy{
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .welcome .home .mitad .entrada .btn{
+        width: 80%;
+    }
+
+}

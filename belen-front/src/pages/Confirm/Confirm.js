@@ -18,12 +18,11 @@ export default function Confirm() {
                         />
                         <div className='text'>
                             <h1>¡Gracias por su adhesión!</h1>
-                            <p>Nos vemos el 10 de novienbre a las 21:00 horas vía streaming. 
-                            Recuerda conectarte ese día en 
-                            <a href="https://fundacionbelen2000.cl/" target="_blank"> www.belen.cl </a> e ingresar atraves  del baner "Maklube 2021" desde las 20:30 hrs
-                            <strong> "Por los niños de Palestina" </strong>
+                            <p>Nos vemos el 10 de noviembre a las 21:00 hrs vía streaming. Recuerda conectarte a través de
+                            <a href="www.maklube.cl" target="_blank"> www.maklube.cl </a>  ingresando el correo registrado. Te esperamos desde las 20:30 hrs
+                            <strong> "Por los niños de Palestina".</strong>
                             <br/>
-                            Nos vemos
+                            Nos vemos.
                             </p>
                         </div>
 

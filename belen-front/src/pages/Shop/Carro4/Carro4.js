@@ -52,11 +52,14 @@ export default function Carro4() {
     const [finalEntradaInvitadosUSD, setFinalEntradaInvitadosUSD] = useState(0);
     const [hobTitularUSD, setHobTitularUSD] = useState(0);
     const [finalHobInvitadosUSD, setFinalHobInvitadosUSD] = useState(0);
+    const [userIdPaypal, setUserIdPaypal] = useState(uuid());
 
     useEffect(() => {
         if (!localStorage.getItem('fullName') || localStorage.getItem('fullName') === 'null') {
             window.location.href = '/';
         }
+
+
         setInputs({
             fullName: localStorage.getItem('fullName'),
             email: localStorage.getItem('email'),
@@ -227,6 +230,7 @@ export default function Carro4() {
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
+                    userIdPaypal:userIdPaypal,
                     phone: inputs.phone,
                     rut: inputs.rut,
                     region: inputs.region,
@@ -243,6 +247,7 @@ export default function Carro4() {
                     payId: uuid()
                 }
                 const result = await signUpApi(data);
+                console.log(result)
                 if (result.ok) {
                     const payData = {
                         amount: totalAmount,
@@ -269,6 +274,7 @@ export default function Carro4() {
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
+                    userIdPaypal:userIdPaypal,
                     phone: inputs.phone,
                     rut: inputs.rut,
                     region: inputs.region,
@@ -325,6 +331,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
+                    userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
@@ -367,6 +374,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
+                    userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
@@ -535,7 +543,7 @@ export default function Carro4() {
                                                 <input type="hidden" name="amount" value='1.00'/>
                                                 <input type="hidden" name="currency_code" value="USD"/>
                                                 {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
-                                                <input type="hidden" name="return" value="https://maklube.upwebinar.cl/confirmacion"/>
+                                                <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${userIdPaypal}`}/>
                                                 <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/>
                                                 {/* <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/> */}
                                                 <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US"/>
@@ -565,7 +573,7 @@ export default function Carro4() {
                                                    
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
-                                                <div className="btns">
+                                                <div className="btns" >
                                                     { methodPay
                                                         ?<span onClick={() => pay()} className="btn center">Pagar</span>
                                                         :<span onClick={() => pagarPaypal()} className="btn center">Pagar</span> 

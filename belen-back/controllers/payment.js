@@ -310,7 +310,7 @@ function catchCallback(req, res) {
                                                                                                             <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
                                                                                                             <p style="margin: 0;padding: 0;font-size:16px;color:#000;text-align:center;font-weight: 500;">
                                                                                                                 Ya estas listo para ser parte de:<br />
-                                                                                                                <strong>Maklube Fraterno 2020</strong>
+                                                                                                                <strong>Maklube Fraterno 2021</strong>
                                                                                                             </p>
                                                                                                         </td>
                                                                                                     </tr>
@@ -355,7 +355,7 @@ function catchCallback(req, res) {
                                                                                                                 </tr>
                                                                                                                 <tr>
                                                                                                                     <td align="center" width="50%" style="padding: 20px 50px;">
-                                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20201016T000000Z%2F20201016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
+                                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202121&dates=20211016T000000Z%2F20211016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
                                                                                                                         <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal1.png" width="150" />
                                                                                                                         
                                                                                                                         </a>
@@ -434,7 +434,7 @@ function catchCallback(req, res) {
                                                                                             <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
                                                                                             <p style="margin: 0;padding: 0;font-size:16px;color:#000;text-align:center;font-weight: 500;">
                                                                                                 Ya estas listo para ser parte de:<br />
-                                                                                                <strong>Maklube Fraterno 2020</strong>
+                                                                                                <strong>Maklube Fraterno 2021</strong>
                                                                                             </p>
                                                                                         </td>
                                                                                     </tr>
@@ -479,7 +479,7 @@ function catchCallback(req, res) {
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td align="center" width="50%" style="padding: 20px 50px;">
-                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20201016T000000Z%2F20201016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
+                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202121&dates=20211016T000000Z%2F20211016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
                                                                                                         <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal1.png" width="150" />
                                                                                                         
                                                                                                         </a>
@@ -886,111 +886,126 @@ function catchCallbackPaypal(req, res) {
                                                                                 text: 'Adhesión Maklube 2021',
                                                                                 html: `
                                                                                 <html>
-                                                                                <head>
-                                                                                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-                                                                                    <title>Maklube</title>
-                                                                                </head>
-                                                                                
-                                                                                <body style="background:#f6f6f6;">
-                                                                                    <div
-                                                                                        style="background:#fff;color:#000; width:600px; max-width: 600px; margin: 0 auto; padding: 0;font-family: Montserrat, sans-serif;">
-                                                                                
-                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:10px;margin-bottom:0; background-image: url('https://upcompany.cl/mailing/maklube/041021/mailing/header-maklube.jpg');">
-                                                                                            <tr>
-                                                                                                <th align="center" width="100%" style="color:#2d2d2d; padding: 10px;"> 
-                                                                                                    <!-- <img src="./bannerBelen.jpg" width="100%"/> -->
-                                                                                                    <img src="https://upcompany.cl/mailing/maklube/041021/mailing/logo3Belen.png"  width="20%" align="left"/>
-                                                                                                    <img src="https://upcompany.cl/mailing/maklube/041021/mailing/logoBelenColor.png"  width="30%" align="right"/>
-                                                                                                </th>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;">
-                                                                                            <tr>
-                                                                                                <td align="center" width="100%" style="color:#000;padding: 50px 0 20px;">
-                                                                                                    <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
-                                                                                                    <p style="margin: 0;padding: 0;font-size:16px;color:#000;text-align:center;font-weight: 500;">
-                                                                                                        Ya estas listo para ser parte de:<br />
-                                                                                                        <strong>Maklube Fraterno 2020</strong>
-                                                                                                    </p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                
-                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
-                                                                                            <tr>
-                                                                                                <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                                    Ingresa tu email
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>&nbsp;</td>
-                                                                                                <td align="center" width="33%" style="padding: 0;">
-                                                                                                    <p
-                                                                                                        style="margin: 0 auto 30px;color: #000;font-size: 18px;padding: 10px 0 10px 20px;border: 1px solid #e4c3a0;border-radius: 5px;">
-                                                                                                        ${userUpdate.email}
-                                                                                                    </p>
-                                                                                                </td>
-                                                                                                <td>&nbsp;</td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td align="center" width="100%%" style="padding: 20px 115px 20px" colspan="3">
-                                                                                                    <img src="https://upcompany.cl/mailing/maklube/041021/mailing/timer.png" width="100%" />
-                                                                                                    <p style="border-top: 4px solid #e4c3a0;padding: 40px 0;margin-top: 40px;color: #000;">
-                                                                                                        Recuerda conectarte 30 minutos antes.
-                                                                                                    </p>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                
-                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="600px"
-                                                                                            style="margin-top:0;margin-bottom:0;padding: 20px 50px;">
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <table cellspacing="0" cellpadding="0" border="0" width="100%"
-                                                                                                        style="margin-top:0;margin-bottom:0;border: 1px solid #e4c3a0;border-radius: 10px;">
-                                                                                                        <tr>
-                                                                                                            <td colspan="2" style="text-align: center;color: #000;font-size: 14px;padding: 20px 0 0;">
-                                                                                                                Para no perderte ni un segundo, agrégalo en tu calendario
-                                                                                                            </td>
-                                                                                                        </tr>
-                                                                                                        <tr>
-                                                                                                            <td align="center" width="50%" style="padding: 20px 50px;">
-                                                                                                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20201016T000000Z%2F20201016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
-                                                                                                                <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal1.png" width="150" />
-                                                                                                                
-                                                                                                                </a>
-                                                                                                            </td>
-                                                                                                            <td align="center" width="50%" style="padding: 20px 50px;">
-                                                                                                                <a href="http://upwebinar.cl/mailing/maklube/maklube.ics" target="_blank" rel="noopener noreferrer" className="btn">
-                                                                                                                <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal2.png" width="150" />
-                                                                                                                </a>
-                                                                                                            </td>
-                                                                                                        </tr>
-                                                                                                    </table>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                
-                                                                                
-                                                                                        <!-- <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
-                                                                                            <tr style="padding: 0 0 50px;">
-                                                                                                <td align="center" width="100%" style="padding: 20px 0;">
-                                                                                                    <img src="https://upwebinar.cl/mailing/maklube/belen.png" width="130" />
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table> -->
-                                                                                
-                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="600px"
-                                                                                            style="background:#000; color:#fff;margin-bottom:0;padding: 10px 50px;font-size: 10px;">
-                                                                                            <tr style="padding: 0 0 50px;">
-                                                                                                <td align="center" width="100%">
-                                                                                                    Este mail es generado de manera automática, Por favor NO RESPONDER.
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </body>
-                                                                                </html>
+                                                                                    <head>
+                                                                                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+                                                                                        <title>Maklube</title>
+                                                                                    </head>
+
+                                                                                    <body style="background:#f6f6f6;">
+                                                                                        <div
+                                                                                            style="background:#fff;color:#000; width:600px; max-width: 600px; margin: 0 auto; padding: 0;font-family: Montserrat, sans-serif;">
+
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="600px"
+                                                                                                style="margin-top:10px;margin-bottom:0; background-image: url('https://upcompany.cl/mailing/maklube/041021/mailing/header-maklube.jpg');">
+                                                                                                <tr>
+                                                                                                    <th align="center" width="100%" style="color:#2d2d2d; padding: 10px;">
+                                                                                                        <!-- <img src="./bannerBelen.jpg" width="100%"/> -->
+                                                                                                        <img src="https://upcompany.cl/mailing/maklube/041021/mailing/logo3Belen.png" width="20%"
+                                                                                                            align="left" />
+                                                                                                        <img src="https://upcompany.cl/mailing/maklube/041021/mailing/logoBelenColor.png" width="30%"
+                                                                                                            align="right" />
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;">
+                                                                                                <tr>
+                                                                                                    <td align="center" width="100%" style="color:#000;padding: 50px 0 20px;">
+                                                                                                        <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
+                                                                                                        <p style="margin: 0;padding: 20px;font-size:14px;color:#000;text-align:center;font-weight: 500;">
+                                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. Miércoles 10 de Noviembre a las 21:00 hrs. 
+                                                                                                            Ingresa el correo registrado, que es por el cuál recibiste esta invitación. 
+                                                                                                            El correo podrá ser ingresado una vez y en un solo dispositivo. 
+                                                                                                            <br/>
+                                                                                                            <br/>
+                                                                                                            Nos vemos!
+                                                                                                            <br />
+                                                                                                            <br />
+                                                                                                            <strong>Maklube Fraterno 2021</strong>
+                                                                                                        </p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
+                                                                                                <tr>
+                                                                                                    <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
+                                                                                                        Ingresa tu email
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>&nbsp;</td>
+                                                                                                    <td align="center" width="33%" style="padding: 0;">
+                                                                                                        <p
+                                                                                                            style="margin: 0 auto 30px;color: #000;font-size: 18px;padding: 10px 0 10px 20px;border: 1px solid #e4c3a0;border-radius: 5px;">
+                                                                                                            ${userUpdate.email}
+                                                                                                        </p>
+                                                                                                    </td>
+                                                                                                    <td>&nbsp;</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td align="center" width="100%%" style="padding: 20px 115px 20px" colspan="3">
+                                                                                                        <img src="https://upcompany.cl/mailing/maklube/041021/mailing/timer.png" width="100%" />
+                                                                                                        <p style="border-top: 4px solid #e4c3a0;padding: 40px 0;margin-top: 40px;color: #000;">
+                                                                                                            Recuerda conectarte 30 minutos antes.
+                                                                                                        </p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="600px"
+                                                                                                style="margin-top:0;margin-bottom:0;padding: 20px 50px;">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <table cellspacing="0" cellpadding="0" border="0" width="100%"
+                                                                                                            style="margin-top:0;margin-bottom:0;border: 1px solid #e4c3a0;border-radius: 10px;">
+                                                                                                            <tr>
+                                                                                                                <td colspan="2" style="text-align: center;color: #000;font-size: 14px;padding: 20px 0 0;">
+                                                                                                                    Para no perderte ni un segundo, agrégalo en tu calendario
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td align="center" width="50%" style="padding: 20px 50px;">
+                                                                                                                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202121&dates=20211016T000000Z%2F20211016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl"
+                                                                                                                        target="_blank" rel="noopener noreferrer">
+                                                                                                                        <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal1.png"
+                                                                                                                            width="150" />
+
+                                                                                                                    </a>
+                                                                                                                </td>
+                                                                                                                <td align="center" width="50%" style="padding: 20px 50px;">
+                                                                                                                    <a href="http://upwebinar.cl/mailing/maklube/maklube.ics" target="_blank"
+                                                                                                                        rel="noopener noreferrer" className="btn">
+                                                                                                                        <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal2.png"
+                                                                                                                            width="150" />
+                                                                                                                    </a>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </table>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+
+
+                                                                                            <!-- <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
+                                                                                                                                                                                <tr style="padding: 0 0 50px;">
+                                                                                                                                                                                    <td align="center" width="100%" style="padding: 20px 0;">
+                                                                                                                                                                                        <img src="https://upwebinar.cl/mailing/maklube/belen.png" width="130" />
+                                                                                                                                                                                    </td>
+                                                                                                                                                                                </tr>
+                                                                                                                                                                            </table> -->
+
+                                                                                            <table cellspacing="0" cellpadding="0" border="0" width="600px"
+                                                                                                style="background:#000; color:#fff;margin-bottom:0;padding: 10px 50px;font-size: 10px;">
+                                                                                                <tr style="padding: 0 0 50px;">
+                                                                                                    <td align="center" width="100%">
+                                                                                                        Este mail es generado de manera automática, Por favor NO RESPONDER.
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </body>
+
+                                                                                    </html>
                                                                                 `
                                                                             };
                                                                             transporter.sendMail(mailOptions, function(error, info){
@@ -1033,7 +1048,7 @@ function catchCallbackPaypal(req, res) {
                                                                                             <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
                                                                                             <p style="margin: 0;padding: 0;font-size:16px;color:#000;text-align:center;font-weight: 500;">
                                                                                                 Ya estas listo para ser parte de:<br />
-                                                                                                <strong>Maklube Fraterno 2020</strong>
+                                                                                                <strong>Maklube Fraterno 2021</strong>
                                                                                             </p>
                                                                                         </td>
                                                                                     </tr>
@@ -1078,7 +1093,7 @@ function catchCallbackPaypal(req, res) {
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td align="center" width="50%" style="padding: 20px 50px;">
-                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202021&dates=20201016T000000Z%2F20201016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
+                                                                                                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Maklube%20Fraterno%202121&dates=20211016T000000Z%2F20211016T020000Z&details=https%3A%2F%2Fmaklube.upwebinar.cl&location=https%3A%2F%2Fmaklube.upwebinar.cl" target="_blank" rel="noopener noreferrer">
                                                                                                         <img src="https://upcompany.cl/mailing/maklube/041021/mailing/cal1.png" width="150" />
                                                                                                         
                                                                                                         </a>
