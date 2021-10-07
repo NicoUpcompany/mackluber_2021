@@ -52,13 +52,19 @@ export default function Carro4() {
     const [finalEntradaInvitadosUSD, setFinalEntradaInvitadosUSD] = useState(0);
     const [hobTitularUSD, setHobTitularUSD] = useState(0);
     const [finalHobInvitadosUSD, setFinalHobInvitadosUSD] = useState(0);
-    const [userIdPaypal, setUserIdPaypal] = useState(uuid());
+    const [payIdAux2, setpayIdAux2] = useState(0);
 
     useEffect(() => {
         if (!localStorage.getItem('fullName') || localStorage.getItem('fullName') === 'null') {
             window.location.href = '/';
         }
 
+        if(payIdAux2 ===0 ){
+            setpayIdAux2(uuid());
+        }
+    
+
+        console.log(payIdAux2);
 
         setInputs({
             fullName: localStorage.getItem('fullName'),
@@ -106,7 +112,7 @@ export default function Carro4() {
             var usersArray = JSON.parse(localStorage.getItem('users'));
             setguestsStatus(usersArray.length > 0)
         }
-    }, []);
+    }, [payIdAux2]);
 
     const numberToString = value => {
         var moneyDots = value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
@@ -223,7 +229,7 @@ export default function Carro4() {
         }
     }
 
-    const payIdAux2 = uuid();
+    // const payIdAux2 = uuid();
 
     const pay = async () => {
         setLoading(true);
@@ -232,7 +238,7 @@ export default function Carro4() {
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     phone: inputs.phone,
                     rut: inputs.rut,
                     region: inputs.region,
@@ -275,7 +281,7 @@ export default function Carro4() {
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     phone: inputs.phone,
                     rut: inputs.rut,
                     region: inputs.region,
@@ -332,7 +338,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
@@ -375,7 +381,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
@@ -501,7 +507,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
@@ -546,7 +552,7 @@ export default function Carro4() {
                     fullName: inputs.fullName,
                     email: inputs.email,
                     phone: inputs.phone,
-                    userIdPaypal:userIdPaypal,
+                    // userIdPaypal:userIdPaypal,
                     rut: inputs.rut,
                     region: inputs.region,
                     commune: inputs.commune,
