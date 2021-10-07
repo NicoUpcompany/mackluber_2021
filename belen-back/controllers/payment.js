@@ -40,8 +40,8 @@ function signInPagoFacil() {
 
 function makePay(req, res) {
 
-    var value = req.body.amount;
-    // var value = 1000;
+    //var value = req.body.amount;
+    var value = 1000;
     var userCode = req.body.code;
 
     User.findOne({ code: userCode }, (err, userStored) => {
@@ -117,14 +117,17 @@ function catchCallback(req, res) {
     var upPassword = process.env.PASSWORD_EMAIL;
 
     var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: "mail.fundacionbelen2000.cl",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        //service: 'Gmail',
         auth: {
             user: upEmail,
             pass: upPassword
-        },
-        tls: {
-            rejectUnauthorized: false
         }
+        // tls: {
+        //     rejectUnauthorized: false
+        // }
     });
 
     if (resp.x_result !== 'completed') {
@@ -319,7 +322,7 @@ function catchCallback(req, res) {
                                                                                                 <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                                     <tr>
                                                                                                         <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. <br/>
+                                                                                                            Haz comprado una entrada para el Maklube Fraterno 2021. <br/>
                                                                                                             Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
                                                                                                             Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
                                                                                                             El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
@@ -446,7 +449,7 @@ function catchCallback(req, res) {
                                                                                 <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                     <tr>
                                                                                         <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                            Haz comprado una entrada para el Maklube Fraterno 2021. <br/>
+                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. <br/>
                                                                                             Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
                                                                                             Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
                                                                                             El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
@@ -648,8 +651,8 @@ function catchDonation(req, res) {
 
 function makePayPaypal(req, res) {
 
-    var value = req.body.amount;
-    // var value = 1;
+    //var value = req.body.amount;
+    var value = 1;
     var userCode = req.body.code;
 
     User.findOne({ code: userCode }, (err, userStored) => {
@@ -659,60 +662,21 @@ function makePayPaypal(req, res) {
             if (!userStored) {
                 res.status(500).send({ message: "Error de servidor 0018" });
             } else {
-                paypal.configure({
-                    'mode': 'live', // sandbox
-                    'client_id': 'AVJwEuQ7jqzSlNPnWZxFpYmlkTLkDu3sPpz_ttFxdCzLBIWWt53cupzitgCPKAFA5gujxp2_B4V5M2PS',
-                    'client_secret': 'EHbdB1KBKGRnEb7IA3sognqv2xEAbaFwqTBKxewIgrYVoBaLzr7YuM6_oeSEy1U4d-Rs5i7PrUbkLMH9'
-                });
-            
-                const create_payment_json = {
-                    "intent": "sale",
-                    "payer": {
-                        "payment_method": "paypal"
-                    },
-                    "redirect_urls": {
-                        "return_url": `https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${userStored.payId}`,
-                        "cancel_url": "https://maklube.upwebinar.cl/error-trx"
-                    },
-                    "transactions": [{
-                        "item_list": {
-                            "items": [{
-                                "name": "Maklube",
-                                "sku": "001",
-                                "price": parseInt(value),
-                                "currency": "USD",
-                                "quantity": 1
-                            }]
-                        },
-                        "amount": {
-                            "currency": "USD",
-                            "total": parseInt(value)
-                        },
-                        "description": "Maklube fraterno"
-                    }]
-                };
-            
-                paypal.payment.create(create_payment_json, function (error, payment) {
-                    if (error) {
-                        throw error;
+                const newPayment = new Payment();
+                newPayment.paymentId = userStored.payId;
+                newPayment.user = userStored.id;
+                newPayment.amount = parseInt(value);
+                newPayment.currencyType = 'USD';
+                newPayment.paymentMethod = 'PAYPAL';
+                newPayment.save((err, paymentStored) => {
+                    if (err) {
+                        res.status(500).send({ message: "Error de servidor 0015" });
                     } else {
-                        const newPayment = new Payment();
-                        newPayment.paymentId = userStored.payId;
-                        newPayment.user = userStored.id;
-                        newPayment.amount = parseInt(value);
-                        newPayment.currencyType = 'USD';
-                        newPayment.paymentMethod = 'PAYPAL';
-                        newPayment.save((err, paymentStored) => {
-                            if (err) {
-                                res.status(500).send({ message: "Error de servidor 0015" });
-                            } else {
-                                if (!paymentStored) {
-                                    res.status(500).send({ message: "Error de servidor 0016" });
-                                } else {
-                                    res.status(200).send({status: 200, response: payment.links});
-                                }
-                            }
-                        });
+                        if (!paymentStored) {
+                            res.status(500).send({ message: "Error de servidor 0016" });
+                        } else {
+                            res.status(200).send({status: 200, response: "OK"});
+                        }
                     }
                 });
             }
@@ -727,13 +691,13 @@ function catchCallbackPaypal(req, res) {
     var upPassword = process.env.PASSWORD_EMAIL;
 
     var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: "mail.fundacionbelen2000.cl",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        //service: 'Gmail',
         auth: {
             user: upEmail,
             pass: upPassword
-        },
-        tls: {
-            rejectUnauthorized: false
         }
     });
 
@@ -918,14 +882,6 @@ function catchCallbackPaypal(req, res) {
                                                                                                     <td align="center" width="100%" style="color:#000;padding: 50px 0 20px;">
                                                                                                         <h3 style="color: #000; font-size: 30px;margin-bottom: 20px;">¡Adhesión exitosa!</h3>
                                                                                                         <p style="margin: 0;padding: 20px;font-size:14px;color:#000;text-align:center;font-weight: 500;">
-                                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. Miércoles 10 de Noviembre a las 21:00 hrs. 
-                                                                                                            Ingresa el correo registrado, que es por el cuál recibiste esta invitación. 
-                                                                                                            El correo podrá ser ingresado una vez y en un solo dispositivo. 
-                                                                                                            <br/>
-                                                                                                            <br/>
-                                                                                                            Nos vemos!
-                                                                                                            <br />
-                                                                                                            <br />
                                                                                                             <strong>Maklube Fraterno 2021</strong>
                                                                                                         </p>
                                                                                                     </td>
@@ -935,7 +891,10 @@ function catchCallbackPaypal(req, res) {
                                                                                             <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                                 <tr>
                                                                                                     <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                                        Ingresa tu email
+                                                                                                        Haz comprado una entrada para el Maklube Fraterno 2021. <br/>
+                                                                                                        Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
+                                                                                                        Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
+                                                                                                        El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr>
@@ -1063,7 +1022,10 @@ function catchCallbackPaypal(req, res) {
                                                                                 <table cellspacing="0" cellpadding="0" border="0" width="600px" style="margin-top:0;margin-bottom:0;">
                                                                                     <tr>
                                                                                         <td align="center" width="100%%" style="padding: 20px 0 20px;color:#000;font-size: 12px;" colspan="3">
-                                                                                            Ingresa tu email
+                                                                                            Haz recibido una invitación para el Maklube Fraterno 2021. <br/>
+                                                                                            Miércoles 10 de Noviembre a las 21:00 hrs. <br/>
+                                                                                            Ingresa el correo registrado, que es por el cuál recibiste esta invitación. <br/>
+                                                                                            El correo podrá ser ingresado una vez y en un solo dispositivo. Nos vemos!
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>

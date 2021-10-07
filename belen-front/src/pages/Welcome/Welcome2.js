@@ -10,7 +10,7 @@ import logoBelen from '../../assets/imagen/logoBelenColor.png'
 import hora from '../../assets/imagen/timer.png';
 import belen from '../../assets/img/belen.png';
 import au from '../../assets/img/auspiciadores.png';
-import au_m from '../../assets/img/auspiciadores_m.jpg';
+import au_m from '../../assets/img/auspiciadores_m.png';
 import pagofacil from '../../assets/img/pagofacil2.png';
 import paypal from '../../assets/img/paypal.png';
 import imgBoy from '../../assets/imagen/img1.png';
@@ -133,14 +133,18 @@ export default function Welcome2() {
                         <div className="home">
                             <div className="mitad">
                                     <div className="header2">
-                                        <img src={logoMaklube} alt="maklube" className="img1" />
-                                        <img src={logoBelen} alt="belen" className="img2"  />
+                                        <div className="img1">
+                                            <img src={logoMaklube} alt="maklube"/>
+                                        </div>
+                                        <div className="img2">
+                                            <img src={logoBelen} alt="belen"/>
+                                        </div>
                                     </div>
                                     <div className='texto-home'>
                                         <h3>¡Bienvenidos al Maklube 2021!</h3>
-                                        <h4>Por los niños de palestina.</h4>
+                                        <h4>"Por los niños de Palestina"</h4>
                                         <p>
-                                            Orgullosos de nuestro origen y de la generosidad que nos caracteriza como comunidad, queremos invitarlos a estar presentees en la edicción XVI de nuestro Maklube Fraterno, 
+                                            Orgullosos de nuestro origen y de la generosidad que nos caracteriza como comunidad, queremos invitarlos a estar presentes en la edición XVI de nuestro Maklube Fraterno, 
                                             este 10 de noviembre a las 21:00 horas, vía streaming.
                                             {/* <strong> nuevamente vía streaming. </strong> */}
                                         </p>

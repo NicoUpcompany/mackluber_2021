@@ -233,29 +233,37 @@
 		width: 100%;
 	}
 	.carro .pasos{
+		display: block;
 		margin: 20px 0;
 	}
 	.carro .pasos .col{
-		width: 100%;
+	    width: 100%;
+	    display: flex;
+	    align-items: center;
+	    height: auto;
+	    line-height: normal;
+	    padding: 0;
 	}
 
 	.carro .pasos .col .num {
-		width: 15px;
-		height: 15px;
-		line-height: 15px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
 		text-align: center;
-		margin: 20px 10px 0 0;
+		margin: 0px 10px 0 0;
 		opacity: 0.3;
-		font-size: 10px;
+		font-size: 14px;
 	}
 
 	.carro .pasos .col span{
-		font-size: 6px;
+		font-size: 12px;
+    	height: 30px;
 	}
 
 	.carro .header{
 		padding: 0;
 		padding-top: 20px;
+		width: 100%;
 	}
 
 	.carro .header .contenedor{
@@ -264,6 +272,12 @@
 
 	.carro .header .belen{
 		float: right;
+	}
+	.carro .header .contenedor .belen img{
+		width: 150px;
+	}
+	.carro .header .contenedor .maklube img{
+		width: 100px;
 	}
 
 	.carro .datos .desc{

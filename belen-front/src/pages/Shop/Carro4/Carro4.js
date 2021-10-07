@@ -223,6 +223,8 @@ export default function Carro4() {
         }
     }
 
+    const payIdAux2 = uuid();
+
     const pay = async () => {
         setLoading(true);
         if (methodPay) {
@@ -244,7 +246,7 @@ export default function Carro4() {
                     totalTickets: '15.000',
                     totalHob: inputs.hobString,
                     signUpTime: moment().format('lll'),
-                    payId: uuid()
+                    payId: payIdAux2
                 }
                 const result = await signUpApi(data);
                 console.log(result)
@@ -270,7 +272,6 @@ export default function Carro4() {
                     setLoading(false);
                 }
             } else {
-                var payIdAux = uuid();
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
@@ -288,7 +289,7 @@ export default function Carro4() {
                     totalTickets: (numberToString(parseInt(finalEntradaInvitados) + 15000)),
                     totalHob: (numberToString(inputs.hob + parseInt(finalHobInvitados))),
                     signUpTime: moment().format('lll'),
-                    payId: payIdAux
+                    payId: payIdAux2
                 }
                 const firstResult = await signUpApi(data);
                 if (firstResult.ok) {
@@ -310,7 +311,7 @@ export default function Carro4() {
                             totalTickets: '0',
                             totalHob: '0',
                             signUpTime: moment().format('lll'),
-                            payId: payIdAux
+                            payId: payIdAux2
                         }
                         const result = await signUpApi(guestData);
                         if (result.ok) {
@@ -344,7 +345,7 @@ export default function Carro4() {
                     totalTickets: '20',
                     totalHob: (parseInt(inputs.hobString) + parseInt(finalHobInvitados)),
                     signUpTime: moment().format('lll'),
-                    payId: uuid()
+                    payId: payIdAux2
                 }
                 const result = await signUpApi(data);
                 if (result.ok) {
@@ -369,7 +370,7 @@ export default function Carro4() {
                     setLoading(false);
                 }
             } else {
-                var payIdAux2 = uuid();
+                
                 const data = {
                     fullName: inputs.fullName,
                     email: inputs.email,
@@ -468,14 +469,21 @@ export default function Carro4() {
                     amount: totalAmountUSD,
                     code: firstResult.user.code
                 }
+
+                
+
                 const resultPay = await MakePaymentPaypalApi(payData);
                 if (resultPay.status !== 200) {
                     notification["error"]({
                         message: resultPay.message
                     });
                 } else {
+                    
+                    //window.location.href = resultPay.response[1].href;
+                    console.log("IR A PAYPAL");
+
+                    const formulario = $('#formPaypal').submit();
                     localStorage.clear();
-                    window.location.href = resultPay.response[1].href;
                 }
             } else {
                 notification['error']({
@@ -485,8 +493,116 @@ export default function Carro4() {
         }
     }
 
-    const pagarPaypal = () =>{
-        const formulario = $('#formPaypal').submit();
+
+    const pagarPaypal = async () => {
+        setLoading(true);
+        if (!guestsStatus) {
+                const data = {
+                    fullName: inputs.fullName,
+                    email: inputs.email,
+                    phone: inputs.phone,
+                    userIdPaypal:userIdPaypal,
+                    rut: inputs.rut,
+                    region: inputs.region,
+                    commune: inputs.commune,
+                    adress: inputs.adress,
+                    hobExperience: inputs.hobValue,
+                    quantityHobExperience: (inputs.hob / 70),
+                    communeHobExperience: inputs.communeHob,
+                    guest: null,
+                    totalPayment: totalAmountString,
+                    totalTickets: '20',
+                    totalHob: (parseInt(inputs.hobString) + parseInt(finalHobInvitados)),
+                    signUpTime: moment().format('lll'),
+                    payId: payIdAux2
+                }
+                const result = await signUpApi(data);
+                if (result.ok) {
+                    const payData = {
+                        amount: totalAmount,
+                        code: result.user.code
+                    }
+                    const resultPay = await MakePaymentPaypalApi(payData);
+                    if (resultPay.status !== 200) {
+                        notification["error"]({
+                            message: resultPay.message
+                        });
+                        setLoading(false);
+                    } else {
+                        
+                        //window.location.href = resultPay.response[1].href;
+                        console.log("IR A PAYPAL2");
+                        const formulario = $('#formPaypal').submit();
+                        setLoading(false);
+                    }
+                } else {
+                    notification["error"]({
+                        message: result.message
+                    });
+                    setLoading(false);
+                }
+            } else {
+                const data = {
+                    fullName: inputs.fullName,
+                    email: inputs.email,
+                    phone: inputs.phone,
+                    userIdPaypal:userIdPaypal,
+                    rut: inputs.rut,
+                    region: inputs.region,
+                    commune: inputs.commune,
+                    adress: inputs.adress,
+                    hobExperience: inputs.hobValue,
+                    quantityHobExperience: (parseInt(inputs.hob) / 70),
+                    communeHobExperience: inputs.communeHob,
+                    guest: null,
+                    totalPayment: totalAmountString,
+                    totalTickets: (parseInt(finalEntradaInvitados) + 20),
+                    totalHob: (parseInt(inputs.hobString) + parseInt(finalHobInvitados)),
+                    signUpTime: moment().format('lll'),
+                    payId: payIdAux2
+                }
+                const firstResult = await signUpApi(data);
+                if (firstResult.ok) {
+                    var count2 = 0;
+                    users.forEach(async item => {
+                        var guestData = {
+                            fullName: item.fullName,
+                            email: item.email,
+                            phone: item.phone,
+                            rut: item.rut,
+                            region: '',
+                            commune: '',
+                            adress: item.adress,
+                            hobExperience: item.hobExperience,
+                            quantityHobExperience: item.quantityHobExperience,
+                            communeHobExperience: item.hobExperience,
+                            guest: firstResult.user._id,
+                            totalPayment: '0',
+                            totalTickets: '0',
+                            totalHob: '0',
+                            signUpTime: moment().format('lll'),
+                            payId: payIdAux2
+                        }
+                        const result = await signUpApi(guestData);
+                        if (result.ok) {
+                            count2 = count2 + 1;
+                            makePayPaypal(count2, result, firstResult, totalAmount);
+                        } else {
+                            notification['error']({
+                                message: result.message
+                            });
+                            setLoading(false);
+                        }
+                    })
+                } else {
+                    notification['error']({
+                        message: firstResult.message
+                    });
+                    setLoading(false);
+                }
+            }
+
+        
     }
 
     const antIcon = <LoadingOutlined style={{ fontSize: 50 }} spin />;
@@ -543,7 +659,7 @@ export default function Carro4() {
                                                 <input type="hidden" name="amount" value='1.00'/>
                                                 <input type="hidden" name="currency_code" value="USD"/>
                                                 {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
-                                                <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${userIdPaypal}`}/>
+                                                <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${payIdAux2}`}/>
                                                 <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1"/>
                                                 {/* <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/> */}
                                                 <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US"/>

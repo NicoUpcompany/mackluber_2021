@@ -407,7 +407,7 @@ export default function Carro2() {
                                     <label className='num'>4 </label> <span> Incluye el despacho</span>
                                 </p> */}
                                 <p>
-                                    <label className='num'>1 </label> <span> Caja de del banquetero <strong> Joaquin Lea Plaza</strong>  con productos para<strong> dos personas</strong> , que incluye: Vino tinto, hummus, pate de ave y oporto, empanaditas de masa philo, hojas de parra, pan pita minis, queso camembert, queso gruyere, mantecoso, damasco turco y romero, tostadas de pan pita crujiente, cecinas, dulces árabes y mucho más</span>
+                                    <label className='num'>1 </label> <span> Caja del banquetero <strong> Joaquin Lea Plaza</strong>  con productos para<strong> dos personas</strong> , que incluye: Vino tinto, hummus, pate de ave y oporto, empanaditas de masa philo, hojas de parra, pan pita minis, queso camembert, queso gruyere, mantecoso, damasco turco y romero, tostadas de pan pita crujiente, cecinas, dulces árabes y mucho más</span>
                                 </p>
                                 <p>
                                     <label className='num'>2 </label> <span> <strong>Puedes comprar 1 o más cajas gastronómicas para la misma dirección.</strong></span>

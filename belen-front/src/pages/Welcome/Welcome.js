@@ -129,8 +129,12 @@ export default function Welcome() {
                 <div className="mid m">
                     <div className="middle">
                         <div className="maklube">
-                            <img src={logoMaklube} alt="maklube" className="img1" />
-                            <img src={logoBelen} alt="belen" className="img2"  />
+                            <div className="img1">
+                                <img src={logoMaklube} alt="maklube"/>
+                            </div>
+                            <div className="img2">
+                                <img src={logoBelen} alt="belen"/>
+                            </div>
                         </div>
                         <h3>¡Bienvenidos al Maklube 2021!</h3>
                         <p>
