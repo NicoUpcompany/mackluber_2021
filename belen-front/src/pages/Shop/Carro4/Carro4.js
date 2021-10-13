@@ -661,8 +661,8 @@ export default function Carro4() {
                                                 <input type="hidden" name="cmd" value="_xclick"/>
                                                 <input type="hidden" name="business" value="KF7U8S9XEPUNQ"/>
                                                 <input type="hidden" name="item_name" value="Entrada general"/>
-                                                {/* <input type="hidden" name="amount" value={totalAmountString}/> */}
-                                                <input type="hidden" name="amount" value='1.00'/>
+                                                <input type="hidden" name="amount" value={totalAmountString}/>
+                                                {/* <input type="hidden" name="amount" value='1.00'/>*/}
                                                 <input type="hidden" name="currency_code" value="USD"/>
                                                 {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
                                                 <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${payIdAux2}`}/>

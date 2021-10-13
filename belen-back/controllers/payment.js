@@ -40,8 +40,8 @@ function signInPagoFacil() {
 
 function makePay(req, res) {
 
-    //var value = req.body.amount;
-    var value = 1000;
+    var value = req.body.amount;
+    //var value = 1000;
     var userCode = req.body.code;
 
     User.findOne({ code: userCode }, (err, userStored) => {
@@ -651,8 +651,8 @@ function catchDonation(req, res) {
 
 function makePayPaypal(req, res) {
 
-    //var value = req.body.amount;
-    var value = 1;
+    var value = req.body.amount;
+    //var value = 1;
     var userCode = req.body.code;
 
     User.findOne({ code: userCode }, (err, userStored) => {
