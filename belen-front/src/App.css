@@ -356,7 +356,6 @@ a:hover{
 	border-image-slice: 1;
 	border-width: 1px;
 	border-style: solid;
-	/* border-image-source: linear-gradient(to left, rgba(181,124,27,1), rgba(255,236,136,1), rgba(181,124,27,1)); */
 	border-color: #e4c3a0;
 }
 
@@ -539,12 +538,6 @@ a:hover{
 	height: 0;
 	border: 6px solid transparent;
 	border-color: #4e4e4e transparent transparent transparent;
-}
-.select-selected:hover{
-	/*background: #ececec;*/
-}
-.select-selected.select-arrow-active{
-	/*border: 2px solid #000;*/
 }
 .select-selected.select-arrow-active:after {
 	border-color: transparent transparent #000 transparent;
@@ -801,9 +794,7 @@ a:hover{
 .carro .datos .campo .campo-r .radiobtn input[type=radio]:checked ~ .check::before{
   	background: #c17c33;
 }
-.carro .datos .campo .campo-r .radiobtn input[type=radio]:checked ~ label{
 
-}
 .carro .resumen{
 	float: left;
 	width: 100%;
@@ -1586,12 +1577,7 @@ a:hover{
 	float: left;
 	width: 100%;
 }
-.exito .campo .mid .custom-select {
-	/* background-color: red; */
-}
-.donacion .botones{
 
-}
 .donacion .mid span{
 	float: left;
 	width: 100%;
@@ -1704,7 +1690,7 @@ a:hover{
 	float: left;
 	width: calc(100% - 320px);
 	padding: 50px;
-	background-image: url('./assets/img/fondoWebinar.jpg');
+	background-image: url('./assets/imagen/fondoBelen.png');
 	background-size: cover;
 	height: 100vh;
   }
@@ -1731,16 +1717,15 @@ a:hover{
   .webinar .column-1 .botones a{
 	float: left;
 	width: 200px;
-	height: 40px;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-	font-size: 20px;
-	line-height: 40px;
+	height: 50px;
+	background: #E4C3A0;
+	font-size: 18px;
+	line-height: 50px;
 	text-align: center;
-	color: black;
-	-webkit-box-shadow: 0px 8px 9px -8px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 8px 9px -8px rgba(0,0,0,1);
-	box-shadow: 0px 8px 9px -8px rgba(0,0,0,1);
+	color: #333;
+	border-radius: 25px;
+	z-index: 10;
+	position: relative;
   }
   .webinar .column-1 .botones .pregunta{
 	float: right;
@@ -1750,18 +1735,24 @@ a:hover{
   .webinar .column-1 .botones .pregunta a{
 	float: right;
 	width: 200px;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
+	background: #E4C3A0;
+	height: 50px;
+	border-radius: 25px;
   }
   .webinar .column-1 .botones .pregunta input{
 	float: right;
 	width: calc(100% - 200px);
-	height: 40px;
-	border: none;
+	height: 50px;
+	border: 1px solid #e4c3a0;
 	padding-left: 25px;
+	color: #333;
+	margin-right: -25px;
+	border-radius: 25px 0 0 25px;
+	z-index: 9;
+	position: relative;
   }
   .webinar .column-1 .botones .pregunta input::placeholder{
-  color: #a2a1a1;
+  color: #333;
   }
   .slick-list{
 	overflow: hidden;
@@ -2097,7 +2088,7 @@ a:hover{
 	  float: left;
 	  width: 100%;
 	  padding: 0px 50px 20px;
-	  background-image: url(./assets/img/fondoSalaEspera.jpg);
+	  background-image: url(./assets/imagen/header-maklube.jpg);
 	  background-size: cover;
 
   }
@@ -2112,7 +2103,7 @@ a:hover{
 	  width: 100%;
   }
 .titulo h2{
-	color: white;
+	color: #333;
 	text-align: center;
 	padding: 20px 0;
 	font-size: 24px;
@@ -2160,10 +2151,7 @@ a:hover{
 	float: left;
 	width: calc(100% / 3 - 20px);
 	margin-left: 20px;
-	border: 1px solid rgba(181,123,27,1);
-	border: 1px solid transparent;
-	border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%) 1;
-
+	border: 1px solid #e4c3a0;
 	border-radius: 5px;
 	position: relative;
 	height: 125px;
@@ -2172,7 +2160,7 @@ a:hover{
 	margin-left: 0px;
 	}
 	.rowSala .cronometro .countdown div h1{
-		color: white;
+		color: #333;
 		text-align: center;
 		font-weight: bold;
 		font-size: 70px;
@@ -2197,7 +2185,7 @@ a:hover{
 		bottom: 5px;
 		left: 50%;
 		transform: translate(-50%);
-		color: white;
+		color: #333;
 		text-align: center;
 	}
 	.rowSala .cronometro .countdown div::after{
@@ -2230,15 +2218,11 @@ a:hover{
 		float: left;
 		width: 100%;
 		padding: 20px 50px;
-		background: black;
+		background: #fff;
 	}
 	.sponsors .blanco{
 		float: left;
 		width: 100%;
-		border: 3px solid transparent;
-		border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-		border-image-slice: 1;
-		background: white;
 		padding: 5px;
 	}
 
@@ -2270,20 +2254,27 @@ a:hover{
 		background-position: top;
 		padding: 0px;
 		margin: 0px !important;
+		display: table;
 	}
 	.container2 .row .column-1{
-		min-width: 50% !important;
+		float: left;
 		width: 50%;
 		background-image: url('./assets/imagen/login.png');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		margin: 0;
+		min-height: 100vh;
 	}
 	.container2 .row .column-2{
 		float: left;
-		min-width: 50%;
-		padding:45px 50px 0;
+		width: 50%;
+		padding: 0;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
 	}
 	.container2 .row .column-2 .datos{
 		float: left;
@@ -2293,30 +2284,21 @@ a:hover{
 		flex-direction: column;
 	}
 	.container2 .row .column-2 .imagen{
+		width: 100%;
 		float: left;
-		width: 100%;
-		height: 25%;
-		margin-bottom: 30px;
-		display: flex;
-		justify-content: center;
 	}
-	.container2 .row .column-2 .imagen:nth-child(2){
-		width: 100%;
-		height: 20%;
+	.container2 .row .column-2 .imagen.i1 img{
+		display: block;
+		width: 280px;
+		margin: 0 auto;
 	}
-	.container2 .row .column-2 .imagen:nth-child(2) img{
-		width: 50%;
-		margin-top: 20px;
-	}
-	.container2 .row .column-2 .datos img{
-		width: 60%;
-		max-width: 220px;
+	.container2 .row .column-2 .imagen.i2 img{
+		display: block;
+		width: 200px;
+		margin: 0 auto;
 	}
 
-	.container2 .row .column-2 .logo-belen {
-		width: 50%;
-		margin-top: 60px;
-	}
+	
 	.container2 .row .column-2 h2{
 		color: #000;
 		font-weight: bold;
@@ -2341,6 +2323,40 @@ a:hover{
 		width: 100%;
 		margin-bottom: 20px;
 		color: #000 ;
+		position: relative;
+	}
+	.container2 .row .column-2 .prueba .campo input{
+		float: left;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		padding: 0 20px;
+		color: #000;
+		background: #fff;
+		border-image-slice: 1;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #e4c3a0;
+	}
+	.container2 .row .column-2 .prueba .campo label{
+		position: absolute;
+		background: #fff;
+		font-size: 10px;
+		color: #000;
+		top: -6px;
+		left: 5px;
+		padding: 0 10px;
+		display: none;
+		transition: 0.3s all ease;
+		-webkit-transition: 0.3s all ease;
+	}
+	.container2 .row .column-2 .prueba .campo input:focus ~ label{ display: block; }
+	.container2 .row .column-2 .prueba .campo input:active ~ label{ display: block; }
+	
+	.container2 .row .column-2 .prueba .campo::-webkit-input-placeholder,
+	.container2 .row .column-2 .prueba .campo:-ms-input-placeholder,
+	.container2 .row .column-2 .prueba .campo::placeholder{
+		color: #222a2f;
 	}
 
 	.container2 .row .column-2 .prueba .campo button{
@@ -2355,24 +2371,10 @@ a:hover{
 		line-height: 35px;
 		text-decoration: none;
 		transition-duration: 1s;
-		background: rgb(181,124,27);
 		font-weight: bold;
 		font-size: 14px;
-		background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 15%, rgba(255,236,136,1) 85%, rgba(181,123,27,1) 100%);
-	}
-	.container2 .row .column-2 .prueba .campo button:hover{
-		transition-duration: 1s;
-		background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 30%, rgba(255,236,136,1) 60%, rgba(181,123,27,1) 100%);
-	}
-	.container2 .row .column-2 .prueba .campo input{
-		width: 100%;
-		max-width: 100%;
-		color: #000;
-	}
-	.MuiInputBase-input{
-		width: 100% !important;
-		float: left;
-		color: black !important;
+		background: #E4C3A0;
+		border-radius: 25px;
 	}
 	.container2 .pie{
 		float: left;
@@ -2438,9 +2440,7 @@ a:hover{
 		min-width: 225px;
 		width: 100%;
 	  }
-	  #color{
-
-	  }
+	  
 	  .content{
 		float: left;
 		width: 100%;

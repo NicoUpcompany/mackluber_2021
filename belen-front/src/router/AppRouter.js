@@ -31,7 +31,7 @@ export const AppRouter = () => {
                     <Route exact path="/iniciarsesion2" component={ Login2Screen } />
                     <Route exact path="/medio-de-pago" component={ Carro4 } />
                     <Route exact path="/streaming" component={ Streaming } />
-                    <Route exact path="/salaespera" component={ Streaming } />
+                    <Route exact path="/salaespera" component={ WaitingRoom } />
                     <Route exact path="/dashboard" component={ LoginDashboard } />
                     <Route path="/dashboard/admin" component={ Dashboard } />
                     <Route path="/" component={ Welcome2 } />

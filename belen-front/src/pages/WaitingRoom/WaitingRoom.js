@@ -7,11 +7,9 @@ import { getTimeApi } from '../../api/stats';
 import { getAccessTokenApi } from '../../api/auth';
 import { updateWaitingRoomApi } from '../../api/user';
 
-import logo from '../../assets/img/logo1.png';
+import logo from '../../assets/imagen/logoBelen.png';
 import logobelen from '../../assets/img/belenpop.png';
-import logo2 from '../../assets/img/logo2.png';
-import belen from '../../assets/img/belen2000.png';
-import w from '../../assets/img/power.png';
+import logo2 from '../../assets/imagen/logoBelenColor.png';
 import logos from '../../assets/img/auspiciadores.png';
 
 moment.locale();
@@ -34,7 +32,7 @@ const WaitingRoom = () => {
                 }
                 updateWaitingRoomApi(token, data);
             } else {
-                window.location.href = "/iniciarsesion";
+                //window.location.href = "/iniciarsesion";
             }
             var interval;
             $('.countdown').each(function(){
@@ -44,7 +42,7 @@ const WaitingRoom = () => {
                 var now = time;
                 
                 interval = setInterval(function() {
-                    var date = "2020-10-15T21:00:00";
+                    var date = "2021-11-10T21:00:00";
                     var countDownDate = new Date(date).getTime();
                     var distance = countDownDate - now;
                     var days_t = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -140,6 +138,7 @@ const WaitingRoom = () => {
                     <img src={logos} width="100%" height="auto" alt="3" />
                 </div>
             </div> 
+            {/*
             <div className="footer">
                 <div className="belen">
                     <img src={belen} alt="belen" />
@@ -148,6 +147,7 @@ const WaitingRoom = () => {
                 <img src={w} style={{justifySelf:'flex-end'}} alt="2" />
                 </div>
             </div>
+            */}
         {modal? 
             
             <div className="modal">

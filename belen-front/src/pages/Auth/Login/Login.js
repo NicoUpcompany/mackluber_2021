@@ -15,7 +15,7 @@ import { getAccessTokenApi } from '../../../api/auth';
 import pagofacil from '../../../assets/img/pagofacil2.png';
 import paypal from '../../../assets/img/paypal.png';
 
-import logo from '../../../assets/imagen/logo2Belen.png';
+import logo from '../../../assets/imagen/logoBelenColor.png';
 import logo2 from '../../../assets/imagen/logoBelen.png';
 
 
@@ -190,46 +190,49 @@ const Login = () => {
         <div className="row">
           <div className="column-1"></div>
           <div className="column-2">
-            <div className="imagen">
-              <img src={logo2} alt="logo" />
-            </div>
-            <div className="prueba">
-              <form onChange={changeForm}>
-                <div className="datos">
-                  <h2>Ingresa al evento Maklube Fraterno</h2>      
-                  {/* <span>Ticket entrada</span> */}
-                </div>    
-                <div className="campo">
-                  <TextField 
-                    id="email"
-                    name="email"
-                    label="Email" 
-                    onChange={inputValidation}
-                    value={inputs.email}
-                  />
-                </div>
-                {/* <div className="campo">
-                  <TextField 
-                    id="code" 
-                    name="code"
-                    label="Ticket de entrada" 
-                    onChange={inputValidation}
-                    value={inputs.code}
-                  />
-                </div> */}
-                <div className="campo">
-                  <button type="button" onClick={() => register()}>Entrar al evento</button>
-                </div>
-                <div className="campo">
-                  <button  type="button" onClick={() => toShop()} >Aún no he comprado mi entrada</button>
-                </div>
-                {/* <div className="campo">
-                  <button  type="button" onClick={() => setVisible(true)}>Haz tu donación aquí</button>
-                </div> */}
-              </form>
-                <div className="imagen">
-                  <img src={logo} alt="logo" />
-                </div>
+            <div className="center">
+              <div className="imagen i1">
+                <img src={logo2} alt="logo"/>
+              </div>
+              <div className="prueba">
+                <form onChange={changeForm}>
+                  <div className="datos">
+                    <h2>Ingresa al evento</h2>      
+                    {/* <span>Ticket entrada</span> */}
+                  </div>    
+                  <div className="campo">
+                    <input 
+                      id="email"
+                      name="email"
+                      label="Email" 
+                      onChange={inputValidation}
+                      value={inputs.email}
+                    />
+                    <label>Email</label>
+                  </div>
+                  {/* <div className="campo">
+                    <TextField 
+                      id="code" 
+                      name="code"
+                      label="Ticket de entrada" 
+                      onChange={inputValidation}
+                      value={inputs.code}
+                    />
+                  </div> */}
+                  <div className="campo">
+                    <button type="button" onClick={() => register()}>Entrar al evento</button>
+                  </div>
+                  <div className="campo">
+                    <button  type="button" onClick={() => toShop()} >Aún no he comprado mi entrada</button>
+                  </div>
+                  {/* <div className="campo">
+                    <button  type="button" onClick={() => setVisible(true)}>Haz tu donación aquí</button>
+                  </div> */}
+                </form>
+              </div>
+              <div className="imagen i2">
+                <img src={logo} alt="logo"/>
+              </div>
             </div>
             <Snackbar anchorOrigin={{vertical: 'top', horizontal: 'right' }} open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error">

@@ -174,12 +174,12 @@ const Streaming = () => {
                             <a onClick={handleClick3}>IR A <strong>DONAR</strong></a>
                             </div>
                             <div className="pregunta">
-                            <a  onClick={sendQuestion}>CHAT EN <strong>VIVO</strong></a>
+                            <a  onClick={sendQuestion}>ENVIAR <strong>SALUDO</strong></a>
                                 <input 
                                     type="text"
                                     onChange={changeInput}
                                     value={question}
-                                    placeholder="Escribe tu pregunta"
+                                    placeholder="Escribe tu saludo"
                                 />
                             </div>
                         </div>
