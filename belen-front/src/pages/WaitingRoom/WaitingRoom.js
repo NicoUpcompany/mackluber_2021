@@ -5,18 +5,20 @@ import moment from 'moment';
 
 import { getTimeApi } from '../../api/stats';
 import { getAccessTokenApi } from '../../api/auth';
-import { updateWaitingRoomApi } from '../../api/user';
-
+import { updateWaitingRoomApi, signOutApi } from '../../api/user';
+import {useHistory} from 'react-router-dom';
 import logo from '../../assets/imagen/logoBelen.png';
 import logobelen from '../../assets/img/belenpop.png';
 import logo2 from '../../assets/imagen/logoBelenColor.png';
 import logos from '../../assets/img/auspiciadores.png';
-
+import {LoginOutlined} from '@ant-design/icons'
 moment.locale();
 
 const WaitingRoom = () => {
     const [time, setTime] = useState(new Date().getTime());
     const [modal, setModal] = useState(false);
+    const history = useHistory();
+
     useEffect(() => {
         getTime();
     }, []);
@@ -112,11 +114,21 @@ const WaitingRoom = () => {
         var result = await getTimeApi();
         setTime(result.time);
     }
+
+    const salir = async() =>{
+        const data ={
+            email: JSON.parse(localStorage.getItem('email'))
+        }
+        await signOutApi(data);
+        localStorage.clear();
+        history.push('/iniciarsesion');
+    }
     return ( 
         <>
             <div className="header">
                 <div className="titulo">
                     <h2>EL EVENTO INICIA EN:</h2>
+                    <LoginOutlined className='logout' onClick={salir} style={{fontSize:'20px'}}/>
                 </div>
                 <div className="rowSala">
                     <div className="logo1">

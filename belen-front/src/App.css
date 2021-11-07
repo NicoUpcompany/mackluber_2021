@@ -145,6 +145,16 @@ a:hover{
 	height: calc(100vh - 20vh);
 }
 
+.header .titulo{
+	position: relative;
+}
+
+.header .logout{
+	position: absolute;
+	top: 20%;
+	right: 0%;
+}
+
 .bienvenida .middle .texto{
 	position: absolute;
 	width: 50%;

@@ -7,7 +7,6 @@ var validRoles = {
 };
 
 var userSchema = Schema({
-
     fullName: { type: String, default: '' },
     email: { type: String, default: '' },
     rut: { type: String, default: '' },
@@ -30,8 +29,8 @@ var userSchema = Schema({
     signUpTime: { type: String, default: '0'},
     signInTime: { type: String, default: '0'},
     waitingRoomTime: { type: String, default: '0'},
-    webinarTime: { type: String, default: '0'}
-
+    webinarTime: { type: String, default: '0'},
+    active: {type:Boolean, default: false}
 });
 
 module.exports = mongoose.model('User', userSchema);

@@ -111,6 +111,7 @@ const Login = () => {
         const { accessToken, refreshToken } = result;
         localStorage.setItem(ACCESS_TOKEN, accessToken);
         localStorage.setItem(REFRESH_TOKEN, refreshToken);
+        localStorage.setItem('email',JSON.stringify(inputs.email));
         if (result.cortesiaCode) {
           window.location.href = "/iniciarsesion2";
         } else {

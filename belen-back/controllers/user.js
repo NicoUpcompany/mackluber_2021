@@ -127,10 +127,13 @@ function signIn(req, res) {
 			if (!userStored) {
 				res.status(404).send({ ok: false, message: "Usuario no encontrado" });
 			} else {
-				if (!userStored.active) {
+				if (userStored.active !==undefined && userStored.active ) {
 					res.status(403).send({ ok: false, message: "Ingreso no permitido" });
 				} else {
 					userStored.signInTime = signInTime;
+                    if(email!=='invitacion@maklube.cl'){
+                        userStored.active = true;
+                    }
 					User.findByIdAndUpdate({ _id: userStored.id }, userStored, (err, userUpdate) => {
 						if (err) {
 							res.status(500).send({ ok: false, message: "Error del servidor" });
@@ -156,7 +159,6 @@ function signInAdmin(req, res) {
     const params = req.body;
     var signInTime = req.body.signInTime;
     const email = params.email;
-  
     User.findOne({email}, (err, userStored) => {
         if (err) {
             res.status(500).send({message: "Error del servidor"});
@@ -199,6 +201,44 @@ function signInAdmin(req, res) {
             }
         }
     });
+  
+}
+
+function signOut(req,res) {
+
+	let data = req.body;
+    let {email} = data;
+    console.log(email);
+	email = email.toString().toLowerCase();
+    User.findOne({email}, (err, userStored) =>{
+        if (err) {
+            res.status(500).send({message: "Error del servidor"});
+        } else {
+            if(!userStored){
+                res.status(500).send({message: "Usuario no encontrado"});
+            }else{
+                if(email !=='invitacion@maklube.cl'){
+                    userStored.active = false;
+                    console.log('El estado cambio a falso de ', email);
+                }
+                User.findByIdAndUpdate({ _id: userStored.id }, userStored, (err, userUpdate) => {
+                    if (err) {
+                        res.status(500).send({ ok: false, message: "Error del servidor" });
+                    } else {
+                        if (!userUpdate) {
+                            res.status(404).send({ ok: false, message: "No se ha encontrado el usuario" });
+                        } else {
+                            res.status(200).send({
+                                ok: true,
+                                accessToken: jwt.createAccessToken(userUpdate),
+                                refreshToken: jwt.createRefreshToken(userUpdate),
+                            });
+                        }
+                    }
+                })
+            }
+        }
+    })
 }
 
 function getUsers(req, res) {
@@ -407,5 +447,6 @@ module.exports = {
     updateWaitingRoomTime,
     updateStreamTime,
     updateUser,
-    generateCortesiaCodes
+    generateCortesiaCodes,
+    signOut
 }; 
