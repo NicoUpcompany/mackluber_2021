@@ -54,7 +54,7 @@ export function signInApi(data) {
         });
 }
 export function signOutApi(data) {
-    const url = `${basePath}/${apiVersion}/sign-out`;
+    const url = `${basePath}/${apiVersion}/sign-out  `;
 
     const params = {
         method: "POST",

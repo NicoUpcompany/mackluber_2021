@@ -10,6 +10,7 @@ const paymentRoutes = require("./routes/payment");
 const questionRoutes = require("./routes/question");
 const statsRoutes = require("./routes/stats");
 const xlsxRoutes = require("./routes/importXlsx");
+const redirect = require("./routes/redirect");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -31,5 +32,6 @@ app.use(`/api/${API_VERSION}`, paymentRoutes);
 app.use(`/api/${API_VERSION}`, questionRoutes);
 app.use(`/api/${API_VERSION}`, statsRoutes);
 app.use(`/api/${API_VERSION}`, xlsxRoutes);
+app.use(`/api/${API_VERSION}`, redirect);
 
 module.exports = app;

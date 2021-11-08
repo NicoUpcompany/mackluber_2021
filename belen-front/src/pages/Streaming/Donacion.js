@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState,useEffect }  from 'react';
 import salir from '../../assets/img/salir.png'
 import jwtDecode from 'jwt-decode';
 import Snackbar from '@material-ui/core/Snackbar';
@@ -8,6 +8,8 @@ import uuid from 'uuid/v4';
 
 import { getAccessTokenApi } from '../../api/auth';
 import { MakeDonationApi, MakeDonationPaypalApi } from '../../api/payment';
+import { getStatusApi } from '../../api/redirect';
+import { useHistory } from 'react-router';
 moment.locale();
 
 function Alert(props) {
@@ -19,6 +21,8 @@ const Donacion = () => {
     const [mensaje, setMensaje] = useState("");
     const [open, setOpen] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState(true);
+    const history = useHistory();
+    const [texto, setTexto] = useState('Donación de becas')
     
     const changeForm = e => {
         setAmountState(e.target.value);
@@ -34,6 +38,25 @@ const Donacion = () => {
         }
         setOpen(false);
     };
+
+    const status = async() =>{
+        const result =  await getStatusApi();
+        if(result.texto){
+            setTexto('Donación de citoscopio')
+        }else{
+            setTexto('Donación de becas')
+        }
+    }
+
+    useEffect(()=>{
+        let interval; 
+        interval = setInterval(function(){
+            status();
+        },5000)
+
+        return () => clearInterval(interval);
+
+    },[])
 
     const makeFormPay = async () => {
         var token = getAccessTokenApi();
@@ -93,7 +116,7 @@ const Donacion = () => {
                      <h1>DONACIÓN</h1>
                     <span>Tu donación permitirá entregar eduación a cientos de niños en Palestina.</span>
 
-                    <span>Cada beca cubre <strong>Matrícula, Útiles escolares y desayuno. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span>
+                    <span>Cada beca cubre <strong>{texto}. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span>
                     <span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>
                     <div className="campo alto">
                         <div className="in">
