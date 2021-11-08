@@ -39,12 +39,11 @@ const WaitingRoom = () => {
             var interval;
             $('.countdown').each(function(){
                 var $this = $(this);
-                //var date = "2020-08-27T09:00:00";
+                var date = "2021-11-10T21:00:00";
                 // var countDownDate = new Date(2020, 10, 15, 9, 0, 0).getTime();
                 var now = time;
                 
                 interval = setInterval(function() {
-                    var date = "2021-11-10T21:00:00";
                     var countDownDate = new Date(date).getTime();
                     var distance = countDownDate - now;
                     var days_t = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -143,7 +142,7 @@ const WaitingRoom = () => {
                 </div>
             </div>
             <div className="streaming">
-                <iframe src="https://player.vimeo.com/video/468522589?autoplay=1&loop=1" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/468522589?autoplay=1&loop=1" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div> 
             <div className="sponsors">
                 <div className="blanco">

@@ -519,7 +519,8 @@ export default function Carro1() {
                 localStorage.setItem('totalAmount', 15000);
                 localStorage.setItem('totalAmountString', '15.000');
                 localStorage.setItem('communeHob', '');
-                window.location.href = '/experiencia-gastronomica'
+                //window.location.href = '/experiencia-gastronomica'
+                window.location.href = '/invitados'
             } else {
                 localStorage.setItem('fullName', inputs.fullName);
                 localStorage.setItem('rut', inputs.rut);
@@ -557,18 +558,18 @@ export default function Carro1() {
                             <div className="num active">1</div>
                             <span>Compra tu entrada</span>
                         </div>
-                        
+                        {/*
                         <div className="col">
                             <div className="num">2</div>
                             <span>Agregar caja Gastronómica</span>
                         </div>
-                       
+                       */}
                         <div className="col">
-                            <div className="num">3</div>
+                            <div className="num">2</div>
                             <span>añadir invitados</span>
                         </div>
                         <div className="col">
-                            <div className="num">4</div>
+                            <div className="num">3</div>
                             <span>medio de pago</span>
                         </div>
                     </div>

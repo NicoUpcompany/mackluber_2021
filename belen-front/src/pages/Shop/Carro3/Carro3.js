@@ -454,18 +454,18 @@ export default function Carro3() {
                             <div className="num">1</div>
                             <span>Compra tu entrada</span>
                         </div>
-                        
+                        {/* 
                         <div className="col">
                             <div className="num">2</div>
                             <span>Agregar caja Gastronómica</span>
                         </div>
-                       
+                       */}
                         <div className="col">
-                            <div className="num active">3</div>
+                            <div className="num active">2</div>
                             <span>añadir invitados</span>
                         </div>
                         <div className="col">
-                            <div className="num">4</div>
+                            <div className="num">3</div>
                             <span>medio de pago</span>
                         </div>
                     </div>
@@ -512,6 +512,7 @@ export default function Carro3() {
                                         <span onClick={() => addUser()} className="btn">Agregar al carro</span>
                                     </div>
                                     <div className="campo">&nbsp;</div>
+                                    {/*
                                     <h3>Caja Gastronómica para invitados</h3>
                                     <div className="campo">
                                         <div className="ml">
@@ -606,9 +607,13 @@ export default function Carro3() {
                                             </div>
                                         </div>
                                     </div>
+                                    */}
+
+                                    {/*
                                     <div className="campo">
                                         <span onClick={() => addExperience()} className="btn">Agregar la caja</span>
                                     </div>
+                                     */}
                                     <div className="campo">
                                         <span onClick={() => clearForm()} className="btn">Agregar otro invitado</span>
                                     </div>
@@ -643,10 +648,10 @@ export default function Carro3() {
                                                 <div className="line">Entrada otros países <span>$20</span></div>
                                             }
                                             {ticketStatus ? <div className="line">Entrada Chile (Invitados)<span>${ticketValueString}</span></div> : <span></span>}
-                                            
+                                            {/*
                                             {inputs.hobValue ? <div className="line">Caja gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
                                             {usersHobStatus ? <div className="line">Caja gastronómica (Invitados)<span>${hobString}</span></div> : <span></span>}
-                                           
+                                            */}
                                         </div>
                                         <div className="total">Total <span>${totalAmountString}</span></div>
                                         <div className="btns">

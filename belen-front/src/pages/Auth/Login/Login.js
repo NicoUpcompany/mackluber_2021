@@ -198,7 +198,7 @@ const Login = () => {
               <div className="prueba">
                 <form onChange={changeForm}>
                   <div className="datos">
-                    <h2>Ingresa al evento</h2>      
+                    <h2>Ingresa mail registrado en tu compra</h2>      
                     {/* <span>Ticket entrada</span> */}
                   </div>    
                   <div className="campo">
@@ -208,6 +208,7 @@ const Login = () => {
                       label="Email" 
                       onChange={inputValidation}
                       value={inputs.email}
+                      placeholder="Email"
                     />
                     <label>Email</label>
                   </div>

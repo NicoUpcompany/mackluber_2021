@@ -2115,8 +2115,8 @@ a:hover{
 .titulo h2{
 	color: #333;
 	text-align: center;
-	padding: 20px 0;
-	font-size: 24px;
+	padding: 10px 0 0;
+	font-size: 20px;
 	font-weight: 400;
   }
   .rowSala .logo1{
@@ -2128,13 +2128,13 @@ a:hover{
   }
   .rowSala .logo1 img{
 	  width: 100%;
-	  max-width: 260px;
+	  max-width: 180px;
   }
   .rowSala .logo2{
 	  float: right;
 	  width: 25%;
 	  padding: 0px 30px 0;
-	  max-width: 400px;
+	  max-width: 240px;
 	  display: flex;
 	  align-items: flex-end;
   }
@@ -2164,7 +2164,7 @@ a:hover{
 	border: 1px solid #e4c3a0;
 	border-radius: 5px;
 	position: relative;
-	height: 125px;
+	height: 90px;
   	}
   	.rowSala .cronometro .countdown div:first-child{
 	margin-left: 0px;
@@ -2173,8 +2173,8 @@ a:hover{
 		color: #333;
 		text-align: center;
 		font-weight: bold;
-		font-size: 70px;
-		line-height: 125px;
+		font-size: 50px;
+		line-height: 70px;
 	}
 	.rowSala .cronometro .countdown a{
 		float: left;
