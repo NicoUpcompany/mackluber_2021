@@ -97,45 +97,65 @@ const Streaming = () => {
             var veces = 0;
             time = setInterval(function() {
                 veces++;
-                if(veces === 2){
+                if(veces === 3){
                     $('.img1').fadeOut('fast', function(){
                         $('.img2').fadeIn('fast');
                     });
                 }
-                if(veces === 4){ // BCI
+                if(veces === 6){ // BCI
                    $('.img2').fadeOut('fast', function(){
-                        $('.img6').fadeIn('fast');
-                    });
-                }
-                if(veces === 6){
-                   $('.img6').fadeOut('fast', function(){
                         $('.img3').fadeIn('fast');
                     });
                 }
-                if(veces === 8){
+                if(veces === 9){
                    $('.img3').fadeOut('fast', function(){
                         $('.img4').fadeIn('fast');
                     });
                 }
-                if(veces === 10){ // BCI
-                   $('.img4').fadeOut('fast', function(){
-                        $('.img6').fadeIn('fast');
-                    });
-                }
                 if(veces === 12){
-                   $('.img6').fadeOut('fast', function(){
+                   $('.img4').fadeOut('fast', function(){
                         $('.img5').fadeIn('fast');
                     });
                 }
-                if(veces === 14){
+                if(veces === 15){ // BCI
                    $('.img5').fadeOut('fast', function(){
+                        $('.img6').fadeIn('fast');
+                    });
+                }
+                if(veces === 18){
+                   $('.img6').fadeOut('fast', function(){
+                        $('.img7').fadeIn('fast');
+                    });
+                }
+                if(veces === 21){
+                    $('.img7').fadeOut('fast', function(){
+                         $('.img8').fadeIn('fast');
+                     });
+                 }
+                 if(veces === 24){
+                    $('.img8').fadeOut('fast', function(){
+                         $('.img9').fadeIn('fast');
+                     });
+                 }
+                 if(veces === 27){
+                    $('.img9').fadeOut('fast', function(){
+                         $('.img10').fadeIn('fast');
+                     });
+                 }
+                 if(veces === 30){
+                    $('.img10').fadeOut('fast', function(){
+                         $('.img11').fadeIn('fast');
+                     });
+                 }
+                if(veces === 33){
+                   $('.img11').fadeOut('fast', function(){
                         $('.img1').fadeIn('fast');
                     });
                     veces = 0;
                 }
     
-            }, 60000);
-            //}, 1000);
+            //}, 60000);
+            }, 1000);
         });
         return () => clearInterval(time);
     }, []);
@@ -203,8 +223,8 @@ const Streaming = () => {
                             <div className="img img7"><img src={a7} alt="a7" /></div>
                             <div className="img img8"><img src={a8} alt="a8" /></div>
                             <div className="img img9"><img src={a9} alt="a9" /></div>
-                            <div className="img img10"><img src={a9} alt="a10" /></div>
-                            <div className="img img11"><img src={a9} alt="a11" /></div>
+                            <div className="img img10"><img src={a10} alt="a10" /></div>
+                            <div className="img img11"><img src={a11} alt="a11" /></div>
                         </div>
 
                         </div>
