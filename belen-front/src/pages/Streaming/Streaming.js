@@ -154,8 +154,8 @@ const Streaming = () => {
                     veces = 0;
                 }
     
-            //}, 60000);
-            }, 1000);
+            }, 60000);
+            //}, 1000);
         });
         return () => clearInterval(time);
     }, []);

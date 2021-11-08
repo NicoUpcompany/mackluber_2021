@@ -96,17 +96,19 @@ const Donacion = () => {
                     <span>Cada beca cubre <strong>Matrícula, Útiles escolares y desayuno. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span>
                     <span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>
                     <div className="campo alto">
-                        <input type="radio" id="donacion4" checked={paymentMethod} onClick={() => setPaymentMethod(true)}  name="donacion" />
-                        <label htmlFor="donacion4" id="labelwey" onClick={() => setPaymentMethod(true)} >Pago Fácil (CLP)</label>
-                        <div className="centro"></div>
-                        <div className="borde"></div>
-
-                        <input type="radio" id="donacion5" checked={!paymentMethod} onClick={() => setPaymentMethod(false)}   name="donacion" />
-                        <label htmlFor="donacion5" id="labelwey2" onClick={() => setPaymentMethod(false)} >PayPal (USD)</label>
-                        <div className="centro1"></div>
-                        <div className="borde"></div>
-
-                        <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" />
+                        <div className="in">
+                            <input type="radio" id="donacion4" for="labelwey" checked={paymentMethod} onClick={() => setPaymentMethod(true)}  name="donacion" />
+                            <label htmlFor="donacion4" id="labelwey" onClick={() => setPaymentMethod(true)} >Pago Fácil (CLP)</label>
+                            <div className="centro"></div>
+                        </div>
+                        <div className="in">
+                            <input type="radio" id="donacion5" for="labelwey2" checked={!paymentMethod} onClick={() => setPaymentMethod(false)}   name="donacion" />
+                            <label htmlFor="donacion5" id="labelwey2" onClick={() => setPaymentMethod(false)} >PayPal (USD)</label>
+                            <div className="centro1"></div>
+                        </div>
+                        <div className="in">
+                            <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" />
+                        </div>
                     </div>
                     <div className="resumen">
                         <h1 className="tituloResumen">Resumen Pedido</h1>

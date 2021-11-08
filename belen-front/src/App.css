@@ -1854,7 +1854,7 @@ a:hover{
 	  float: left;
 	  width: 100%;
 	text-align: left;
-	color: white;
+	color: #333;
 	font-size: 24px;
 	margin: 0px;
 	margin-bottom: 40px;
@@ -1862,7 +1862,7 @@ a:hover{
 	letter-spacing: -1px;
   }
   .row1 span{
-	  color: white;
+	  color: #333;
 	  float: left;
 	  width: 100%;
 	  margin-bottom: 20px;
@@ -1872,35 +1872,35 @@ a:hover{
   .row1 .campo{
 	float: left;
 	width: 100%;
-	border: 2px solid transparent;
-    border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-    border-image-slice: 1;
-	background: black;
+	border: 1px solid #e4c3a0;
 	margin-bottom: 20px;
 	height: 50px;
-	display: flex;
-	color: white;
-	align-items: center;
+	color: #333;
 	position: relative;
   }
-
+  .row1 .campo .in{
+	  float: left;
+	  width: 100%;
+	  position: relative;
+  }
   .row1 .campo input[type=radio]{
 	visibility: hidden;
+	position: absolute;
   }
   .row1 .campo #donacion4:checked ~ .centro{
 	visibility: visible !important;
+	background: #e4c3a0;
   }
   .row1 .campo #donacion5:checked ~ .centro1{
 	visibility: visible !important;
+	background: #e4c3a0;
   }
   .row1 .campo .centro1{
 	height: 8px;
 	width: 8px;
 	border-radius: 20px;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
 	position: absolute;
-	top: 32px;
+	top: 14px;
 	left: 17px;
 	visibility: hidden;
   }
@@ -1909,7 +1909,7 @@ a:hover{
 	width: 14px;
 	height: 14px;
 	border-radius: 100px;
-    border: 1px solid rgba(255,236,136,1);
+    border: 1px solid #e4c3a0;
 	border-image-slice: 1;
 	left: -3px;
 	top: -3px;
@@ -1931,8 +1931,6 @@ a:hover{
 	height: 8px;
 	width: 8px;
 	border-radius: 20px;
-	background: rgb(181,124,27);
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
 	position: absolute;
 	top: 12px;
 	left: 17px;
@@ -1943,8 +1941,7 @@ a:hover{
 	width: 14px;
 	height: 14px;
 	border-radius: 100px;
-    border: 1px solid rgba(255,236,136,1);
-	border-image-slice: 1;
+    border: 1px solid #e4c3a0;
 	left: -3px;
 	top: -3px;
 	position: absolute;
@@ -1961,45 +1958,38 @@ a:hover{
 	  line-height: 41px;
   }
   .row1 .campo input[type=text]{
-	position: absolute;
-	left: 25px;
-	width: 150px;
+	width: calc(100% - 40px);
 	background: transparent;
-	border: 1px solid transparent;
-    border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-    border-image-slice: 1;
-	color: white;
-	height: 35px;
-	bottom: 15px;
-	line-height: 20px;
+	border: 1px solid #e4c3a0;
+	color: #333;
+	line-height: 30px;
 	padding-left: 10px;
 	font-size: 12px;
+	margin: 0 15px;
   }
   .row1 .campo input[type=text]::placeholder{
-	color: #c7c8cb;
+	color: #333;
 	font-size: 12px;
 	line-height: 20px;
   }
   .alto
   {
-	height: 110px !important;
+	height: 130px !important;
   }
    .row1 .resumen{
 	float: left;
 	width: 100%;
-	border: 2px solid transparent;
-    border-image: linear-gradient(180deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-    border-image-slice: 1;
-	background: black;
+	border: 1px solid #e4c3a0;
+	background: #fff;
 	height: 150px;
-	color: white;
+	color: #333;
 	position: relative;
 	padding: 17px 14px 0px;
   }
   .row1 .resumen a{
 	float: left;
 	width: 100%;
-	background: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
+	background-color: #e4c3a0;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
@@ -2014,11 +2004,9 @@ a:hover{
   }
   .row1 .resumen hr{
 	color: #9a005e;
-	border: 1px solid transparent;
+	border-bottom: 1px solid #e4c3a0;
 	float: left;
 	width: 100%;
-	border-image: linear-gradient(90deg, rgba(181,124,27,1) 0%, rgba(255,236,136,1) 25%, rgba(255,236,136,1) 75%, rgba(181,123,27,1) 100%);
-    border-image-slice: 1;
 	margin: 0px;
 	margin-bottom: 15px;
   }
@@ -2048,14 +2036,13 @@ a:hover{
   }
 
   .row1 .campo #labelwey{
-	position: absolute;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 20px;
-	top: 3px;
-	left: 40px;
+	position: relative;
+	padding: 0;
+	top: 0;
+	left: 0;
 	font-size: 12px;
-	line-height: normal;
+	line-height: 34px;
+    padding-left: 40px;
   }
 
   .row1 .campo #labelwey small{
@@ -2063,14 +2050,13 @@ a:hover{
   }
 
   .row1 .campo #labelwey2{
-	position: absolute;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 20px;
-	top: 25px;
-	left: 40px;
+	position: relative;
+	padding: 0;
+	top: 0;
+	left: 0;
 	font-size: 12px;
-	line-height: normal;
+	line-height: 34px;
+    padding-left: 40px;
   }
 
   .row1 .campo #labelwey2 small{
@@ -2084,7 +2070,7 @@ a:hover{
 	right: -320px;
 	width: 320px;
 	height: 100vh;
-	background: #000000;
+	background: #fff;
   }
   .popUpDonacion .salir{
 	clear: both;
