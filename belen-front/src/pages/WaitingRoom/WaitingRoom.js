@@ -142,7 +142,7 @@ const WaitingRoom = () => {
                 </div>
             </div>
             <div className="streaming">
-                <iframe src="https://player.vimeo.com/video/468522589?autoplay=1&loop=1" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/643580851?autoplay=1&loop=1" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div> 
             <div className="sponsors">
                 <div className="blanco">
