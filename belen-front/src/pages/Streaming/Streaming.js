@@ -195,6 +195,7 @@ const Streaming = () => {
                             <div className="img img4"><img src={a4} alt="a4" /></div>
                             <div className="img img5"><img src={a5} alt="a5" /></div>
                             <div className="img img6"><img src={a6} alt="a6" /></div>
+                            <div className="img img7"><img src={a7} alt="a7" /></div>
                         </div>
 
                         </div>
