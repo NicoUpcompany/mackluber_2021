@@ -23,8 +23,13 @@ import a1 from '../../assets/img/a1.jpg';
 import a2 from '../../assets/img/a2.jpg';
 import a3 from '../../assets/img/a3.jpg';
 import a4 from '../../assets/img/a4.jpg';
-import a5 from '../../assets/img/a5.jpg';
-import a6 from '../../assets/img/a6.jpg';
+import a5 from '../../assets/img/a1.jpg';
+import a6 from '../../assets/img/a5.jpg';
+import a7 from '../../assets/img/a6.jpg';
+import a8 from '../../assets/img/a7.jpg';
+import a9 from '../../assets/img/a1.jpg';
+import a10 from '../../assets/img/a8.jpg';
+import a11 from '../../assets/img/a9.jpg';
 // import a7 from '../../assets/img/a7.jpg';
 // import a8 from '../../assets/img/a8.jpg';
 // import a9 from '../../assets/img/a9.jpg';
@@ -196,6 +201,10 @@ const Streaming = () => {
                             <div className="img img5"><img src={a5} alt="a5" /></div>
                             <div className="img img6"><img src={a6} alt="a6" /></div>
                             <div className="img img7"><img src={a7} alt="a7" /></div>
+                            <div className="img img8"><img src={a8} alt="a8" /></div>
+                            <div className="img img9"><img src={a9} alt="a9" /></div>
+                            <div className="img img10"><img src={a9} alt="a10" /></div>
+                            <div className="img img11"><img src={a9} alt="a11" /></div>
                         </div>
 
                         </div>
