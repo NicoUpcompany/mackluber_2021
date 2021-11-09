@@ -14,6 +14,7 @@ import { signInApi } from '../../../api/user';
 import { getAccessTokenApi } from '../../../api/auth';
 import pagofacil from '../../../assets/img/pagofacil2.png';
 import paypal from '../../../assets/img/paypal.png';
+import {useHistory} from 'react-router-dom'
 
 import logo from '../../../assets/imagen/logoBelenColor.png';
 import logo2 from '../../../assets/imagen/logoBelen.png';
@@ -39,6 +40,7 @@ const Login = () => {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     var token = getAccessTokenApi();
@@ -122,6 +124,10 @@ const Login = () => {
       }
     }
   };
+
+  const donar = () =>{
+    history.push('/donacion');
+  }
 
   const makeDonation = async () => {
     setLoading(true);
@@ -233,6 +239,10 @@ const Login = () => {
                   </div>
                   <div className="campo">
                     <button  type="button" onClick={() => toShop()} >Aún no he comprado mi entrada</button>
+                  </div>
+
+                  <div className="campo">
+                    <button  type="button" onClick={donar} style={{backgroundColor:'#545456', color:'white'}}>Donar</button>
                   </div>
                   {/* <div className="campo">
                     <button  type="button" onClick={() => setVisible(true)}>Haz tu donación aquí</button>
