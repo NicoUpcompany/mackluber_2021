@@ -131,9 +131,15 @@ function signIn(req, res) {
 					res.status(403).send({ ok: false, message: "Ingreso no permitido" });
 				} else {
 					userStored.signInTime = signInTime;
+
                     if(email!=='invitacion@maklube.cl'){
                         userStored.active = true;
                     }
+
+                    if(email ==='invitacion@maklube.cl'){
+                        userStored.counter = userStored.counter + 1;
+                    }
+                    
 					User.findByIdAndUpdate({ _id: userStored.id }, userStored, (err, userUpdate) => {
 						if (err) {
 							res.status(500).send({ ok: false, message: "Error del servidor" });

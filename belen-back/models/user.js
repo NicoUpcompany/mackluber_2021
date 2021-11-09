@@ -30,7 +30,8 @@ var userSchema = Schema({
     signInTime: { type: String, default: '0'},
     waitingRoomTime: { type: String, default: '0'},
     webinarTime: { type: String, default: '0'},
-    active: {type:Boolean, default: false}
+    active: {type:Boolean, default: false},
+    counter: {type:Number}
 });
 
 module.exports = mongoose.model('User', userSchema);
