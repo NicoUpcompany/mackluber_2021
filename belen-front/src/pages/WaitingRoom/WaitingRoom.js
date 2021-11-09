@@ -97,8 +97,8 @@ const WaitingRoom = () => {
                         }
                     } else {
                         clearInterval(interval);
-                        $this.append("<a href='streaming' class='btn'>Entrar al evento</a>");
-                        setModal(true);
+                        //$this.append("<a href='streaming' class='btn'>Entrar al evento</a>");
+                        //setModal(true);
                     }
                     now = now + 1000;
                 }, 1000);
@@ -125,7 +125,7 @@ const WaitingRoom = () => {
         let interval;
         interval = setInterval(function () {
             status();
-        }, 5000)
+        }, 60000)
 
         return () => clearInterval(interval);
 
@@ -160,14 +160,14 @@ const WaitingRoom = () => {
                 </div>
             </div>
             <div className="streaming">
-                <iframe src="https://player.vimeo.com/video/643580851?autoplay=1&loop=1" width="100%" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/643580851?autoplay=1&loop=1" width="100%" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-            <div className="sponsors">
+            {/*<div className="sponsors">
                 <div className="blanco">
                     <img src={logos} width="100%" height="auto" alt="3" />
                 </div>
             </div>
-            {/*
+            
             <div className="footer">
                 <div className="belen">
                     <img src={belen} alt="belen" />

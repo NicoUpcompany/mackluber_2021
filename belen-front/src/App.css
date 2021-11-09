@@ -2260,13 +2260,13 @@ a:hover{
 		background-size: cover;
 		background-repeat: no-repeat;
 		margin: 0;
-		min-height: 100vh;
+		height: calc(100vh - 180px);
 	}
 	.container2 .row .column-2{
 		float: left;
 		width: 50%;
 		padding: 0;
-		height: 100vh;
+		height: calc(100vh - 180px);
 		display: flex;
 		align-items: center;
 		align-content: center;
@@ -2279,21 +2279,35 @@ a:hover{
 		justify-content: center;
 		flex-direction: column;
 	}
-	.container2 .row .column-2 .imagen{
+	.container2 .row .column-2 .images{
+		display: table;
 		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.container2 .row .column-2 .imagen{
+		width: 50%;
 		float: left;
+		height: 108px;
+		display: flex;
+		align-items: center;
 	}
 	.container2 .row .column-2 .imagen.i1 img{
 		display: block;
-		width: 280px;
+		width: 160px;
 		margin: 0 auto;
+		float: left;
 	}
 	.container2 .row .column-2 .imagen.i2 img{
 		display: block;
-		width: 200px;
+		width: 150px;
 		margin: 0 auto;
+		float: right;
 	}
-
+	.container2 .row .logos{
+		float: left;
+		width: 100%;
+	}
 	
 	.container2 .row .column-2 h2{
 		color: #000;

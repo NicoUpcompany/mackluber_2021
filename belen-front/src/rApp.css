@@ -113,14 +113,9 @@
 	.container2 .row .column-2{
 		float: left;
 		width: 100%;
-		border-bottom:2px solid black;
 	}
 	.container2 .row{
 		background-position: right !important;
-		border-bottom: 2px solid black;
-	}
-	.container2 .pie{
-		border-top: 1px solid black;
 	}
 
 	.banner-footer{
@@ -419,6 +414,15 @@
 
 	.exito .btns {
 		margin-bottom: 30px;
+
+	}
+
+	.container2 .row .column-1{
+		display: none;
+	}
+	.container2 .row .column-2{
+		width: 100%;
+		padding: 0 20px;
 	}
 
 }

@@ -22,7 +22,7 @@ const Donacion = () => {
     const [open, setOpen] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState(true);
     const history = useHistory();
-    const [texto, setTexto] = useState('Donación de becas')
+    const [texto, setTexto] = useState("<span>Tu donación permitirá entregar eduación a cientos de niños en Palestina.</span><span>Cada beca cubre <strong>Matrícula, Útiles escolares y desayuno. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span><span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>")
     
     const changeForm = e => {
         setAmountState(e.target.value);
@@ -42,9 +42,9 @@ const Donacion = () => {
     const status = async() =>{
         const result =  await getStatusApi();
         if(result.texto){
-            setTexto('Donación de citoscopio')
+            setTexto("<span><strong>Salud por Palestina</strong></span><span>Tu donación permitirá entregar <strong>un nuevo Cistoscopio al hospital de Belén</strong>.</span><span>Valor Cistoscopio: <br/>U$ 10.000 ($ 8.150.000)</span>")
         }else{
-            setTexto('Donación de becas')
+            setTexto("<span>Tu donación permitirá entregar eduación a cientos de niños en Palestina.</span><span>Cada beca cubre <strong>Matrícula, Útiles escolares y desayuno. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span><span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>")
         }
     }
 
@@ -52,7 +52,7 @@ const Donacion = () => {
         let interval; 
         interval = setInterval(function(){
             status();
-        },5000)
+        },60000)
 
         return () => clearInterval(interval);
 
@@ -114,10 +114,7 @@ const Donacion = () => {
                 <form onSubmit={makeFormPay}>
                     <div className="row1">
                      <h1>DONACIÓN</h1>
-                    <span>Tu donación permitirá entregar eduación a cientos de niños en Palestina.</span>
-
-                    <span>Cada beca cubre <strong>{texto}. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span>
-                    <span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>
+                    <div dangerouslySetInnerHTML={{ __html: texto }}></div>
                     <div className="campo alto">
                         <div className="in">
                             <input type="radio" id="donacion4" for="labelwey" checked={paymentMethod} onClick={() => setPaymentMethod(true)}  name="donacion" />

@@ -18,6 +18,8 @@ import paypal from '../../../assets/img/paypal.png';
 import logo from '../../../assets/imagen/logoBelenColor.png';
 import logo2 from '../../../assets/imagen/logoBelen.png';
 
+import au from '../../../assets/img/auspiciadores3.png';
+import au_m from '../../../assets/img/auspiciadores_m.png';
 
 import { MakeDonationApi, MakeDonationPaypalApi } from '../../../api/payment';
 
@@ -192,8 +194,13 @@ const Login = () => {
           <div className="column-1"></div>
           <div className="column-2">
             <div className="center">
-              <div className="imagen i1">
-                <img src={logo2} alt="logo"/>
+              <div className="images">
+                <div className="imagen i1">
+                  <img src={logo2} alt="logo"/>
+                </div>
+                <div className="imagen i2">
+                  <img src={logo} alt="logo"/>
+                </div>
               </div>
               <div className="prueba">
                 <form onChange={changeForm}>
@@ -232,16 +239,18 @@ const Login = () => {
                   </div> */}
                 </form>
               </div>
-              <div className="imagen i2">
-                <img src={logo} alt="logo"/>
-              </div>
-            </div>
+              
             <Snackbar anchorOrigin={{vertical: 'top', horizontal: 'right' }} open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error">
                 {mensaje}
               </Alert>
             </Snackbar>
-          </div>      
+          </div>
+        </div>
+        <div className="logos">
+            <img src={au} alt="au" className="tablet desktop" width="100%" />
+            <img src={au_m} alt="au_m" className="movil" width="100%" />
+        </div>
         </div>
       </div>
           <Modal
