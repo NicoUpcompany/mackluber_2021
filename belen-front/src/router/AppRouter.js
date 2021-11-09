@@ -15,6 +15,7 @@ import ErrorTrx from '../pages/Error';
 import LoginDashboard from '../pages/AdminDashboard/Auth';
 import Dashboard from '../pages/AdminDashboard/Dashboard';
 import Welcome2 from '../pages/Welcome/Welcome2';
+import { Donation } from '../pages/Donation/Donation';
 
 export const AppRouter = () => {
     return (
@@ -23,6 +24,7 @@ export const AppRouter = () => {
                 <Switch>
                     <Route exact path="/confirmacion" component={ Confirm } />
                     <Route exact path="/confirmacion-donacion" component={ ConfirmDonation } />
+                    <Route exact path="/donacion" component={ Donation } />
                     <Route exact path="/error-trx" component={ ErrorTrx } />
                     <Route exact path="/ingresa-tus-datos" component={ Carro1 } />
                     <Route exact path="/experiencia-gastronomica" component={ Carro2 } />

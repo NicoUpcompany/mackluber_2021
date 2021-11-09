@@ -198,6 +198,8 @@ const Streaming = () => {
         localStorage.clear();
         history.push('/iniciarsesion');
     }
+
+    
     return (
         <>
             <div className="contenedor2">
