@@ -1201,6 +1201,7 @@ function catchDonationPaypal(req, res) {
             } else {
                 if (paymentStored.status === 'PENDIENTE') {
                     paymentStored.status = 'COMPLETADO';
+                    paymentStored.income = "DONACION"
                     Payment.findByIdAndUpdate({_id: paymentStored.id}, paymentStored, (err, paymentUpdate) => {
                         if (err) {
                             res.status(404).send({message: "Error de servidor 0007"});
