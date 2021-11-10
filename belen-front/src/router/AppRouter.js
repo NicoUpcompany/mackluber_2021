@@ -36,7 +36,7 @@ export const AppRouter = () => {
                     <Route exact path="/salaespera" component={ WaitingRoom } />
                     <Route exact path="/dashboard" component={ LoginDashboard } />
                     <Route path="/dashboard/admin" component={ Dashboard } />
-                    <Route path="/" component={ Welcome2 } />
+                    <Route path="/" component={ LoginScreen } />
                     <Route path="/login" component={ LoginScreen } />
                     <Redirect to="/" />
                 </Switch>
