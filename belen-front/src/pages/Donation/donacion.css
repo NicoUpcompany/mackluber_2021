@@ -9,20 +9,23 @@
 }
 
 .donacion-header{
-    display: flex;
-    width: 80%; 
-    height: 30vh;
-    justify-content: space-around;
+    float: left;
+    width: 100%;
     padding: 30px;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 
 .donacion-header img{
-    height: 100%;
     margin-right: 10px;
 }
 
-.form-donacion{
-    height: 200px !important;
+.container-donacion .row1 .campo{
+    background: #fff;
+    height: auto;
+    padding: 20px;
 }

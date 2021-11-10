@@ -13,6 +13,8 @@ import { getStatusApi } from '../../api/redirect';
 import { useHistory } from 'react-router';
 import $ from 'jquery';
 import { signUpApi } from '../../api/user';
+import CurrencyFormat from 'react-currency-format';
+
 
 moment.locale();
 
@@ -22,6 +24,7 @@ function Alert(props) {
 const Donacion = () => {
 
     const [amountState, setAmountState] = useState();
+    const [amountPuntoState, setAmountPuntoState] = useState();
     const [mensaje, setMensaje] = useState("");
     const [open, setOpen] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState(true);
@@ -37,6 +40,7 @@ const Donacion = () => {
 
     const changeForm = e => {
         setAmountState(e.target.value);
+        setAmountPuntoState(e.target.value);
     };
 
     const handleClick = () => {
@@ -53,7 +57,7 @@ const Donacion = () => {
     const status = async () => {
         const result = await getStatusApi();
         if (result.texto) {
-            setTexto("<span><strong>Salud por Palestina</strong></span><span>Tu donación permitirá entregar <strong>un nuevo Cistoscopio al hospital de Belén</strong>.</span><span>Valor Cistoscopio: <br/>U$ 10.000 ($ 8.150.000)</span>")
+            setTexto("<span><strong>Salud para Palestina</strong></span><span>Tu donación permitirá entregar <strong>un nuevo Cistoscopio al hospital de Belén</strong>.</span><span>Valor Cistoscopio: <br/>U$ 10.000 ($ 8.150.000)</span>")
         } else {
             setTexto("<span>Tu donación permitirá entregar eduación a cientos de niños en Palestina.</span><span>Cada beca cubre <strong>Matrícula, Útiles escolares y desayuno. <br/></strong> Su valor anual es de <strong>$ 300.000</strong> por niño</span><span>La meta de esta noche es recaudar el dinero para <strong>120 becas completas</strong></span>")
         }
@@ -187,7 +191,7 @@ const Donacion = () => {
                                 <div className="centro1"></div>
                             </div>
                             <div className="in">
-                                <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" />
+                                <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" onKeyPress={(event)=>{if (!/[0-9]/.test(event.key)) { event.preventDefault(); }}} />
                             </div>
                         </div>
                         <div className="resumen">
@@ -195,7 +199,7 @@ const Donacion = () => {
                             <hr />
                             <div className="total">
                                 <strong className="left">Total</strong>
-                                <strong className="right">${amountState}</strong>
+                                <strong className="right"><CurrencyFormat value={amountState} displayType={'text'} thousandSeparator={true} prefix={'$'} /></strong>
                             </div>
                             <hr />
                             {

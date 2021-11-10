@@ -628,18 +628,18 @@ export default function Carro4() {
                             <div className="num">1</div>
                             <span>Compra tu entrada</span>
                         </div>
-                        
+                        {/*
                         <div className="col">
                             <div className="num">2</div>
                             <span>Agregar caja Gastronómica</span>
                         </div>
-                        
+                        */ }
                         <div className="col">
-                            <div className="num">3</div>
+                            <div className="num">2</div>
                             <span>añadir invitados</span>
                         </div>
                         <div className="col">
-                            <div className="num active">4</div>
+                            <div className="num active">3</div>
                             <span>medio de pago</span>
                         </div>
                     </div>
@@ -689,10 +689,10 @@ export default function Carro4() {
                                                         <div className="line">Entrada Otros países <span>$20</span></div>
                                                     }
                                                     {ticketStatus ? <div className="line">Entrada Chile (Invitados)<span>${finalEntradaInvitadosString}</span></div> : <span></span>}
-                                                    
+                                                    {/*
                                                     { ( inputs.hobValue && currencyTypeString==='CLP') ? <div className="line">Caja gastronómica (Titular)<span>${inputs.hobString}</span></div> : <span></span>}
                                                     { ( usersHobStatus && currencyTypeString==='CLP' ) ? <div className="line">Caja gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> : <span></span>} 
-                                                   
+                                                    */ }
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>
                                                 <div className="btns" >
@@ -709,7 +709,7 @@ export default function Carro4() {
                                                     :
                                                         <div className="line">Entrada Otros países <span>$20</span></div>
                                                     }
-                                                    {
+                                                    {/*
                                                         (inputs.hobValue && currencyTypeString==='CLP')
                                                             ? <div className="line">Caja gastronómica<span>${inputs.hobString}</span></div> 
                                                             : <span></span>
@@ -718,7 +718,7 @@ export default function Carro4() {
                                                         (usersHobStatus && currencyTypeString==='CLP' && finalHobInvitadosString )
                                                             ? <div className="line">Caja gastronómica (Invitados)<span>${finalHobInvitadosString}</span></div> 
                                                             : <span></span>
-                                                    }
+                                                    */}
                                                
                                                 </div>
                                                 <div className="total">Total <span>${totalAmountString}</span></div>

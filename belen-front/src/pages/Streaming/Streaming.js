@@ -31,6 +31,7 @@ import a8 from '../../assets/img/a7.jpg';
 import a9 from '../../assets/img/a1.jpg';
 import a10 from '../../assets/img/a8.jpg';
 import a11 from '../../assets/img/a9.jpg';
+import a12 from '../../assets/img/a10.jpg';
 import { useHistory } from "react-router";
 // import a7 from '../../assets/img/a7.jpg';
 // import a8 from '../../assets/img/a8.jpg';
@@ -39,6 +40,9 @@ import { useHistory } from "react-router";
 // import a11 from '../../assets/img/a11.jpg';
 // import a12 from '../../assets/img/a12.jpg';
 // import a13 from '../../assets/img/a13.jpg';
+
+import belen from '../../assets/imagen/logoBelenColor.png';
+import macklube from '../../assets/imagen/logoBelen.png';
 
 moment.locale();
 
@@ -82,18 +86,18 @@ const Streaming = () => {
         setOpen2(false);
     }
     useEffect(() => {
-        // var token = getAccessTokenApi();
-        // if (token !== null) {
-        //     var decodedToken = jwtDecode(token);
-        //     setUser(decodedToken);
-        //     const data = {
-        //         code: decodedToken.code,
-        //         streamTime: moment().format('LLL')
-        //     }
-        //     updateStreamApi(token, data);
-        // } else {
-        //     window.location.href = "/iniciarsesion";
-        // }
+        var token = getAccessTokenApi();
+        if (token !== null) {
+            var decodedToken = jwtDecode(token);
+            setUser(decodedToken);
+            const data = {
+                code: decodedToken.code,
+                streamTime: moment().format('LLL')
+            }
+            updateStreamApi(token, data);
+        } else {
+            window.location.href = "/iniciarsesion";
+        }
 
         var time
         $(function () {
@@ -152,6 +156,11 @@ const Streaming = () => {
                 }
                 if (veces === 33) {
                     $('.img11').fadeOut('fast', function () {
+                        $('.img12').fadeIn('fast');
+                    });
+                }
+                if (veces === 36) {
+                    $('.img12').fadeOut('fast', function () {
                         $('.img1').fadeIn('fast');
                     });
                     veces = 0;
@@ -203,6 +212,10 @@ const Streaming = () => {
     return (
         <>
             <div className="contenedor2">
+                <div className='donacion-header'>
+                    <img src={macklube} alt="maklube" width="140"/>
+                    <img src={belen} alt="belen"  width="140"/>
+                </div>
                 <div className="webinar">
                     <div className="column-1">
                         <div className="videoWebinar">
@@ -244,6 +257,7 @@ const Streaming = () => {
                                 <div className="img img9"><img src={a9} alt="a9" /></div>
                                 <div className="img img10"><img src={a10} alt="a10" /></div>
                                 <div className="img img11"><img src={a11} alt="a11" /></div>
+                                <div className="img img12"><img src={a12} alt="a12" /></div>
                             </div>
                         </div>
                     </div>

@@ -258,7 +258,7 @@ const Login = () => {
           </div>
         </div>
         <div className="logos">
-            <img src={au} alt="au" className="tablet desktop" width="100%" />
+            <img src={au} alt="au" className="tablet desktop" height="160" />
             <img src={au_m} alt="au_m" className="movil" width="100%" />
         </div>
         </div>

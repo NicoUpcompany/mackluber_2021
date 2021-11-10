@@ -143,15 +143,15 @@ const WaitingRoom = () => {
     return (
         <>
             <div className="header">
-                <div className="titulo">
-                    <h2>EL EVENTO INICIA EN:</h2>
-                    <LoginOutlined className='logout' onClick={salir} style={{ fontSize: '20px' }} />
-                </div>
                 <div className="rowSala">
                     <div className="logo1">
                         <img src={logo} alt="logo" width="100%" height="auto" />
                     </div>
                     <div className="cronometro">
+                        <div className="titulo">
+                            <h2>EL EVENTO INICIA EN:</h2>
+                            <LoginOutlined className='logout' onClick={salir} style={{ fontSize: '20px' }} />
+                        </div>
                         <div className="countdown"></div>
                     </div>
                     <div className="logo2">

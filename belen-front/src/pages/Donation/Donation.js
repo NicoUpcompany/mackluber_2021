@@ -11,9 +11,12 @@ import moment from 'moment';
 import $ from 'jquery';
 import './donacion.css';
 import { LoadingOutlined } from '@ant-design/icons';
+import CurrencyFormat from 'react-currency-format';
+
+moment.locale();
+
 export const Donation = () => {
-
-
+    
     const [amountState, setAmountState] = useState();
     const [email, setEmail] = useState();
     const [mensaje, setMensaje] = useState("");
@@ -247,64 +250,66 @@ export const Donation = () => {
     return (
         <Spin spinning={loading} size="large" indicator={antIcon}>
             <div className='container-donacion'>
-                <div className='donacion-header'>
-                    <img src={macklube} alt="maklube" />
-                    <img src={belen} alt="belen" />
-                </div>
-
-                <form onSubmit={pay}>
-                    <div className="row1">
-                        <div className="campo  form-donacion">
-                            <div className="in">
-                                <input type="radio" id="donacion4" for="labelwey" checked={paymentMethod} onClick={() => setPaymentMethod(true)} name="donacion" />
-                                <label htmlFor="donacion4" id="labelwey" onClick={() => setPaymentMethod(true)} >Pago Fácil (CLP)</label>
-                                <div className="centro"></div>
-                            </div>
-                            <div className="in">
-                                <input type="radio" id="donacion5" for="labelwey2" checked={!paymentMethod} onClick={() => setPaymentMethod(false)} name="donacion" />
-                                <label htmlFor="donacion5" id="labelwey2" onClick={() => setPaymentMethod(false)} >PayPal (USD)</label>
-                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="formPaypal" >
-                                    <input type="hidden" name="charset" value="utf-8" />
-                                    <input type="hidden" name="cmd" value="_xclick" />
-                                    <input type="hidden" name="business" value="KF7U8S9XEPUNQ" />
-                                    <input type="hidden" name="item_name" value="Entrada general" />
-                                    <input type="hidden" name="amount" value={amountState} />
-                                    {/* <input type="hidden" name="amount" value='1.00'/>*/}
-                                    <input type="hidden" name="currency_code" value="USD" />
-                                    {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
-                                    <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${payIdAux2}`} />
-                                    <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1" />
-                                    {/* <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/> */}
-                                    <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US" />
-                                    {/* <input type="image" src={paypal} border="0" name="submit"/> */}
-                                </form>
-
-                                <div className="centro1"></div>
-                            </div>
-                            <div className="in">
-                                <input type="text" name="email" onChange={changeForm} value={email} placeholder="Ingresa Su email" style={{ marginBottom: '10px' }} />
-                            </div>
-                            <div className="in">
-                                <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" />
-                            </div>
-                        </div>
-                        <div className="resumen">
-                            <h1 className="tituloResumen">Resumen Pedido</h1>
-                            <hr />
-                            <div className="total">
-                                <strong className="left">Total</strong>
-                                <strong className="right">${amountState}</strong>
-                            </div>
-                            <hr />
-                            {
-                                paymentMethod ?
-                                    <a onClick={pay}>Donar <strong>Ahora</strong> </a>
-                                    : <a onClick={pagarPaypal}>Donar <strong>Ahora</strong> </a>
-                            }
-                        </div>
-
+                <div className="contenedor-sm">
+                    <div className='donacion-header'>
+                        <img src={macklube} alt="maklube" width="200"/>
+                        <img src={belen} alt="belen"  width="180"/>
                     </div>
-                </form>
+
+                    <form onSubmit={pay}>
+                        <div className="row1">
+                            <div className="campo  form-donacion">
+                                <div className="in">
+                                    <input type="radio" id="donacion4" for="labelwey" checked={paymentMethod} onClick={() => setPaymentMethod(true)} name="donacion" />
+                                    <label htmlFor="donacion4" id="labelwey" onClick={() => setPaymentMethod(true)} >Pago Fácil (CLP)</label>
+                                    <div className="centro"></div>
+                                </div>
+                                <div className="in">
+                                    <input type="radio" id="donacion5" for="labelwey2" checked={!paymentMethod} onClick={() => setPaymentMethod(false)} name="donacion" />
+                                    <label htmlFor="donacion5" id="labelwey2" onClick={() => setPaymentMethod(false)} >PayPal (USD)</label>
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="formPaypal" >
+                                        <input type="hidden" name="charset" value="utf-8" />
+                                        <input type="hidden" name="cmd" value="_xclick" />
+                                        <input type="hidden" name="business" value="KF7U8S9XEPUNQ" />
+                                        <input type="hidden" name="item_name" value="Entrada general" />
+                                        <input type="hidden" name="amount" value={amountState} />
+                                        {/* <input type="hidden" name="amount" value='1.00'/>*/}
+                                        <input type="hidden" name="currency_code" value="USD" />
+                                        {/* <input type="hidden" name="return" value="https://fundacionbelen2000.cl/index.php/donaciones-muchas-gracias"/> */}
+                                        <input type="hidden" name="return" value={`https://maklube.upwebinar.cl/api/v1/catch-payment-paypal/${payIdAux2}`} />
+                                        <input type="hidden" name="notify_url" value="http://demowp.0101.cl/?wp_paypal_ipn=1" />
+                                        {/* <input type="hidden" name="notify_url" value="https://maklube.upwebinar.cl/confirmacion"/> */}
+                                        <input type="hidden" name="bn" value="WPPayPal_BuyNow_WPS_US" />
+                                        {/* <input type="image" src={paypal} border="0" name="submit"/> */}
+                                    </form>
+
+                                    <div className="centro1"></div>
+                                </div>
+                                <div className="in">
+                                    <input type="text" name="email" onChange={changeForm} value={email} placeholder="Ingresa Su email" style={{ marginBottom: '10px' }} />
+                                </div>
+                                <div className="in">
+                                    <input type="text" name="amountState" onChange={changeForm} value={amountState} placeholder="Ingresa un monto" onKeyPress={(event)=>{if (!/[0-9]/.test(event.key)) { event.preventDefault(); }}} />
+                                </div>
+                            </div>
+                            <div className="resumen">
+                                <h1 className="tituloResumen">Resumen Pedido</h1>
+                                <hr />
+                                <div className="total">
+                                    <strong className="left">Total</strong>
+                                    <strong className="right"><CurrencyFormat value={amountState} displayType={'text'} thousandSeparator={true} prefix={'$'} /></strong>
+                                </div>
+                                <hr />
+                                {
+                                    paymentMethod ?
+                                        <a onClick={pay}>Donar <strong>Ahora</strong> </a>
+                                        : <a onClick={pagarPaypal}>Donar <strong>Ahora</strong> </a>
+                                }
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
             </div>
         </Spin>
     )

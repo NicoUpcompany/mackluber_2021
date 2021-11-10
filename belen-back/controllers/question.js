@@ -18,7 +18,7 @@ function makeQuestion(req, res) {
             if (!questionMaked) {
                 res.status(404).send({status: 404, message: "Error al hacer pregunta"});
             } else {
-                res.status(200).send({status: 200, message: "Pregunta enviada"});
+                res.status(200).send({status: 200, message: "Saludo enviado!"});
             }
         }
     });
