@@ -1893,6 +1893,7 @@ a:hover{
 	  float: left;
 	  width: 100%;
 	  position: relative;
+	  height: 40px;
   }
   .row1 .campo input[type=radio]{
 	visibility: hidden;
