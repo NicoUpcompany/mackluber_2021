@@ -62,6 +62,8 @@ export default function Dashboard() {
     const [visible2, setVisible2] = useState(false);
     // const [usersWaitingRoom, setUsersWaitingRoom] = useState([]);
     // const [statsData, setStatsData] = useState([]);
+    const [donacionesDolares, setDonacionesDolares] = useState(0);
+    const [donacionesCLP, setDonacionesCLP] = useState(0);
     const [usersData, setUsersData] = useState([]);
     const [questionData, setQuestionData] = useState([]);
     const [paymentData, setPaymentData] = useState([]);
@@ -139,9 +141,21 @@ export default function Dashboard() {
     const getPayments = async () => {
         var totalCLP = 0;
         var totalUSD = 0;
+        let totalDonacionUSD = 0;
+        let totalDonacionCLP = 0;
         await getPaymentsApi(getAccessTokenApi()).then(resp => {
             const arrayPayments = [];
             resp.payments.forEach(item => {
+                //Guardar valor donación
+                if(item.income ==="DONACION" && item.currencyType ==="USD" && item.status === 'COMPLETADO'){
+                     totalDonacionUSD = totalDonacionUSD + item.amount;
+                    setDonacionesDolares(totalDonacionUSD);
+                }
+                if(item.income ==="DONACION" && item.currencyType ==="CLP" && item.status === 'COMPLETADO'){
+                     totalDonacionCLP = totalDonacionCLP + item.amount;
+                    setDonacionesCLP(totalDonacionCLP)
+                }
+
                 if (item.status === 'COMPLETADO') {
                     if (item.currencyType === 'CLP') {
                         totalCLP = totalCLP + item.amount;
@@ -175,14 +189,15 @@ export default function Dashboard() {
         var boxCount = 0;
         var headlinesCount = 0;
         var guestsCount = 0;
-        console.log(fromData)
+        // console.log(fromData)
         await getUsers2Api(getAccessTokenApi(), fromData).then(resp => {
             const arrayUsers = [];
             totalUsersCount = resp.total;
             signInCount = totalUsersCount- resp.signInTime;
             waitingRoomCount = totalUsersCount - resp.waitingRoomTime;
+            console.log(resp);
             streamCount = totalUsersCount - resp.webinarTime;
-            console.log(resp.users[0]);
+            // console.log(resp.users[0]);
             resp.users.forEach(item => {
                 if (item.quantityHobExperience > 0 && item.statusPay) {
                     boxCount = boxCount + item.quantityHobExperience;
@@ -486,7 +501,10 @@ export default function Dashboard() {
                                         )
                                     })}
                                 </div>
+
                             </div>
+                                <h3 style={{marginTop:'20px'}}>Donación USD: {donacionesDolares}</h3>
+                                <h3>Donación CLP: {donacionesCLP}</h3>
                         </div>
                     </div>
                 </div>
